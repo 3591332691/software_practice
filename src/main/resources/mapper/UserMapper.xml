@@ -1,0 +1,35 @@
+<!-- 这边的namespace一定要写完整正确（Mapper接口全限定类名） -->
+<mapper namespace="com.example.backend.mapper.UserMapper">
+    <!-- 通过id查询用户 -->
+    <select id="findUserById" parameterType="int" resultType="com.example.Entity.User">
+        select * from user where id = #{id}
+    </select>
+
+    <!-- 查询所有用户信息 -->
+    <select id="getAllUsers" resultType="com.example.Entity.User">
+        SELECT * FROM users
+    </select>
+
+    <!--通过name查找一个list的用户，模糊匹配 TODO:这个可以用在书的查找上-->
+    <select id="findUserByName" parameterType="java.lang.String" resultType="com.example.Entity.User">
+        select * from user where name like '%${value}%'
+    </select>
+
+    <!--插入用户信息-->
+    <insert id="insertUser" parameterType="com.example.Entity.User">
+        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">
+            select uuid()         <!--  这里是对于主键属性的id进行赋值 -->
+        </selectKey>
+        insert into user(id,username,password) values(#{id},#{username},#{password})
+    </insert>
+
+    <!--删除用户信息-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from user where id=#{id}
+    </delete>
+
+    <!-- 更新用户信息 -->
+    <update id="updateUser" parameterType="com.example.Entity.User">
+        UPDATE users SET username = #{username}, password = #{password} WHERE id = #{id}
+    </update>
+</mapper>
