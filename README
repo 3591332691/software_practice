@@ -1,0 +1,17 @@
+1. BackendApplication.java 里面写数据库的初始化（springboot每次运行就初始化一遍数据库）
+2. 关于mybatis的使用方法还要在数据库确定下来之后再去尝试使用
+3. 业务就写在src/main/java/com/example/backend/service 和src/main/java/com/example/backend/controller
+    下，其中controller是更接近于前端交互的接口，service是逻辑实现，例子可见LogInController和LogInService。
+    LogInController的接口调用了LogInService的一个函数。
+4. 接口测试就大家自己测试
+5. 大家git pull或者git clone要指定一下分支名字：
+    git pull origin <远程分支名>:<本地分支名>
+    git pull origin <远程分支名>
+    免得拉下来了叶的test分支
+6. 拉下来之后要先修改src/main/resources/application.yml里面的root和密码改成自己本地的连接账户和密码，还要建一个
+	名字叫for_database_lab1的数据库。（刚拉下来他可能下载依赖需要一会儿）
+7. 大家 git push的时候要push到自己的分支上：
+    首先修改本地分支名
+    然后再git push origin 新分支名
+    （这样他就能直接创建并push到你的分支上了，叶的分支名字暂时叫backend）
+8. 可以打打finish-tag让叶尝试合并一下版本
