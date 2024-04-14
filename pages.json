@@ -1,0 +1,67 @@
+{
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        // "navigationBarTitleText": "uni-app",
+        "navigationStyle": "custom"
+      }
+    }, {
+      "path": "pages/bookshelf/index",
+      "style": {
+        "navigationBarTitleText": "我的书架",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/user/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/search/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+
+    }, {
+      "path": "pages/book-detail/index",
+      "style": {
+        "navigationBarTitleText": "小说详情",
+        "enablePullDownRefresh": false
+      }
+
+    }
+  ],
+  "tabBar": {
+    "color": "#535353",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "static/images/home.png",
+      "selectedIconPath": "static/images/home_selected.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/bookshelf/index",
+      "iconPath": "static/images/book1.png",
+      "selectedIconPath": "static/images/book1_selected.png",
+      "text": "书架"
+    }, {
+      "pagePath": "pages/user/index",
+      "iconPath": "static/images/self.png",
+      "selectedIconPath": "static/images/self_selected.png",
+      "text": "我的"
+    }]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "uniIdRouter": {}
+}
