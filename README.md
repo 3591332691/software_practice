@@ -1,4 +1,5 @@
 ## 项目结构
+```
 ┌─components            uni-app组件目录
 │  └─comp-a.vue         可复用的a组件
 ├─pages                 业务页面文件存放的目录
@@ -18,3 +19,10 @@
 ├─pages.json            配置页面路由、导航条、选项卡等页面类信息
 ├─manifest.json         配置应用名称、appid、logo、版本等打包信息
 └─uni.scss              内置的常用样式变量
+```
+
+## 测试
+1. HbuilderX自动化测试框架
+2. minium框架
+
+[相关资料](https://developers.weixin.qq.com/community/develop/article/doc/0000cae3a58748ed7f2c8975351413)
