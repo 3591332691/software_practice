@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!-- 这边的namespace一定要写完整正确（Mapper接口全限定类名） -->
 <mapper namespace="com.example.backend.mapper.ContentMapper">
-    <!-- 通过id查询用户 -->
-    <select id="getContentById" parameterType="int" resultType="com.example.Entity.Contents">
-        select * from contents where content_id = #{content_id}
+    <!-- 通过book_id查询contents -->
+    <select id="getContentByBook_id" parameterType="int" resultType="com.example.backend.Entity.Contents">
+        select * from contents where book_id = #{book_id}
     </select>
-
 </mapper>

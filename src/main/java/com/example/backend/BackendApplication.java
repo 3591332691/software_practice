@@ -1,5 +1,6 @@
 package com.example.backend;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -15,7 +16,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
 
 @SpringBootApplication
+@MapperScan("com.example.backend.mapper")
 public class BackendApplication {
+
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
@@ -37,7 +40,7 @@ public class BackendApplication {
 	public void executeSqlFile(String filePath) {
 		try {
 			URL url = getClass().getClassLoader().getResource(filePath);
-			System.out.println("Resource URL: " + url);
+
 			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filePath);
 			if (inputStream != null) {
 				BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));

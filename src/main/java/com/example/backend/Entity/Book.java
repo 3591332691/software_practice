@@ -1,8 +1,9 @@
 package com.example.backend.Entity;
 
 public class Book {
-    private int book_id;
-    private String book_name;
-    private String brief_introduction;
-    private String tag;
+    public int book_id;
+    public String book_name;
+    public String brief_introduction;
+    public String tag;
+    public int author_id;
 }

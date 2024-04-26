@@ -1,37 +1,36 @@
-<!-- 这边的namespace一定要写完整正确（Mapper接口全限定类名） -->
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
 <mapper namespace="com.example.backend.mapper.BookMapper">
     <!-- 通过id查询书 -->
-    <select id="findBookById" parameterType="int" resultType="com.example.Entity.Book">
+    <select id="findBookById" parameterType="int" resultType="com.example.backend.Entity.Book">
         select * from book where id = #{id}
     </select>
 
     <!-- 查询所有书籍信息 -->
-    <select id="getAllBooks" resultType="com.example.Entity.Book">
+    <select id="getAllBooks" resultType="com.example.backend.Entity.Book">
         SELECT * FROM book
     </select>
 
     <!-- 通过作者查询书籍信息 -->
-    <select id="findBookByAuthor" resultType="com.example.Entity.Book">
+    <select id="findBookByAuthor" parameterType="int" resultType="com.example.backend.Entity.Book">
         SELECT * FROM book where author_id = #{author_id}
     </select>
 
     <!-- 通过Tag查询书籍信息 -->
-    <select id="findBookByTag" resultType="com.example.Entity.Book">
+    <select id="findBookByTag"  parameterType="java.lang.String" resultType="com.example.backend.Entity.Book">
         SELECT * FROM book where tag = #{tag}
     </select>
 
-    <!--通过tag查找一个list的书籍，模糊匹配 TODO:这个可以用在书的查找上-->
-    <select id="findBookByName" parameterType="java.lang.String" resultType="com.example.Entity.Book">
+    <!--通过tag查找一个list的书籍，模糊匹配-->
+    <select id="findBookByName" parameterType="java.lang.String" resultType="com.example.backend.Entity.Book">
         select * from book where book_name like '%${value}%'
     </select>
 
 
     <!--插入书籍信息-->
-    <insert id="insertBook" parameterType="com.example.Entity.Book">
-        <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.String">
-            select uuid()         <!--  这里是对于主键属性的id进行赋值 -->
-        </selectKey>
-        insert into book(book_id,book_name,brief_introduction,tag) values(#{book_id},#{book_name},#{brief_introduction,#{tag}})
+    <insert id="insertBook" parameterType="com.example.backend.Entity.Book">
+        insert into book(book_name,brief_introduction,tag,author_id) values(#{book_name},#{brief_introduction},#{tag},#{author_id})
     </insert>
 
     <!--删除书籍信息-->
@@ -40,7 +39,7 @@
     </delete>
 
     <!-- 更新书籍信息 -->
-    <update id="updateBook" parameterType="com.example.Entity.Book">
-        UPDATE book SET username = #{username}, password = #{password} WHERE book_id = #{book_id}
+    <update id="updateBook" parameterType="com.example.backend.Entity.Book">
+        UPDATE book SET book_name = #{book_name}, brief_introduction = #{brief_introduction} WHERE book_id = #{book_id}
     </update>
 </mapper>

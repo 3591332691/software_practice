@@ -1,0 +1,13 @@
+<configuration>
+    <settings>
+        <!-- 打印查询语句 -->
+        <setting name="logImpl" value="STDOUT_LOGGING" />
+    </settings>
+    <mappers>
+        <!--将操作配置文件User.xml系添加进mapper-->
+        <mapper resource="mapper/BookMapper.xml"/>
+        <mapper resource="mapper/ContentMapper.xml"/>
+        <mapper resource="mapper/Favored_bookMapper.xml"/>
+        <mapper resource="mapper/UserMapper.xml" />
+    </mappers>
+</configuration>

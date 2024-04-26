@@ -13,7 +13,7 @@ CREATE TABLE `user` (
 
 DROP TABLE IF EXISTS `book`;
 CREATE TABLE `book` (
-                        `book_id` int NOT NULL,
+                        `book_id` int NOT NULL AUTO_INCREMENT,
                         `book_name` varchar(255) NOT NULL COMMENT '书名',
                         `brief_introduction` varchar(255) DEFAULT NULL COMMENT '简介',
                         `tag` varchar(255) DEFAULT NULL COMMENT '标签',
@@ -40,5 +40,9 @@ DROP TABLE IF EXISTS `contents`;
 CREATE TABLE `contents` (
                             `content_id` int NOT NULL AUTO_INCREMENT COMMENT '章节id，自增',
                             `chapter` varchar(255) NOT NULL COMMENT 'url',
-                            PRIMARY KEY (`content_id`)
+                            `title` varchar(255) NOT NULL COMMENT '标题',
+                            `book_id` int  COMMENT '属于的书的id',
+                            `content_index_inBook` int COMMENT '在书中的第几章节',
+                            PRIMARY KEY (`content_id`),
+                            FOREIGN KEY (`book_id`) REFERENCES `book` (`book_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

@@ -1,18 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!-- 这边的namespace一定要写完整正确（Mapper接口全限定类名） -->
 <mapper namespace="com.example.backend.mapper.Favored_bookMapper">
     <!-- 通过book_id查询被收藏的记录 -->
-    <select id="findFavored_bookByBook_id" parameterType="int" resultType="com.example.Entity.favored_book">
+    <select id="findFavored_bookByBook_id" parameterType="int" resultType="com.example.backend.Entity.Favored_book">
         select * from Favored_book where book_id = #{book_id}
     </select>
 
 
     <!--通过reader_id查找一个list的favored_book-->
-    <select id="findFavored_bookByReader_id" parameterType="java.lang.Integer" resultType="com.example.Entity.favored_book">
+    <select id="findFavored_bookByReader_id" parameterType="java.lang.Integer" resultType="com.example.backend.Entity.Favored_book">
         select * from Favored_book where reader_id = #{ reader_id}
     </select>
 
     <!--把书插入书架-->
-    <insert id="insertBookIntoFavored_book" parameterType="com.example.Entity.favored_book">
+    <insert id="insertBookIntoFavored_book" parameterType="com.example.backend.Entity.Favored_book">
         insert into favored_book(book_id,reading_time,reading_progress,begin_time,end_time) values(#{book_id},#{reading_time},#{reading_progress},#{begin_time},#{end_time})
     </insert>
 

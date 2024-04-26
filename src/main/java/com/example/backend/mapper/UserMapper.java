@@ -1,12 +1,13 @@
 package com.example.backend.mapper;
 
 import com.example.backend.Entity.User;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 
-@Repository
+@Mapper
 public interface UserMapper {
     // 根据用户ID查询用户信息
     User findUserById(int id);
