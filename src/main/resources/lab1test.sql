@@ -25,14 +25,14 @@ CREATE TABLE `book` (
 DROP TABLE IF EXISTS `favored_book`;
 CREATE TABLE `favored_book` (
                                 `id` int NOT NULL AUTO_INCREMENT COMMENT '书架的书id，自增',
-                                `favored_book_id` int NOT NULL COMMENT '收藏的书的id',
+                                `book_id` int NOT NULL COMMENT '收藏的书的id',
                                 `reading_time` int NOT NULL DEFAULT '0' COMMENT '阅读时间，默认为0',
                                 `reading_progress` int NOT NULL DEFAULT '1' COMMENT '阅读进度，默认为第一章',
                                 `begin_time` datetime DEFAULT NULL COMMENT '开始阅读时间',
                                 `end_time` datetime DEFAULT NULL COMMENT '结束阅读时间',
                                 `reader_id`  int NOT NULL COMMENT '收藏的人的id',
                                 PRIMARY KEY (`id`),
-                                FOREIGN KEY (`favored_book_id`) REFERENCES `book` (`book_id`),
+                                FOREIGN KEY (`book_id`) REFERENCES `book` (`book_id`),
                                 FOREIGN KEY (`reader_id`) REFERENCES `user` (`open_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

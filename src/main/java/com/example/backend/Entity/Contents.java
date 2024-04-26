@@ -1,6 +1,6 @@
 package com.example.backend.Entity;
 
-public class contents {
+public class Contents {
     private int content_id;
     private String chapter;
 }

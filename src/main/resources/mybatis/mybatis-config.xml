@@ -20,7 +20,9 @@
 
     <mappers>
         <!--将操作配置文件User.xml系添加进mapper-->
-        <mapper resource="mapper/UserMapper.xml" />
         <mapper resource="mapper/BookMapper.xml"/>
+        <mapper resource="mapper/ContentMapper.xml"/>
+        <mapper resource="mapper/Favored_bookMapper.xml"/>
+        <mapper resource="mapper/UserMapper.xml" />
     </mappers>
 </configuration>
