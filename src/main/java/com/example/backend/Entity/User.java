@@ -3,9 +3,10 @@ package com.example.backend.Entity;
 
 
 public class User {
-    private String id;
-    private String password;
-    private String username;
+    private int open_id;
+    private String name;
+    private String image;
+    private String news;
     //省略getter/setter方法
 
 }

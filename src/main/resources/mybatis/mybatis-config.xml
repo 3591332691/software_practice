@@ -11,7 +11,7 @@
             <!-- 数据库连接池，目前由mybatis来管理 -->
             <dataSource type="POOLED"><!--有关于mysql数据库的各种信息-->
                 <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="url" value="jdbc:mysql://localhost:3306/mybatis" />
+                <property name="url" value="jdbc:mysql://localhost:3306/software_practice_phase1" />
                 <property name="username" value="root" />
                 <property name="password" value="123456" />
             </dataSource>
@@ -21,6 +21,6 @@
     <mappers>
         <!--将操作配置文件User.xml系添加进mapper-->
         <mapper resource="mapper/UserMapper.xml" />
-
+        <mapper resource="mapper/BookMapper.xml"/>
     </mappers>
 </configuration>

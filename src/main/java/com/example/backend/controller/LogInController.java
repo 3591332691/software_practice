@@ -23,7 +23,7 @@ public class LogInController {
         if (isAuthenticated) {
             return "Login successful!";
         } else {
-            return "Invalid username or password!";
+            return "Invalid username";
         }
     }
 
