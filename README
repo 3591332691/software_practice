@@ -1,30 +1,27 @@
 1. BackendApplication.java 里面有数据库的初始化（springboot每次运行就初始化一遍数据库）
 	要求是本地的mysql里有一个叫做software_practice_phase1的数据库
 //这是application.yml文件，需要按自己的root和密码改
-	spring:
-	  datasource:
-	    url: jdbc:mysql://localhost:3306/software_practice_phase1
-	    username: root
-	    password: 123456
-	    driver-class-name: com.mysql.cj.jdbc.Driver
-	  jpa:
-	    hibernate:
-	      ddl-auto: update # 设置 Hibernate 在启动时自动更新数据库结构
-	    show-sql: true # 在控制台显示 SQL 语句
-	
-	server:
-	  port: 8080
-2. 关于mybatis的使用方法还要在数据库确定下来之后再去尝试使用（这个可能要学一会儿）
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/software_practice_phase1
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+server:
+  port: 8080
+
+2. 关于mybatis的使用方法，一个Entity对应一个Mapper接口类对应一个mapper.xml文件；分别代表table,调用的函数，函数使用table的sql语句；如果哪里不对就去哪里改
+		(src/main/java/com/example/backend/Entity)、(src/main/java/com/example/backend/mapper)、(src/main/resources/mapper)
 3. 业务就写在src/main/java/com/example/backend/service 和src/main/java/com/example/backend/controller
     下，其中controller是更接近于前端交互的接口，service是逻辑实现，例子可见LogInController和LogInService。
     LogInController的接口调用了LogInService的一个函数。
 4. 接口测试就大家自己测试
-5. 大家git pull或者git clone要指定一下分支名字：
-    git pull origin <远程分支名>:<本地分支名>
-    git pull origin <远程分支名>
-    免得拉下来了叶的test分支
+5. 大家git pull或者git clone要指定一下分支名字
+    免得拉下来test分支
 6. 大家 git push的时候要push到自己的分支上：
     首先修改本地分支名
     然后再git push origin 新分支名
-    （这样他就能直接创建并push到你的分支上了，叶的分支名字暂时叫backend-y）
-7. 可以在自己分支上打打finish-tag，然后叶会尝试合并一下分支
+    （这样他就能直接创建并push到你的分支上了，y的分支名字暂时叫backend-y）
+7. 可以在自己分支上打打finish-tag，然后尝试合并一下分支
