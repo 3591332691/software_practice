@@ -1,9 +1,11 @@
 package com.example.backend.mapper;
 
 import com.example.backend.Entity.Book;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface BookMapper {
     Book findBookById(int id);
     List<Book> getAllBooks();
