@@ -29,6 +29,6 @@
 
     <!-- 更新用户信息 -->
     <update id="updateUser" parameterType="com.example.backend.Entity.User">
-        UPDATE users SET name = #{name}, image = #{image},news= #{news} WHERE open_id = #{open_id}
+        UPDATE user SET name = #{name}, image = #{image},news= #{news} WHERE open_id = #{open_id}
     </update>
 </mapper>

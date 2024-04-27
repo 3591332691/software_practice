@@ -13,6 +13,11 @@
         select * from Favored_book where reader_id = #{ reader_id}
     </select>
 
+    <!--通过reader_id和book_id查找某一个favored_book，防止重复添加-->
+    <select id="findFavored_bookByReader_idAndBook_id" parameterType="java.lang.Integer" resultType="com.example.backend.Entity.Favored_book">
+        select * from Favored_book where reader_id = #{ reader_id} and book_id = #{ book_id }
+    </select>
+
     <!--把书插入书架-->
     <insert id="insertBookIntoFavored_book" parameterType="com.example.backend.Entity.Favored_book">
         insert into favored_book(book_id,reading_time,reading_progress,begin_time,end_time) values(#{book_id},#{reading_time},#{reading_progress},#{begin_time},#{end_time})

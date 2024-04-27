@@ -1,9 +1,15 @@
 package com.example.backend.Entity;
 
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class Book {
-    public int book_id;
-    public String book_name;
-    public String brief_introduction;
-    public String tag;
-    public int author_id;
+    private int book_id;
+    private String book_name;
+    private String brief_introduction;
+    private String tag;
+    private int author_id;
 }

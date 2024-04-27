@@ -19,7 +19,7 @@
 
     <!-- 通过Tag查询书籍信息 -->
     <select id="findBookByTag"  parameterType="java.lang.String" resultType="com.example.backend.Entity.Book">
-        SELECT * FROM book where tag = #{tag}
+        SELECT * FROM book where tag like '%${tag}'
     </select>
 
     <!--通过tag查找一个list的书籍，模糊匹配-->

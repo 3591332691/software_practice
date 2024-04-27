@@ -8,7 +8,7 @@ import java.util.List;
 
 @Mapper
 public interface BookMapper {
-    List<Book> findBookById(int id);
+    Book findBookById(int id);
     List<Book> getAllBooks();
     List<Book> findBookByAuthor(int author_id);
     List<Book> findBookByTag(String tag);

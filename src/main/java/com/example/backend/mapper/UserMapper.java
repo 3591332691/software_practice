@@ -15,6 +15,9 @@ public interface UserMapper {
     // 查询所有用户信息
     List<User> getAllUsers();
 
+    // 模糊查找用户
+    List<User> findUserByName(String name);
+
     // 插入用户信息
     void insertUser(User user);
 
