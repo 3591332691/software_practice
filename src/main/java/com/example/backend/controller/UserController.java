@@ -39,7 +39,11 @@ public class UserController {
             return "添加用户成功";
         else return "用户已存在";
     }
-
+    /*
+   "open_id":2,
+   "name": "Mary",
+   "image": "null"
+     */
     @PostMapping("/UpdateUser")
     public String UpdateUser(@RequestBody Map<String, Object> UserData) throws Exception {
         int open_id = (Integer) UserData.get("open_id");
@@ -47,15 +51,20 @@ public class UserController {
         String image = (String) UserData.get("image");
         String news = (String) UserData.get("news");
 
-        User user = new User();
-        user.setOpen_id(open_id);
-        user.setName(name);
-        user.setImage(image);
-        user.setNews(news);
-
-        boolean result = userService.updateUser(user);
-        if(result) return "更新成功";
-        else return "更新失败";
+        try {
+            User user = userService.getUserById(open_id);
+            if (user == null) {
+                return "用户不存在，无法更新";
+            }
+            user.setName(name);
+            user.setImage(image);
+            user.setNews(news);
+            userService.updateUser(user);
+        } catch (Exception e) {
+            // 返回具体的错误信息给客户端
+            return "更新用户失败：" + e.getMessage();
+        }
+        return "更新成功";
 
     }
 

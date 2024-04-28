@@ -53,10 +53,8 @@ public class UserService {
         userMapper.deleteUser(id);
         return true;
     }
-    public boolean updateUser(User user) throws Exception{
-        if(userMapper.findUserById(user.getOpen_id()) == null) return false;
+    public void updateUser(User user) throws Exception{
         userMapper.updateUser(user);
-        return true;
     }
     public List<User> findUserByName(String name) throws Exception{
         return userMapper.findUserByName(name);

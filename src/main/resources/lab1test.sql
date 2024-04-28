@@ -17,6 +17,7 @@ CREATE TABLE `book` (
                         `book_name` varchar(255) NOT NULL COMMENT '书名',
                         `brief_introduction` varchar(255) DEFAULT NULL COMMENT '简介',
                         `tag` varchar(255) DEFAULT NULL COMMENT '标签',
+                        `image` varchar(255) DEFAULT NULL COMMENT '存url',
                         `author_id` int  DEFAULT NULL COMMENT '作者id',
                         PRIMARY KEY (`book_id`),
                         FOREIGN KEY (`author_id`) REFERENCES `user` (`open_id`)
@@ -26,8 +27,8 @@ DROP TABLE IF EXISTS `favored_book`;
 CREATE TABLE `favored_book` (
                                 `id` int NOT NULL AUTO_INCREMENT COMMENT '书架的书id，自增',
                                 `book_id` int NOT NULL COMMENT '收藏的书的id',
-                                `reading_time` int NOT NULL DEFAULT '0' COMMENT '阅读时间，默认为0',
-                                `reading_progress` int NOT NULL DEFAULT '1' COMMENT '阅读进度，默认为第一章',
+                                `reading_time` int NOT NULL DEFAULT 0 COMMENT '阅读时间，默认为0，单位为分钟',
+                                `reading_progress` int NOT NULL DEFAULT 1 COMMENT '阅读进度，默认为第一章',
                                 `begin_time` datetime DEFAULT NULL COMMENT '开始阅读时间',
                                 `end_time` datetime DEFAULT NULL COMMENT '结束阅读时间',
                                 `reader_id`  int NOT NULL COMMENT '收藏的人的id',
@@ -46,3 +47,12 @@ CREATE TABLE `contents` (
                             PRIMARY KEY (`content_id`),
                             FOREIGN KEY (`book_id`) REFERENCES `book` (`book_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- 测试数据
+INSERT INTO  `user` values (1, 'Anna', 'null', null);
+INSERT INTO  `user` values (2, 'Mary', 'null', null);
+INSERT INTO  `book` values (1, 'test', 'test', 'test', 'test', 1);
+INSERT INTO  `book` values (2, '软件实践', 'test', '学习', 'test', 1);
+INSERT INTO  `book` values (3, '云原生', 'test', '学习', 'test', 1);
+
+

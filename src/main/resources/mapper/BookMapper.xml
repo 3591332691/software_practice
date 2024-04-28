@@ -4,7 +4,7 @@
 <mapper namespace="com.example.backend.mapper.BookMapper">
     <!-- 通过id查询书 -->
     <select id="findBookById" parameterType="int" resultType="com.example.backend.Entity.Book">
-        select * from book where id = #{id}
+        select * from book where book_id = #{book_id}
     </select>
 
     <!-- 查询所有书籍信息 -->

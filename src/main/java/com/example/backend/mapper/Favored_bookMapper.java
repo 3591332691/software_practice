@@ -7,9 +7,11 @@ import java.util.List;
 
 @Mapper
 public interface Favored_bookMapper {
+    Favored_book findFavored_bookById(int id);
     List<Favored_book> findFavored_bookByBook_id(int book_id);
     List<Favored_book> findFavored_bookByReader_id(int reader_id);
     List<Favored_book> findFavored_bookByReader_idAndBook_id(int reader_id, int book_id);
     void insertBookIntoFavored_book(Favored_book favored_book);
     void deleteFavored_book(int id);
+    void updateFavored_book(Favored_book favored_book);
 }

@@ -11,5 +11,6 @@ public class Book {
     private String book_name;
     private String brief_introduction;
     private String tag;
+    private String image;
     private int author_id;
 }
