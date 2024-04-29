@@ -1,12 +1,18 @@
 package com.example.backend.Entity;
 
 
+import lombok.Getter;
+import lombok.Setter;
 
+
+@Setter
+@Getter
 public class User {
     private int open_id;
-    public String name;
-    public String image;
-    private String news;
-    //省略getter/setter方法
 
+    private String name;
+
+    private String image;
+
+    private String news;
 }

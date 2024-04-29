@@ -2,13 +2,12 @@ package com.example.backend.mapper;
 
 import com.example.backend.Entity.Book;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper
 public interface BookMapper {
-    List<Book> findBookById(int id);
+    Book findBookById(int book_id);
     List<Book> getAllBooks();
     List<Book> findBookByAuthor(int author_id);
     List<Book> findBookByTag(String tag);

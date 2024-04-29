@@ -13,14 +13,29 @@
         select * from Favored_book where reader_id = #{ reader_id}
     </select>
 
+    <!--通过reader_id和book_id查找某一个favored_book，防止重复添加-->
+    <select id="findFavored_bookByReader_idAndBook_id" parameterType="java.lang.Integer" resultType="com.example.backend.Entity.Favored_book">
+        select * from Favored_book where reader_id = #{ reader_id} and book_id = #{ book_id }
+    </select>
+
+    <!--通过id查找某个favored_book-->
+    <select id="findFavored_bookById" parameterType="java.lang.Integer" resultType="com.example.backend.Entity.Favored_book">
+        select * from Favored_book where id = #{ id}
+    </select>
+
     <!--把书插入书架-->
     <insert id="insertBookIntoFavored_book" parameterType="com.example.backend.Entity.Favored_book">
-        insert into favored_book(book_id,reading_time,reading_progress,begin_time,end_time) values(#{book_id},#{reading_time},#{reading_progress},#{begin_time},#{end_time})
+        insert into favored_book(book_id,reading_time,reading_progress,begin_time,end_time,reader_id) values(#{book_id},#{reading_time},#{reading_progress},#{begin_time},#{end_time},#{reader_id})
     </insert>
 
     <!--删除书架的书-->
     <delete id="deleteFavored_book" parameterType="java.lang.Integer">
         delete from favored_book where id=#{id}
     </delete>
+
+    <!--更新书架信息（比如阅读时间、阅读进度）-->
+    <update id="updateFavored_book" parameterType="com.example.backend.Entity.Favored_book">
+        UPDATE favored_book SET reading_time = #{reading_time}, reading_progress = #{reading_progress}, begin_time = #{begin_time}, end_time = #{end_time} WHERE id = #{id}
+    </update>
 
 </mapper>
