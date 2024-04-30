@@ -19,6 +19,7 @@ CREATE TABLE `book` (
                         `tag` varchar(255) DEFAULT NULL COMMENT '标签',
                         `image` varchar(255) DEFAULT NULL COMMENT '存url',
                         `author_id` int  DEFAULT NULL COMMENT '作者id',
+                        `publish` bool DEFAULT FALSE COMMENT '是否上架',
                         PRIMARY KEY (`book_id`),
                         FOREIGN KEY (`author_id`) REFERENCES `user` (`open_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

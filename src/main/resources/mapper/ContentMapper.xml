@@ -6,4 +6,18 @@
     <select id="getContentByBook_id" parameterType="int" resultType="com.example.backend.Entity.Contents">
         select * from contents where book_id = #{book_id}
     </select>
+
+    <!--插入章节信息-->
+    <insert id="insertContent" parameterType="com.example.backend.Entity.Contents">
+        insert into contents(chapter,title,book_id,content_index_inBook) values(#{chapter},#{title},#{book_id},#{content_index_inBook})
+    </insert>
+
+    <select id="getContentByBook_idAndIndex_id" parameterType="int,int" resultType="com.example.backend.Entity.Contents">
+        select * from contents where book_id = #{book_id} And content_index_inBook = #{content_index_inBook}
+    </select>
+
+    <!-- 更新章节信息 -->
+    <update id="updateContent" parameterType="com.example.backend.Entity.Contents">
+        UPDATE contents SET chapter = #{chapter}, title = #{title} WHERE content_id = #{content_id}
+    </update>
 </mapper>

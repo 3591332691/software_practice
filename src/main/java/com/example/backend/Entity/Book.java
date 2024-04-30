@@ -13,4 +13,5 @@ public class Book {
     private String tag;
     private String image;
     private int author_id;
+    private boolean publish;
 }

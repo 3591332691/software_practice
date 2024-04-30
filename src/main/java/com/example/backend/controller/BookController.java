@@ -105,4 +105,37 @@ public class BookController {
         Gson gson = new Gson();
         return gson.toJson(books);
     }
+
+    @GetMapping("/BookPublish")
+    public String BookPublish(@RequestParam int book_id) throws Exception {
+        if(bookService.getBookById(book_id) == null) return "no book found";
+        else {//如果有这本书
+            Book book = bookService.getBookById(book_id);
+            //更新book的上架属性
+            book.setPublish(true);
+            bookService.updateBook(book);
+            return "上架成功";
+        }
+    }
+    @GetMapping("/BookPublishRemove")
+    public String BookPublishRemove(@RequestParam int book_id) throws Exception {
+        if(bookService.getBookById(book_id) == null) return "no book found";
+        else {//如果有这本书
+            Book book = bookService.getBookById(book_id);
+            //更新book的上架属性
+            book.setPublish(false);
+            bookService.updateBook(book);
+            return "下架成功";
+        }
+    }
+    @GetMapping("/EditBookInfo")
+    public String EditBookInfo(@RequestParam int book_id,@RequestParam String book_name,@RequestParam String brief_introduction,@RequestParam String tag) throws Exception {
+        Book book = bookService.getBookById(book_id);
+        if(book == null) return "no book found";
+        book.setBook_name(book_name);
+        book.setBrief_introduction(brief_introduction);
+        book.setTag(tag);
+        bookService.updateBook(book);
+        return "更新书籍信息成功";
+    }
 }
