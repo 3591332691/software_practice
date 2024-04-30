@@ -52,8 +52,8 @@ CREATE TABLE `contents` (
 -- 测试数据
 INSERT INTO  `user` values (1, 'Anna', 'null', null);
 INSERT INTO  `user` values (2, 'Mary', 'null', null);
-INSERT INTO  `book` values (1, 'test', 'test', 'test', 'test', 1);
-INSERT INTO  `book` values (2, '软件实践', 'test', '学习', 'test', 1);
-INSERT INTO  `book` values (3, '云原生', 'test', '学习', 'test', 1);
+INSERT INTO  `book` (book_id, book_name, brief_introduction, tag, author_id, publish) values (1, 'test', 'test', 'test', 1,false);
+INSERT INTO  `book` (book_id, book_name, brief_introduction, tag, author_id, publish)values (2, '软件实践', 'test', '学习',  1,false);
+INSERT INTO  `book` (book_id, book_name, brief_introduction, tag, author_id, publish)values (3, '云原生', 'test', '学习',  1,false);
 
 

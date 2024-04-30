@@ -19,6 +19,12 @@ public class FavoredBookController {
     @Autowired
     private FavoredBookService favoredBookService;
 
+    /**
+     *得到读者id的人的收藏的书
+     * @param reader_id 读者的open_id
+     * @return Favored_book的List
+     * @throws Exception
+     */
     @GetMapping("/GetFavoredBooks/Reader")
     public String GetFavoredBooksByReader(@RequestParam int reader_id) throws Exception{
         List<Favored_book> favored_books = favoredBookService.findFavoredBooksByReader(reader_id);
@@ -55,16 +61,16 @@ public class FavoredBookController {
         favored_book.setEnd_time(begin_time);
 
         boolean success = favoredBookService.insertFavoredBook(favored_book);
-        if(success) return "添加成功";
-        else return "添加失败";
+        if(success) return "add succeed";
+        else return "add false";
     }
 
     @GetMapping("/DeleteFavoredBook")
     public String DeleteFavoredBook(@RequestParam int favored_id) throws Exception{
         if(favoredBookService.deleteFavoredBook(favored_id)){
-            return "删除成功";
+            return "delete succeed";
         } else {
-            return "删除失败";
+            return "delete false";
         }
     }
 

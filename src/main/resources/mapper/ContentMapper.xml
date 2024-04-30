@@ -12,7 +12,7 @@
         insert into contents(chapter,title,book_id,content_index_inBook) values(#{chapter},#{title},#{book_id},#{content_index_inBook})
     </insert>
 
-    <select id="getContentByBook_idAndIndex_id" parameterType="int,int" resultType="com.example.backend.Entity.Contents">
+    <select id="getContentByBook_idAndIndex_id" parameterType="map" resultType="com.example.backend.Entity.Contents">
         select * from contents where book_id = #{book_id} And content_index_inBook = #{content_index_inBook}
     </select>
 

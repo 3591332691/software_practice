@@ -41,7 +41,7 @@ public class BookController {
 
         boolean success = bookService.addBook(book);
         if(success)
-            return "创建成功！";
+            return "create succeed";
         else
             return "创建失败";
     }
@@ -55,7 +55,7 @@ public class BookController {
     @GetMapping("/DeleteBook")
     public String deleteBook(@RequestParam int book_id) throws Exception {
         boolean success = bookService.deleteBook(book_id);
-        if(success) return "删除成功";
+        if(success) return "delete succeed";
         else return "删除失败";
     }
 
@@ -78,7 +78,7 @@ public class BookController {
             // 返回具体的错误信息给客户端
             return "更新书籍失败：" + e.getMessage();
         }
-        return "更新书籍成功";
+        return "update succeed";
     }
 
     @GetMapping("/GetBooksICreated")
@@ -114,7 +114,7 @@ public class BookController {
             //更新book的上架属性
             book.setPublish(true);
             bookService.updateBook(book);
-            return "上架成功";
+            return "Publish success";
         }
     }
     @GetMapping("/BookPublishRemove")
@@ -125,9 +125,11 @@ public class BookController {
             //更新book的上架属性
             book.setPublish(false);
             bookService.updateBook(book);
-            return "下架成功";
+            return "remove successfully";
         }
     }
+    //和前面的updateBook功能写重了
+    /*
     @GetMapping("/EditBookInfo")
     public String EditBookInfo(@RequestParam int book_id,@RequestParam String book_name,@RequestParam String brief_introduction,@RequestParam String tag) throws Exception {
         Book book = bookService.getBookById(book_id);
@@ -137,5 +139,5 @@ public class BookController {
         book.setTag(tag);
         bookService.updateBook(book);
         return "更新书籍信息成功";
-    }
+    }*/
 }

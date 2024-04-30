@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class ContentsController {
@@ -81,7 +83,10 @@ public class ContentsController {
     @GetMapping("/EditChapter")
     public String EditChapter(@RequestParam int book_id,@RequestParam int chapter_index, @RequestParam String title, @RequestParam String textContent) throws IOException {
         if(bookMapper.findBookById(book_id)==null) {return "Book not found";}
-        Contents contents = contentMapper.getContentByBook_idAndIndex_id(book_id, chapter_index);
+        Map<String, Object> params = new HashMap<>();
+        params.put("bookId", book_id);
+        params.put("contentIndexInBook", chapter_index);
+        Contents contents = contentMapper.getContentByBook_idAndIndex_id(params);
         if (contents!=null) {
             return "chapter no found";
         }
