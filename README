@@ -17,11 +17,5 @@ server:
 3. 业务就写在src/main/java/com/example/backend/service 和src/main/java/com/example/backend/controller
     下，其中controller是更接近于前端交互的接口，service是逻辑实现，例子可见LogInController和LogInService。
     LogInController的接口调用了LogInService的一个函数。
-4. 接口测试就大家自己测试
-5. 大家git pull或者git clone要指定一下分支名字
-    免得拉下来test分支
-6. 大家 git push的时候要push到自己的分支上：
-    首先修改本地分支名
-    然后再git push origin 新分支名
-    （这样他就能直接创建并push到你的分支上了，y的分支名字暂时叫backend-y）
-7. 可以在自己分支上打打finish-tag，然后尝试合并一下分支
+4. 自行进行基础的接口测试
+5. 可以在自己分支上打打finish-tag，然后尝试合并一下分支
