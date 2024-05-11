@@ -16,14 +16,50 @@
     }, {
       "path": "pages/user/index",
       "style": {
-        "navigationBarTitleText": "",
+        "navigationBarTitleText": "我的",
         "enablePullDownRefresh": false
       }
-
-    }, {
+    }, 
+	
+	{
+		"path": "pages/user/components/info",
+		"style": {
+			"navigationBarTitleText": "我的信息",
+			"enablePullDownRefresh": false
+		}
+	},
+	{
+		"path": "pages/user/components/changInfo",
+		"style": {
+			"navigationBarTitleText": "修改信息"
+		}
+	},
+	{
+		"path": "pages/user/components/bookshelf",
+		"style": {
+			"navigationBarTitleText": "我的书架"
+		}
+	},
+	{
+		"path" : "pages/user/components/publish",
+		"style" : 
+		{
+			"navigationBarTitleText" : "我的发表",
+			"enablePullDownRefresh" : false
+		}
+	},
+	{
+		"path" : "pages/publishBook/publishBook",
+		"style" : 
+		{
+			"navigationBarTitleText" : "发布上传",
+			"enablePullDownRefresh" : false
+		}
+	},
+	{
       "path": "pages/search/index",
       "style": {
-        "navigationBarTitleText": "",
+        "navigationBarTitleText": "搜索",
         "enablePullDownRefresh": false
       }
 
@@ -37,31 +73,37 @@
     }
   ],
   "tabBar": {
-    "color": "#535353",
-    "selectedColor": "#1296db",
+    // "color": "#535353",
+    "selectedColor": "#61ba8b",
     "borderStyle": "white",
-    "list": [{
+    "list": [
+		{
       "pagePath": "pages/index/index",
-      "iconPath": "static/images/home.png",
-      "selectedIconPath": "static/images/home_selected.png",
+      "iconPath": "static/assets/icon/home.png",
+      "selectedIconPath": "static/assets/icon/homeSelected.png",
       "text": "首页"
-    }, {
+    }, 
+	{
       "pagePath": "pages/bookshelf/index",
-      "iconPath": "static/images/book1.png",
-      "selectedIconPath": "static/images/book1_selected.png",
+      "iconPath": "static/assets/icon/shuben.png",
+      "selectedIconPath": "static/assets/icon/shuselected.png",
       "text": "书架"
-    }, {
+    }, 
+	{
       "pagePath": "pages/user/index",
-      "iconPath": "static/images/self.png",
-      "selectedIconPath": "static/images/self_selected.png",
+      "iconPath": "static/assets/icon/yonghu.png",
+      "selectedIconPath": "static/assets/icon/yonghuSelected.png",
       "text": "我的"
-    }]
+    }
+	]
   },
   "globalStyle": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+	"navigationBarBackgroundColor": "#61ba8b",
+	"backgroundColor": "#61ba8b"
+    // "navigationBarBackgroundColor": "#F8F8F8",
+    // "backgroundColor": "#F8F8F8"
   },
   "uniIdRouter": {}
 }

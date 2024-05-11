@@ -2,7 +2,7 @@
   <view class="content">
     <!-- 顶端状态栏 -->
     <navbar :isHome="true" />
-
+	
     <!-- 公告栏 -->
     <view :style="'margin-top:' + navbar_height + 'rpx;'">
       <view class="weui-cell" style="background:#fff9eb;">

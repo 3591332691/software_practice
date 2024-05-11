@@ -1,6 +1,6 @@
 <template>
   <!-- 顶部区域 -->
-  <view class="header">{{book.title}}免费在线阅读</view>
+  <!-- <view class="header">{{book.title}}免费在线阅读</view> -->
 
   <!-- 小说区域 -->
   <view class="books">
@@ -19,13 +19,13 @@
         </view>
       </view>
     </view>
-
-    <view class="read_link">
-      <view class="button">
-        <button type="primary">加入书架</button>
-        <button type="primary" style="margin-left: 2%;">开始阅读</button>
-      </view>
-    </view>
+	
+	<view class="read_link">
+	      <view class="button">
+	        <button >加入书架</button>
+	        <button style="margin-left: 2%;">开始阅读</button>
+	      </view>
+	    </view>
 
     <view class="book_about">
       <view class="dt">内容简介</view>
@@ -33,7 +33,7 @@
     </view>
 
     <view class="book_last">
-      <view class="dt">{{book.title}}免费在线阅读</view>
+      <view class="dt">目录</view>
       <view v-for="(item,index) in book.content" :key="index">
         <view class="book_last_dd">{{item.title}}</view>
       </view>
@@ -81,7 +81,7 @@
 </script>
 
 <style>
-  .header {
+  /* .header {
     height: 90rpx;
     line-height: 90rpx;
     text-align: center;
@@ -93,12 +93,12 @@
     border-top: 1px #8ec5d9 solid;
     position: relative;
     overflow: hidden;
-  }
+  } */
 
   .dt {
-    background: #68AAC2;
+    /* background: #61ba8b; */
     line-height: 80rpx;
-    color: #fff;
+    /* color: #888; */
     padding-left: 20rpx;
     border-bottom: 2rpx solid #EEE;
   }
@@ -109,10 +109,13 @@
   }
 
   .book_info {
-    margin: 20rpx;
     display: block;
     position: relative;
     overflow: hidden;
+	border: 1rpx solid #efefef;
+	border-radius: 8rpx;
+	margin: 15rpx;
+	box-shadow: 1rpx 1rpx 15rpx #ddd;
   }
 
   .book_info .cover {
@@ -146,6 +149,7 @@
     margin: 0 20rpx;
     xpadding: 0 20rpx;
     border-bottom: 2rpx solid #EEE;
+	color: #888;
     font-size: 28rpx;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -170,6 +174,8 @@
     margin-top: 10rpx;
     margin-bottom: 10rpx;
     width: 47%;
+	color: #fff;
+	background-color: #61ba8b;
     text-align: center;
   }
 </style>
