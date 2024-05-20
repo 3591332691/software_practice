@@ -17,6 +17,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -34,10 +35,10 @@ public class SearchControllerTests {
     @Autowired
     private MockMvc mockMvc;
 
-    @Mock
+    @MockBean
     private UserService userService;
 
-    @Mock
+    @MockBean
     private BookService bookService;
 
     @InjectMocks
@@ -49,7 +50,7 @@ public class SearchControllerTests {
     }
 
     @Test
-    public void testSearchBookByName() throws Exception {
+    public void testSearchBookByName0() throws Exception {
         List<Book> books = new ArrayList<>();
         // 添加测试数据
         Book book1 = new Book();
@@ -71,7 +72,23 @@ public class SearchControllerTests {
     }
 
     @Test
-    public void testSearchBookByTag() throws Exception {
+    public void testSearchBookByName1() throws Exception {
+        List<Book> books = new ArrayList<>();
+        //设置返回为空
+        when(bookService.searchBooksByName("Book 1")).thenReturn(books);
+
+        String expectedResponse = "";
+        MvcResult mvcResult =mockMvc.perform(MockMvcRequestBuilders.get("/SearchBookByName")
+                        .param("name", "Book 1"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+        String mvcResult_s = mvcResult.getResponse().getContentAsString();
+
+        Assertions.assertEquals("no books found",mvcResult_s);
+    }
+
+    @Test
+    public void testSearchBookByTag0() throws Exception {
         List<Book> books = new ArrayList<>();
         // 添加测试数据
         Book book1 = new Book();
@@ -93,7 +110,21 @@ public class SearchControllerTests {
     }
 
     @Test
-    public void testSearchUserByName() throws Exception {
+    public void testSearchBookByTag1() throws Exception {
+        List<Book> books = new ArrayList<>();
+        when(bookService.searchBooksByTag("tag")).thenReturn(books);
+
+        String expectedResponse = "";
+        MvcResult mvcResult =mockMvc.perform(MockMvcRequestBuilders.get("/SearchBookByTag")
+                        .param("tag", "tag"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+        String mvcResult_s = mvcResult.getResponse().getContentAsString();
+        Assertions.assertEquals("no books found",mvcResult_s);
+    }
+
+    @Test
+    public void testSearchUserByName0() throws Exception {
         List<User> users = new ArrayList<>();
         // 添加测试数据
         User user1 = new User();
@@ -112,6 +143,22 @@ public class SearchControllerTests {
         Gson gson = new Gson();
         String result = gson.toJson(users);
         Assertions.assertEquals(result,mvcResult_s);
+
+    }
+
+
+    @Test
+    public void testSearchUserByName1() throws Exception {
+        List<User> users = new ArrayList<>();
+        when(userService.findUserByName("User 1")).thenReturn(users);
+
+        String expectedResponse = "";
+        MvcResult mvcResult =mockMvc.perform(MockMvcRequestBuilders.get("/SearchUserByName")
+                        .param("name", "User 1"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
+        String mvcResult_s = mvcResult.getResponse().getContentAsString();
+        Assertions.assertEquals("no users found",mvcResult_s);
 
     }
 }
