@@ -6,10 +6,7 @@ import com.example.backend.mapper.ContentMapper;
 import com.example.backend.service.ContentService;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -51,13 +48,15 @@ public class ContentsController {
     }
 
     /**
-     * 发布新章节
-     * @param book_id
-     * @param textContent 章节内容
+     * 创建书籍
+     * @param chapterData
      * @return
      */
-    @GetMapping("/AddNewChapter")
-    public String AddNewChapter(@RequestParam int book_id, @RequestParam String title, @RequestParam String textContent) throws IOException {
+    @PostMapping("/AddNewChapter")
+    public String AddNewChapter(@RequestBody Map<String, Object> chapterData) throws IOException {
+        int book_id = (Integer)chapterData.get("book_id");
+        String title = (String) chapterData.get("title");
+        String textContent = (String) chapterData.get("textContent");
         if(bookMapper.findBookById(book_id)==null) {
             return "Book not found";
         }
@@ -73,15 +72,19 @@ public class ContentsController {
         }
         contents.setContent_index_inBook(content_index_inBook);
         //把txtContent转成url
-        String url = contentService.textToUrl(textContent);
-        contents.setChapter(url);
+        //String url = contentService.textToUrl(textContent);
+        contents.setChapter(textContent);
         //
         contentMapper.insertContent(contents);
         return "Add chapter successfully";
     }
 
-    @GetMapping("/EditChapter")
-    public String EditChapter(@RequestParam int book_id,@RequestParam int chapter_index, @RequestParam String title, @RequestParam String textContent) throws IOException {
+    @PostMapping("/EditChapter")
+    public String EditChapter(@RequestBody Map<String, Object> chapterData) throws IOException {
+        int chapter_index = (Integer) chapterData.get("chapter_index");
+        int book_id = (Integer)chapterData.get("book_id");
+        String title = (String) chapterData.get("title");
+        String textContent = (String) chapterData.get("textContent");
         if(bookMapper.findBookById(book_id)==null) {return "Book not found";}
         Map<String, Object> params = new HashMap<>();
         params.put("bookId", book_id);
