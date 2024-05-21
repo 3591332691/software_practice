@@ -28,8 +28,7 @@ public class ContentService {
         for (Contents contents : all_chapters) {
             if (contents.content_index_inBook==chapter_id){
                 String url = contents.chapter;
-                output = getTextFromUrl(url);
-                break;
+                return url;
             }
         }
         return output;
