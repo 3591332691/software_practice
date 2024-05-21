@@ -37,8 +37,8 @@ public class UserController {
         user.setNews("");
 
         if(userService.addUser(user))
-            return "添加用户成功";
-        else return "用户已存在";
+            return "Add user successfully";
+        else return "Fail to add user";
     }
     /*
    "open_id":2,
@@ -55,7 +55,7 @@ public class UserController {
         try {
             User user = userService.getUserById(open_id);
             if (user == null) {
-                return "用户不存在，无法更新";
+                return "Fail to update user";
             }
             user.setName(name);
             user.setImage(image);
@@ -63,18 +63,18 @@ public class UserController {
             userService.updateUser(user);
         } catch (Exception e) {
             // 返回具体的错误信息给客户端
-            return "更新用户失败：" + e.getMessage();
+            return "Fail to update user:" + e.getMessage();
         }
-        return "更新成功";
+        return "Update user successfully";
 
     }
 
     @GetMapping("/DeleteUser")
     public String DeleteUser(@RequestParam int open_id) throws Exception {
         boolean result = userService.deleteUser(open_id);
-        if (result) return "删除成功";
+        if (result) return "Delete user successfully";
         else {
-            return "删除失败";
+            return "Fail to delete user";
         }
     }
 

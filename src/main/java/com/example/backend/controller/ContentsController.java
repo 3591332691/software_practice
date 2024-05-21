@@ -77,7 +77,7 @@ public class ContentsController {
         contents.setChapter(url);
         //
         contentMapper.insertContent(contents);
-        return "发布新章节成功";
+        return "Add chapter successfully";
     }
 
     @GetMapping("/EditChapter")
@@ -87,15 +87,15 @@ public class ContentsController {
         params.put("bookId", book_id);
         params.put("contentIndexInBook", chapter_index);
         Contents contents = contentMapper.getContentByBook_idAndIndex_id(params);
-        if (contents!=null) {
-            return "chapter no found";
+        if (contents == null) {
+            return "chapter not found";
         }
         else{
             contents.setTitle(title);
             String url = contentService.textToUrl(textContent);
             contents.setChapter(url);
             contentMapper.updateContent(contents);
-            return "修改章节成功！";
+            return "Modify chapter successfully";
         }
 
     }
