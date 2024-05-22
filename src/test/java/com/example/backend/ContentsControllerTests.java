@@ -6,6 +6,7 @@ import com.example.backend.controller.ContentsController;
 import com.example.backend.mapper.BookMapper;
 import com.example.backend.mapper.ContentMapper;
 import com.example.backend.service.ContentService;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -130,15 +131,23 @@ public class ContentsControllerTests {
         String textContent = "Chapter content";
         String expectedResult = "Add chapter successfully";
 
+        // 创建包含请求体数据的Map对象
+        Map<String, Object> chapterData = new HashMap<>();
+        chapterData.put("book_id", bookId);
+        chapterData.put("title", title);
+        chapterData.put("textContent", textContent);
+
+        // 将Map对象转换为JSON字符串
+        ObjectMapper objectMapper = new ObjectMapper();
+        String requestBody = objectMapper.writeValueAsString(chapterData);
+
         when(bookMapper.findBookById(bookId)).thenReturn(new Book());
         when(contentMapper.getContentByBook_id(bookId)).thenReturn(new ArrayList<>());
-        when(contentService.textToUrl(textContent)).thenReturn("chapter-url");
+        // when(contentService.textToUrl(textContent)).thenReturn("chapter-url");
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/AddNewChapter")
-                        .param("book_id", String.valueOf(bookId))
-                        .param("title", title)
-                        .param("textContent", textContent)
-                        .contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(MockMvcRequestBuilders.post("/AddNewChapter")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(requestBody))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(expectedResult));
     }
@@ -150,14 +159,22 @@ public class ContentsControllerTests {
         String textContent = "Chapter content";
         String expectedResult = "Book not found";
 
+        // 创建包含请求体数据的Map对象
+        Map<String, Object> chapterData = new HashMap<>();
+        chapterData.put("book_id", bookId);
+        chapterData.put("title", title);
+        chapterData.put("textContent", textContent);
+
+        // 将Map对象转换为JSON字符串
+        ObjectMapper objectMapper = new ObjectMapper();
+        String requestBody = objectMapper.writeValueAsString(chapterData);
+
         // 模拟书籍不存在的情况
         when(bookMapper.findBookById(bookId)).thenReturn(null);
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/AddNewChapter")
-                        .param("book_id", String.valueOf(bookId))
-                        .param("title", title)
-                        .param("textContent", textContent)
-                        .contentType(MediaType.APPLICATION_JSON))
+        mockMvc.perform(MockMvcRequestBuilders.post("/AddNewChapter")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(requestBody))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(expectedResult));
     }
@@ -178,16 +195,25 @@ public class ContentsControllerTests {
         existingContent.setContent_id(chapterIndex);
         existingContent.setTitle("chapter title");
 
+        // 创建包含请求体数据的Map对象
+        Map<String, Object> chapterData = new HashMap<>();
+        chapterData.put("chapter_index", chapterIndex);
+        chapterData.put("book_id", bookId);
+        chapterData.put("title", title);
+        chapterData.put("textContent", textContent);
+
+        // 将Map对象转换为JSON字符串
+        ObjectMapper objectMapper = new ObjectMapper();
+        String requestBody = objectMapper.writeValueAsString(chapterData);
+
         when(bookMapper.findBookById(bookId)).thenReturn(new Book());
         when(contentMapper.getContentByBook_idAndIndex_id(params)).thenReturn(existingContent);
-        when(contentService.textToUrl(textContent)).thenReturn("updated-chapter-url");
+        //when(contentService.textToUrl(textContent)).thenReturn("updated-chapter-url");
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/EditChapter")
-                        .param("book_id", String.valueOf(bookId))
-                        .param("chapter_index", String.valueOf(chapterIndex))
-                        .param("title", title)
-                        .param("textContent", textContent)
-                        .contentType(MediaType.APPLICATION_JSON))
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/EditChapter")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(requestBody))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(expectedResult));
     }
@@ -204,15 +230,23 @@ public class ContentsControllerTests {
         params.put("bookId", bookId);
         params.put("contentIndexInBook", chapterIndex);
 
+        // 创建包含请求体数据的Map对象
+        Map<String, Object> chapterData = new HashMap<>();
+        chapterData.put("chapter_index", chapterIndex);
+        chapterData.put("book_id", bookId);
+        chapterData.put("title", title);
+        chapterData.put("textContent", textContent);
+
         when(bookMapper.findBookById(bookId)).thenReturn(new Book());
         when(contentMapper.getContentByBook_idAndIndex_id(params)).thenReturn(null);
-        
-        mockMvc.perform(MockMvcRequestBuilders.get("/EditChapter")
-                        .param("book_id", String.valueOf(bookId))
-                        .param("chapter_index", String.valueOf(chapterIndex))
-                        .param("title", title)
-                        .param("textContent", textContent)
-                        .contentType(MediaType.APPLICATION_JSON))
+
+        // 将Map对象转换为JSON字符串
+        ObjectMapper objectMapper = new ObjectMapper();
+        String requestBody = objectMapper.writeValueAsString(chapterData);
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/EditChapter")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(requestBody))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string(expectedResult));
     }
