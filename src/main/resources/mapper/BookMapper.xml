@@ -30,7 +30,7 @@
 
     <!--插入书籍信息-->
     <insert id="insertBook" parameterType="com.example.backend.Entity.Book">
-        insert into book(book_name,brief_introduction,tag,author_id) values(#{book_name},#{brief_introduction},#{tag},#{author_id})
+        insert into book(book_name,brief_introduction,tag,author_id, image) values(#{book_name},#{brief_introduction},#{tag},#{author_id}, #{image})
     </insert>
 
     <!--删除书籍信息-->
@@ -40,6 +40,6 @@
 
     <!-- 更新书籍信息 -->
     <update id="updateBook" parameterType="com.example.backend.Entity.Book">
-        UPDATE book SET book_name = #{book_name}, brief_introduction = #{brief_introduction}, publish = #{publish} WHERE book_id = #{book_id}
+        UPDATE book SET book_name = #{book_name}, brief_introduction = #{brief_introduction}, publish = #{publish}, image = #{image} WHERE book_id = #{book_id}
     </update>
 </mapper>
