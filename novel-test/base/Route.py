@@ -1,0 +1,6 @@
+IndexPage_route = "/pages/index/index"
+BookShelfPage_route = "/pages/bookshelf/index"
+UserPage_route = "/pages/user/index"
+PublishBookPage_route = "/pages/publishBook/publishBook"
+SearchPage_route = "/pages/search/index"
+BookDetailPage_route = "/pages/book-detail/index"

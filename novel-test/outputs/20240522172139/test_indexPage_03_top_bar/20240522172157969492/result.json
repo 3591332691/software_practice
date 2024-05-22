@@ -1,0 +1,115 @@
+{
+    "case_name": "test_indexPage_03_top_bar",
+    "run_time": "20240522 17:21:57",
+    "test_type": "IndexPageTest",
+    "case_doc": "case3:\u68c0\u67e5\u9996\u9875\u9876\u90e8\u72b6\u6001\u680f\u7684\u6587\u5b57\u662f\u5426\u6b63\u786e\u663e\u793a\n",
+    "success": true,
+    "failures": "",
+    "errors": "",
+    "start_timestamp": 1716369718.2876673,
+    "is_failure": false,
+    "is_error": false,
+    "module": "C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.\u836f\u5b66.\u5927\u56db\u4e0b.7 \u8f6f\u4ef6\u5b9e\u8df5.novel.novel-test.pageTest.IndexPage_test",
+    "package": "pageTest",
+    "failed_line_num": -1,
+    "device": {
+        "system_info": {
+            "batteryLevel": 95,
+            "benchmarkLevel": -1,
+            "brand": "devtools",
+            "memorySize": 2048,
+            "model": "iPhone 6/7/8",
+            "system": "iOS 10.0.1",
+            "platform": "devtools",
+            "pixelRatio": 2,
+            "safeArea": {
+                "top": 20,
+                "left": 0,
+                "right": 375,
+                "bottom": 667,
+                "width": 375,
+                "height": 647
+            },
+            "screenWidth": 375,
+            "screenHeight": 667,
+            "screenTop": 48,
+            "windowWidth": 375,
+            "windowHeight": 619,
+            "statusBarHeight": 20,
+            "version": "8.0.5",
+            "language": "zh_CN",
+            "SDKVersion": "2.25.3",
+            "enableDebug": false,
+            "fontSizeScaleFactor": 0.85,
+            "fontSizeSetting": 15,
+            "mode": "default",
+            "host": {
+                "env": "WeChat"
+            },
+            "bluetoothEnabled": true,
+            "locationEnabled": true,
+            "wifiEnabled": true,
+            "locationReducedAccuracy": true,
+            "albumAuthorized": true,
+            "bluetoothAuthorized": true,
+            "cameraAuthorized": true,
+            "locationAuthorized": true,
+            "microphoneAuthorized": true,
+            "notificationAuthorized": true,
+            "notificationAlertAuthorized": true,
+            "notificationBadgeAuthorized": true,
+            "notificationSoundAuthorized": true,
+            "phoneCalendarAuthorized": true,
+            "deviceOrientation": "portrait",
+            "devicePixelRatio": 2
+        }
+    },
+    "log_filename": "run.log",
+    "error_type": "",
+    "error_value": "",
+    "error_stages": [],
+    "screen_info": [
+        {
+            "name": "setup",
+            "url": "/pages/index/index",
+            "path": "images\\setup.png",
+            "ts": 1716369718,
+            "datetime": "2024-05-22 17:21:58",
+            "use_region": false
+        },
+        {
+            "name": "teardown",
+            "url": "/pages/index/index",
+            "path": "images\\teardown.png",
+            "ts": 1716369718,
+            "datetime": "2024-05-22 17:21:58",
+            "use_region": false
+        }
+    ],
+    "step_info": [],
+    "check_list": [],
+    "assert_list": [
+        {
+            "name": "assertTexts",
+            "ret": true,
+            "msg": null
+        }
+    ],
+    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+    "weapp_log_path": "weapp.log",
+    "request_log_path": "request.log",
+    "stop_timestamp": 1716369718.619506,
+    "appId": "",
+    "appName": "",
+    "source": {
+        "code": [
+            "    def test_indexPage_03_top_bar(self):\n",
+            "        \"\"\"\n",
+            "        case3:\u68c0\u67e5\u9996\u9875\u9876\u90e8\u72b6\u6001\u680f\u7684\u6587\u5b57\u662f\u5426\u6b63\u786e\u663e\u793a\n",
+            "        \"\"\"\n",
+            "        self.assertTexts([\"\u9605\u8bfb\u5e73\u53f0\", \"\u627e\u5c0f\u8bf4\"], \"text\")\n"
+        ],
+        "start": 30
+    },
+    "filename": "result.json"
+}

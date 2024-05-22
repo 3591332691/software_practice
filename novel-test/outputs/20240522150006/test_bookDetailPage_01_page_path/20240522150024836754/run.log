@@ -1,0 +1,80 @@
+[I 2024-05-22 15:00:24,838 minium minitest#416 _miniSetUp] =========Current case: test_bookDetailPage_01_page_path=========
+[I 2024-05-22 15:00:24,839 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.case.BookDetailPage_test, case info: BookDetailPageTest.test_bookDetailPage_01_page_path
+[I 2024-05-22 15:00:24,840 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-22 15:00:24,840 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[I 2024-05-22 15:00:24,841 minium basenative#59 wrapper] call BaseNative.back_to_miniprogram
+[I 2024-05-22 15:00:24,842 minium basenative#767 back_to_miniprogram] try back_to_miniprogram 3
+[I 2024-05-22 15:00:24,842 minium basenative#63 wrapper] call BaseNative.back_to_miniprogram end 
+[D 2024-05-22 15:00:24,843 minium.Conn4688 connection#417 _safely_send] ASYNC_SEND > [2068124334688]{"id":"2f31f4c7-0d02-4685-beeb-d58935f7affd","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-22 15:00:24,846 minium.Conn4688 connection#650 __on_message] RECV < [2068124334688]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-22 15:00:24,849 minium.Conn4688 connection#650 __on_message] RECV < [2068124334688]{"id":"2f31f4c7-0d02-4685-beeb-d58935f7affd","result":{"result":{"errMsg":"switchTab:ok"}}}
+[I 2024-05-22 15:00:24,849 minium.Conn4688 connection#694 _handle_async_msg] received async msg: 2f31f4c7-0d02-4685-beeb-d58935f7affd
+[D 2024-05-22 15:00:24,850 minium.Conn4688 connection#417 _safely_send] SEND > [2068124334688]{"id":"4f65433c-73e9-4b29-a9d9-552be982d419","method":"App.getCurrentPage","params":{}}
+[D 2024-05-22 15:00:24,852 minium.Conn4688 connection#650 __on_message] RECV < [2068124334688]{"id":"4f65433c-73e9-4b29-a9d9-552be982d419","result":{"pageId":2,"path":"pages/index/index","query":{}}}
+[D 2024-05-22 15:00:24,853 minium.App2384 app#583 _evaluate_js] evaluate js file getCurrentPages [ALL]
+[D 2024-05-22 15:00:24,854 minium.Conn4688 connection#417 _safely_send] SEND > [2068124334688]{"id":"96beaea8-a419-4d42-98a9-305041a790fc","method":"App.callFunction","params":{"functionDeclaration":"function miniumGetCurrentPages(e){var r=getCurrentPages();return e&&(r=[r.pop()]),r=r.map((function(e){if(e){let{route:r}=e;const n=r.indexOf(\"__plugin__/\");return n>-1&&(r=\"plugin-private://\"+r.slice(n+11)),{pageId:e.__wxWebviewId__,path:r,query:e.options,renderer:e.renderer}}})),e?r.pop():r}","args":[true]}}
+[D 2024-05-22 15:00:24,857 minium.Conn4688 connection#650 __on_message] RECV < [2068124334688]{"id":"96beaea8-a419-4d42-98a9-305041a790fc","result":{"result":{"pageId":2,"path":"pages/index/index","query":{},"renderer":"webview"}}}
+[I 2024-05-22 15:00:24,858 minium minitest#819 capture] capture setup.png
+[D 2024-05-22 15:00:24,858 minium.Conn4688 connection#417 _safely_send] SEND > [2068124334688]{"id":"774da529-5771-4d36-9fad-242da7160fb5","method":"App.captureScreenshot","params":{}}
+[D 2024-05-22 15:00:25,120 minium.Conn4688 connection#650 __on_message] RECV < [2068124334688]{"id":"774da529-5771-4d36-9fad-242da7160fb5","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvWewHld65/ecczqnN4cbgYsMAgRAgGE4kTOaoDBKO0rrXa92pd1VyZKqtOWyyyXbJcuusnfLH7wue7e2LLtkVVmylVZhNNJwNDOkhnmGJEgi55vDm9+3c/cJ/tDAxeUFQAAEyEuA/St8eNHd5/TT53b/+znPec5p9M++9T9DTk5OTs6Hy77yFN5qG3JycnI+puT6m5OTk7M15Pqbk5OTszXk+puTk5OzNUhbbUBOTk7OQ47q8exHbL3L5c3935ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cn
+[I 2024-05-22 15:00:25,124 minium minitest#471 _miniSetUp] =========case: test_bookDetailPage_01_page_path start=========
+[I 2024-05-22 15:00:25,125 minium minitest#703 _callTestMethod] call test method
+[E 2024-05-22 15:00:25,220 minium assertbase#60 hook_assert] '/pages/index/index' != 'pages/book-detail/index'
+- /pages/index/index
++ pages/book-detail/index
+
+[E 2024-05-22 15:00:25,221 minium assertbase#60 hook_assert] '/pages/index/index' != 'pages/book-detail/index'
+- /pages/index/index
++ pages/book-detail/index
+
+[E 2024-05-22 15:00:25,222 minium minitest#708 _callTestMethod] test exception
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\case\BookDetailPage_test.py", line 25, in test_bookDetailPage_01_page_path
+    self.bookDetailPage.check_bookDetailPage_path()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\case\pages\BookDetailPage.py", line 28, in check_bookDetailPage_path
+    self.mini.assertEqual(self.current_path(), Route.BookDetailPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\assertbase.py", line 58, in hook_assert
+    return src(self, *args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\unittest\case.py", line 845, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\assertbase.py", line 58, in hook_assert
+    return src(self, *args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\unittest\case.py", line 1226, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "E:\zfy\anaconda3\envs\minium\lib\unittest\case.py", line 675, in fail
+    raise self.failureException(msg)
+AssertionError: '/pages/index/index' != 'pages/book-detail/index'
+- /pages/index/index
++ pages/book-detail/index
+
+[I 2024-05-22 15:00:25,226 minium minitest#711 _callTestMethod] end test method
+[D 2024-05-22 15:00:25,227 minium minitest#714 _miniTearDown] =========Current case Down: test_bookDetailPage_01_page_path=========
+[I 2024-05-22 15:00:25,228 minium minitest#819 capture] capture teardown.png
+[D 2024-05-22 15:00:25,229 minium.Conn4688 connection#417 _safely_send] SEND > [2068124334688]{"id":"96099190-2e4d-4c92-aa32-0f251a83b4a0","method":"App.captureScreenshot","params":{}}
+[D 2024-05-22 15:00:25,487 minium.Conn4688 connection#650 __on_message] RECV < [2068124334688]{"id":"96099190-2e4d-4c92-aa32-0f251a83b4a0","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGeIQmSyPnl8Mu/X+fuG/xHA4+PDwABECAeCfan+AfY4fb53df97XPPOfc2+qff+l8hJycnJ+f+sq88hbfahpycnJyPKbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkb
+[I 2024-05-22 15:00:25,491 minium basenative#59 wrapper] call BaseNative.get_start_up
+[I 2024-05-22 15:00:25,492 minium basenative#63 wrapper] call BaseNative.get_start_up end 
+[E 2024-05-22 15:00:25,497 minium assertbase#351 _get_stack_info] <bound method BookDetailPageTest.test_bookDetailPage_01_page_path of <case.BookDetailPage_test.BookDetailPageTest testMethod=test_bookDetailPage_01_page_path>>
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 266, in testPartExecutor
+    yield
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 351, in run
+    self._callTestMethod(testMethod)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\case\BookDetailPage_test.py", line 25, in test_bookDetailPage_01_page_path
+    self.bookDetailPage.check_bookDetailPage_path()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\case\pages\BookDetailPage.py", line 28, in check_bookDetailPage_path
+    self.mini.assertEqual(self.current_path(), Route.BookDetailPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\assertbase.py", line 58, in hook_assert
+    return src(self, *args, **kwargs)
+AssertionError: '/pages/index/index' != 'pages/book-detail/index'
+- /pages/index/index
++ pages/book-detail/index
+
+[W 2024-05-22 15:00:25,500 minium assertbase#333 _log_info_when_error] config: {'debug': False, 'base_dir': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test', 'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'auto_capture': 'auto', 'check_mp_foreground': True, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs', 'enable_app_log': False, 'enable_network_panel': False, 'project_path': 'C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin', 'dev_tool_path': 'D:/小程序/微信web开发者工具/cli.bat', 'test_port': 9420, 'mock_native_modal': {}, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'teardown_snapshot': False, 'mock_images_dir': '', 'mock_images': {}, 'need_perf': False, 'appid': None, 'enable_h5': True, 'assert_capture': False, 'framework_capture': True, 'error_capture': False, 'create_time': '20240522150006', 'case_output': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs\\20240522150006\\test_bookDetailPage_01_page_path\\20240522150024836754'}
+[W 2024-05-22 15:00:25,501 minium assertbase#334 _log_info_when_error] build info: {'version': '1.5.4', 'revision': 'd0e4ae555098cbedc3c3d5dd383806e1d5aebe34', 'branch': 'master', 'update_at': '2024-04-22 21:01:28'}
+[W 2024-05-22 15:00:25,502 minium minitest#951 _log_info_when_error] mini: 基础库2.25.3, 开发者工具1.06.2402040
+[W 2024-05-22 15:00:25,502 minium minitest#953 _log_info_when_error] native: <minium.native.wx_native.idenative.IdeNative object at 0x000001E185D0DD80>

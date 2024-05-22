@@ -1,0 +1,16 @@
+{
+    "pkg_list": [
+        {
+            "case_list": [
+                "test_*"
+            ],
+            "pkg": "pageTest.*_test"
+        },
+        {
+            "case_list": [
+                "test_*"
+            ],
+            "pkg": "caseTest.*_test"
+        }
+    ]
+}

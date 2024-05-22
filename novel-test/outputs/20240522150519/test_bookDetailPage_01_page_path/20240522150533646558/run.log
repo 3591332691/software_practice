@@ -1,0 +1,78 @@
+[I 2024-05-22 15:05:33,648 minium minitest#416 _miniSetUp] =========Current case: test_bookDetailPage_01_page_path=========
+[I 2024-05-22 15:05:33,649 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.case.BookDetailPage_test, case info: BookDetailPageTest.test_bookDetailPage_01_page_path
+[I 2024-05-22 15:05:33,651 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-22 15:05:33,652 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[I 2024-05-22 15:05:33,653 minium basenative#59 wrapper] call BaseNative.back_to_miniprogram
+[I 2024-05-22 15:05:33,654 minium basenative#767 back_to_miniprogram] try back_to_miniprogram 3
+[I 2024-05-22 15:05:33,655 minium basenative#63 wrapper] call BaseNative.back_to_miniprogram end 
+[D 2024-05-22 15:05:33,656 minium.Conn4368 connection#417 _safely_send] ASYNC_SEND > [2083146234368]{"id":"37bc65f0-8f56-4b20-a08f-01e4a1a78180","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-22 15:05:33,658 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-22 15:05:33,664 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"37bc65f0-8f56-4b20-a08f-01e4a1a78180","result":{"result":{"errMsg":"switchTab:ok"}}}
+[I 2024-05-22 15:05:33,665 minium.Conn4368 connection#694 _handle_async_msg] received async msg: 37bc65f0-8f56-4b20-a08f-01e4a1a78180
+[D 2024-05-22 15:05:33,667 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"4ef763c6-d00a-4b7d-b81f-6e504829fb39","method":"App.getCurrentPage","params":{}}
+[D 2024-05-22 15:05:33,669 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"4ef763c6-d00a-4b7d-b81f-6e504829fb39","result":{"pageId":2,"path":"pages/index/index","query":{}}}
+[D 2024-05-22 15:05:33,670 minium.App2064 app#583 _evaluate_js] evaluate js file getCurrentPages [ALL]
+[D 2024-05-22 15:05:33,671 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"47a16351-7ccb-4936-9cd3-de2e47a0cb6b","method":"App.callFunction","params":{"functionDeclaration":"function miniumGetCurrentPages(e){var r=getCurrentPages();return e&&(r=[r.pop()]),r=r.map((function(e){if(e){let{route:r}=e;const n=r.indexOf(\"__plugin__/\");return n>-1&&(r=\"plugin-private://\"+r.slice(n+11)),{pageId:e.__wxWebviewId__,path:r,query:e.options,renderer:e.renderer}}})),e?r.pop():r}","args":[true]}}
+[D 2024-05-22 15:05:33,674 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"47a16351-7ccb-4936-9cd3-de2e47a0cb6b","result":{"result":{"pageId":2,"path":"pages/index/index","query":{},"renderer":"webview"}}}
+[I 2024-05-22 15:05:33,676 minium minitest#819 capture] capture setup.png
+[D 2024-05-22 15:05:33,678 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"877aef5c-0f75-4c5a-94c4-eb8342ef06b8","method":"App.captureScreenshot","params":{}}
+[W 2024-05-22 15:06:33,680 minium.App2064 app#647 screen_shot] 截图指令响应失败, 可能因为开发者工具不在前台导致
+[W 2024-05-22 15:06:33,681 minium minitest#851 capture] C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\outputs\20240522150519\test_bookDetailPage_01_page_path\20240522150533646558\images\setup.png not exists
+[I 2024-05-22 15:06:33,682 minium minitest#471 _miniSetUp] =========case: test_bookDetailPage_01_page_path start=========
+[I 2024-05-22 15:06:33,683 minium minitest#703 _callTestMethod] call test method
+[I 2024-05-22 15:06:33,684 minium.App2064 app#856 navigate_to] NavigateTo: pages/book-detail/index
+[D 2024-05-22 15:06:33,685 minium.Conn4368 connection#417 _safely_send] ASYNC_SEND > [2083146234368]{"id":"b63b8a4a-2f8a-49cd-a2d4-8b16afe8047b","method":"App.callWxMethod","params":{"method":"navigateTo","args":[{"url":"pages/book-detail/index"}]}}
+[D 2024-05-22 15:06:33,688 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"method":"App.bindingCalled","params":{"name":"navigateTo_before_global","args":[{"url":"pages/book-detail/index"}]}}
+[D 2024-05-22 15:06:33,695 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"b63b8a4a-2f8a-49cd-a2d4-8b16afe8047b","error":{"message":"page \"pages/index/pages/book-detail/index\" is not found"}}
+[E 2024-05-22 15:06:33,696 minium.Conn4368 connection#658 __on_message] [b63b8a4a-2f8a-49cd-a2d4-8b16afe8047b]: page "pages/index/pages/book-detail/index" is not found
+[I 2024-05-22 15:06:33,696 minium.Conn4368 connection#694 _handle_async_msg] received async msg: b63b8a4a-2f8a-49cd-a2d4-8b16afe8047b
+[E 2024-05-22 15:06:33,697 minium minitest#708 _callTestMethod] test exception
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\case\BookDetailPage_test.py", line 22, in test_bookDetailPage_01_page_path
+    self.app.navigate_to(Route.BookDetailPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 857, in navigate_to
+    page = self._change_route_async("navigateTo", url, is_wait_url_change)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 1113, in _change_route_async
+    cmd.get_open_result(wait_timeout)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 132, in get_open_result
+    return self._open_callback.get_result()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\callback.py", line 158, in get_result
+    return self._waiter.result()
+minium.framework.exception.MiniCommandError: page "pages/index/pages/book-detail/index" is not found
+[I 2024-05-22 15:06:33,700 minium minitest#711 _callTestMethod] end test method
+[D 2024-05-22 15:06:33,701 minium minitest#714 _miniTearDown] =========Current case Down: test_bookDetailPage_01_page_path=========
+[I 2024-05-22 15:06:33,702 minium minitest#819 capture] capture teardown.png
+[D 2024-05-22 15:06:33,702 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"3273ab0b-fcca-45ca-b0eb-fa5fba086872","method":"App.captureScreenshot","params":{}}
+[W 2024-05-22 15:06:35,704 minium.App2064 app#647 screen_shot] 截图指令响应失败, 可能因为开发者工具不在前台导致
+[W 2024-05-22 15:06:35,705 minium minitest#851 capture] C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\outputs\20240522150519\test_bookDetailPage_01_page_path\20240522150533646558\images\teardown.png not exists
+[I 2024-05-22 15:06:35,706 minium basenative#59 wrapper] call BaseNative.get_start_up
+[I 2024-05-22 15:06:35,707 minium basenative#63 wrapper] call BaseNative.get_start_up end 
+[E 2024-05-22 15:06:35,712 minium assertbase#351 _get_stack_info] <bound method BookDetailPageTest.test_bookDetailPage_01_page_path of <case.BookDetailPage_test.BookDetailPageTest testMethod=test_bookDetailPage_01_page_path>>
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 266, in testPartExecutor
+    yield
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 351, in run
+    self._callTestMethod(testMethod)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\case\BookDetailPage_test.py", line 22, in test_bookDetailPage_01_page_path
+    self.app.navigate_to(Route.BookDetailPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 857, in navigate_to
+    page = self._change_route_async("navigateTo", url, is_wait_url_change)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 1113, in _change_route_async
+    cmd.get_open_result(wait_timeout)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 132, in get_open_result
+    return self._open_callback.get_result()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\callback.py", line 158, in get_result
+    return self._waiter.result()
+minium.framework.exception.MiniCommandError: page "pages/index/pages/book-detail/index" is not found
+[W 2024-05-22 15:06:35,715 minium assertbase#333 _log_info_when_error] config: {'debug': False, 'base_dir': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test', 'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'auto_capture': 'auto', 'check_mp_foreground': True, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs', 'enable_app_log': False, 'enable_network_panel': False, 'project_path': 'C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin', 'dev_tool_path': 'D:/小程序/微信web开发者工具/cli.bat', 'test_port': 9420, 'mock_native_modal': {}, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'teardown_snapshot': False, 'mock_images_dir': '', 'mock_images': {}, 'need_perf': False, 'appid': None, 'enable_h5': True, 'assert_capture': False, 'framework_capture': True, 'error_capture': False, 'create_time': '20240522150519', 'case_output': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs\\20240522150519\\test_bookDetailPage_01_page_path\\20240522150533646558'}
+[W 2024-05-22 15:06:35,716 minium assertbase#334 _log_info_when_error] build info: {'version': '1.5.4', 'revision': 'd0e4ae555098cbedc3c3d5dd383806e1d5aebe34', 'branch': 'master', 'update_at': '2024-04-22 21:01:28'}
+[W 2024-05-22 15:06:35,717 minium minitest#951 _log_info_when_error] mini: 基础库2.25.3, 开发者工具1.06.2402040
+[W 2024-05-22 15:06:35,718 minium minitest#953 _log_info_when_error] native: <minium.native.wx_native.idenative.IdeNative object at 0x000001E50530DD20>

@@ -1,0 +1,46 @@
+[I 2024-05-22 15:06:43,908 minium minitest#416 _miniSetUp] =========Current case: test_indexPage_02_page_base_element=========
+[I 2024-05-22 15:06:43,909 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.case.IndexPage_test, case info: IndexPageTest.test_indexPage_02_page_base_element
+[I 2024-05-22 15:06:43,909 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-22 15:06:43,910 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[I 2024-05-22 15:06:43,911 minium basenative#59 wrapper] call BaseNative.back_to_miniprogram
+[I 2024-05-22 15:06:43,911 minium basenative#767 back_to_miniprogram] try back_to_miniprogram 3
+[I 2024-05-22 15:06:43,912 minium basenative#63 wrapper] call BaseNative.back_to_miniprogram end 
+[D 2024-05-22 15:06:43,913 minium.Conn4368 connection#417 _safely_send] ASYNC_SEND > [2083146234368]{"id":"79b32c19-b610-4197-ad6b-8f3c017ce9d8","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-22 15:06:43,915 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-22 15:06:43,919 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"79b32c19-b610-4197-ad6b-8f3c017ce9d8","result":{"result":{"errMsg":"switchTab:ok"}}}
+[I 2024-05-22 15:06:43,919 minium.Conn4368 connection#694 _handle_async_msg] received async msg: 79b32c19-b610-4197-ad6b-8f3c017ce9d8
+[D 2024-05-22 15:06:43,921 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"b25ea754-b5cb-4613-9d87-b7990a33c5bc","method":"App.getCurrentPage","params":{}}
+[D 2024-05-22 15:06:43,923 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"b25ea754-b5cb-4613-9d87-b7990a33c5bc","result":{"pageId":2,"path":"pages/index/index","query":{}}}
+[D 2024-05-22 15:06:43,924 minium.App2064 app#583 _evaluate_js] evaluate js file getCurrentPages [ALL]
+[D 2024-05-22 15:06:43,924 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"772cda6a-66f7-447c-a0b7-8dadbb43ca68","method":"App.callFunction","params":{"functionDeclaration":"function miniumGetCurrentPages(e){var r=getCurrentPages();return e&&(r=[r.pop()]),r=r.map((function(e){if(e){let{route:r}=e;const n=r.indexOf(\"__plugin__/\");return n>-1&&(r=\"plugin-private://\"+r.slice(n+11)),{pageId:e.__wxWebviewId__,path:r,query:e.options,renderer:e.renderer}}})),e?r.pop():r}","args":[true]}}
+[D 2024-05-22 15:06:43,927 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"772cda6a-66f7-447c-a0b7-8dadbb43ca68","result":{"result":{"pageId":2,"path":"pages/index/index","query":{},"renderer":"webview"}}}
+[I 2024-05-22 15:06:43,928 minium minitest#819 capture] capture setup.png
+[D 2024-05-22 15:06:43,929 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"e7cca457-4243-41e4-b713-ab605454a125","method":"App.captureScreenshot","params":{}}
+[W 2024-05-22 15:06:45,930 minium.App2064 app#647 screen_shot] 截图指令响应失败, 可能因为开发者工具不在前台导致
+[W 2024-05-22 15:06:45,931 minium minitest#851 capture] C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\outputs\20240522150519\test_indexPage_02_page_base_element\20240522150643907971\images\setup.png not exists
+[I 2024-05-22 15:06:45,931 minium minitest#471 _miniSetUp] =========case: test_indexPage_02_page_base_element start=========
+[I 2024-05-22 15:06:45,932 minium minitest#703 _callTestMethod] call test method
+[I 2024-05-22 15:06:45,933 minium page#607 _get_elements_by_css] try to get elements: view
+[D 2024-05-22 15:06:45,934 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"0f4cb51f-86ae-4d3c-b022-d3a1467f4cb7","method":"Page.getElements","params":{"selector":"view","pageId":2}}
+[D 2024-05-22 15:06:45,948 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"0f4cb51f-86ae-4d3c-b022-d3a1467f4cb7","result":{"elements":[{"elementId":"267aa7ab-763e-4932-9c6c-b83548b5e7ee","tagName":"view"},{"elementId":"95732782-2dad-4145-91ff-be4d606a5e18","tagName":"view"},{"elementId":"25680bde-af15-433e-aa80-0827064b76c0","tagName":"view"},{"elementId":"18224058-13b2-4d45-86d1-ee0c36ad0ab3","tagName":"view"},{"elementId":"cfc9e2a4-3fc1-437a-acbf-928cb0421e97","tagName":"view"},{"elementId":"ce3f6970-f6f1-4fd9-b96b-882d192283f6","tagName":"view"},{"elementId":"02569823-f3
+[I 2024-05-22 15:06:45,950 minium page#614 _get_elements_by_css] find elements success: [<minium.miniprogram.base_driver.element.BaseElement object at 0x000001E505CA90C0>]
+[I 2024-05-22 15:06:45,954 minium page#607 _get_elements_by_css] try to get elements: navbar
+[D 2024-05-22 15:06:45,954 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"6c82daf8-72c7-4dd5-9f41-0acfaa5dc183","method":"Page.getElements","params":{"selector":"navbar","pageId":2}}
+[D 2024-05-22 15:06:45,958 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"6c82daf8-72c7-4dd5-9f41-0acfaa5dc183","result":{"elements":[{"elementId":"0e54248a-c2b9-4883-8df6-b7d3ea7d8e7b","tagName":"navbar","nodeId":"acd59f5a"}]}}
+[I 2024-05-22 15:06:45,958 minium page#614 _get_elements_by_css] find elements success: [<minium.miniprogram.base_driver.element.CustomElement object at 0x000001E50533BC70>]
+[I 2024-05-22 15:06:45,962 minium page#607 _get_elements_by_css] try to get elements: swiper
+[D 2024-05-22 15:06:45,962 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"cf29794a-bd5e-4aa7-875b-002606325999","method":"Page.getElements","params":{"selector":"swiper","pageId":2}}
+[D 2024-05-22 15:06:45,964 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"cf29794a-bd5e-4aa7-875b-002606325999","result":{"elements":[{"elementId":"323b7dad-51da-4786-86c7-5a5a5708edde","tagName":"swiper"}]}}
+[I 2024-05-22 15:06:45,965 minium page#614 _get_elements_by_css] find elements success: [<minium.miniprogram.base_driver.element.ViewElement object at 0x000001E50533A440>]
+[I 2024-05-22 15:06:45,969 minium page#607 _get_elements_by_css] try to get elements: book-list
+[D 2024-05-22 15:06:45,969 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"9a3647d1-5fa4-4af0-8746-8fae642ad357","method":"Page.getElements","params":{"selector":"book-list","pageId":2}}
+[D 2024-05-22 15:06:45,972 minium.Conn4368 connection#650 __on_message] RECV < [2083146234368]{"id":"9a3647d1-5fa4-4af0-8746-8fae642ad357","result":{"elements":[{"elementId":"9adf9412-f2cf-4973-88ac-b9f3a8eefe57","tagName":"book-list","nodeId":"2c846311"}]}}
+[I 2024-05-22 15:06:45,973 minium page#614 _get_elements_by_css] find elements success: [<minium.miniprogram.base_driver.element.CustomElement object at 0x000001E50533A410>]
+[I 2024-05-22 15:06:45,977 minium minitest#711 _callTestMethod] end test method
+[D 2024-05-22 15:06:45,978 minium minitest#714 _miniTearDown] =========Current case Down: test_indexPage_02_page_base_element=========
+[I 2024-05-22 15:06:45,978 minium minitest#819 capture] capture teardown.png
+[D 2024-05-22 15:06:45,979 minium.Conn4368 connection#417 _safely_send] SEND > [2083146234368]{"id":"c81a9bbb-ca92-4755-8007-59c0b009834e","method":"App.captureScreenshot","params":{}}
+[W 2024-05-22 15:06:47,981 minium.App2064 app#647 screen_shot] 截图指令响应失败, 可能因为开发者工具不在前台导致
+[W 2024-05-22 15:06:47,981 minium minitest#851 capture] C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\outputs\20240522150519\test_indexPage_02_page_base_element\20240522150643907971\images\teardown.png not exists
+[I 2024-05-22 15:06:47,982 minium basenative#59 wrapper] call BaseNative.get_start_up
+[I 2024-05-22 15:06:47,983 minium basenative#63 wrapper] call BaseNative.get_start_up end 
