@@ -22,7 +22,9 @@
 ```
 
 ## 测试
-1. HbuilderX自动化测试框架
-2. minium框架
 
-[相关资料](https://developers.weixin.qq.com/community/develop/article/doc/0000cae3a58748ed7f2c8975351413)
+使用minium框架进行自动化测试
+> 代码在novel-test文件夹
+
+[minium介绍](https://developers.weixin.qq.com/community/develop/article/doc/0000cae3a58748ed7f2c8975351413)
+[minium文档](https://minitest.weixin.qq.com/#/minium/Python/readme)
