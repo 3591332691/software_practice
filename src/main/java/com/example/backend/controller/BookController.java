@@ -19,7 +19,7 @@ public class BookController {
     /**
      * 创建书籍
      * @param createBookData
-     * @return
+     * @return "succeed"
      */
     @PostMapping("/createBook")
     public String createBook(@RequestBody Map<String, Object> createBookData) throws Exception {
@@ -43,7 +43,7 @@ public class BookController {
         if(success)
             return "create succeed";
         else
-            return "创建失败";
+            return "create fail";
     }
     /*
     "book_name": "软件测试",
@@ -56,7 +56,7 @@ public class BookController {
     public String deleteBook(@RequestParam int book_id) throws Exception {
         boolean success = bookService.deleteBook(book_id);
         if(success) return "delete succeed";
-        else return "删除失败";
+        else return "delete fail";
     }
 
     @PostMapping("/UpdateBook")
@@ -68,7 +68,7 @@ public class BookController {
         int book_id = (int) BookData.get("book_id");
         try{
             Book book = bookService.getBookById(book_id);
-            if(book == null) return "书籍不存在，更新失败";
+            if(book == null) return "book not found";
             book.setBook_name(book_name);
             book.setBrief_introduction(brief_introduction);
             book.setTag(tag);
@@ -76,7 +76,7 @@ public class BookController {
             bookService.updateBook(book);
         } catch (Exception e){
             // 返回具体的错误信息给客户端
-            return "更新书籍失败：" + e.getMessage();
+            return "update fail:" + e.getMessage();
         }
         return "update succeed";
     }
@@ -128,16 +128,5 @@ public class BookController {
             return "remove successfully";
         }
     }
-    //和前面的updateBook功能写重了
-    /*
-    @GetMapping("/EditBookInfo")
-    public String EditBookInfo(@RequestParam int book_id,@RequestParam String book_name,@RequestParam String brief_introduction,@RequestParam String tag) throws Exception {
-        Book book = bookService.getBookById(book_id);
-        if(book == null) return "no book found";
-        book.setBook_name(book_name);
-        book.setBrief_introduction(brief_introduction);
-        book.setTag(tag);
-        bookService.updateBook(book);
-        return "更新书籍信息成功";
-    }*/
+
 }
