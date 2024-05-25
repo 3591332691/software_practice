@@ -1,15 +1,39 @@
 <script setup>
+	import {
+		ref
+	} from 'vue';
+	import {
+		onShow,
+		onLoad
+	} from "@dcloudio/uni-app"
+
 	function changInfo() {
 		uni.navigateTo({
-			url:'./changInfo'
+			url: './changInfo'
 		})
 	}
+
+	const user = ref({})
+	const open_id = uni.getStorageSync("open_id")
+	const getUserInfo = () => {
+		uni.request({
+			url: "http://150.158.39.251:8080/GetUserInfo?open_id=" + open_id,
+			method: "GET",
+			success: (res) => {
+				user.value = res.data
+				// console.log(user.value);
+			}
+		})
+	}
+	onLoad(() => {
+		getUserInfo()
+	})
 </script>
 
 <template>
 	<view class="viewport">
 		<view class="avatar">
-			<image class="image" src="../../../static/upload/1.jpg" />
+			<image class="image" src="../../../static/images/touxiang.jpg"></image>
 			<text class="text">点击修改头像</text>
 		</view>
 		<view class="content">
@@ -19,7 +43,7 @@
 			</view>
 			<view class="item">
 				<text class="label">昵称</text>
-				<text class="text">123456</text>
+				<text class="text">{{user.value.Name}}</text>
 			</view>
 			<view class="item">
 				<text class="label">性别</text>
@@ -30,7 +54,10 @@
 				<view class="text">01</view>
 			</view>
 		</view>
-		<button @click="changInfo" class="button">修 改</button>
+		<view class="btn">
+			<button class="button">退出登录</button>
+			<button @click="changInfo" class="button">修 改</button>
+		</view>
 	</view>
 </template>
 
@@ -83,8 +110,13 @@
 			}
 		}
 	}
-	
+
+	.btn {
+		display: flex;
+	}
+
 	.button {
+		flex: 1;
 		margin: 30rpx 20rpx;
 		height: 80rpx;
 		color: #fff;

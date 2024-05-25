@@ -1,0 +1,28 @@
+[I 2024-05-26 03:17:56,360 minium minitest#416 _miniSetUp] =========Current case: test_index_01_index_path=========
+[I 2024-05-26 03:17:56,362 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.pageTest.IndexPage_test, case info: IndexPageTest.test_index_01_index_path
+[I 2024-05-26 03:17:56,365 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-26 03:17:56,367 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[I 2024-05-26 03:17:56,368 minium basenative#59 wrapper] call BaseNative.back_to_miniprogram
+[I 2024-05-26 03:17:56,370 minium basenative#767 back_to_miniprogram] try back_to_miniprogram 3
+[I 2024-05-26 03:17:56,371 minium basenative#63 wrapper] call BaseNative.back_to_miniprogram end 
+[D 2024-05-26 03:17:56,372 minium.Conn9280 connection#417 _safely_send] ASYNC_SEND > [1534007069280]{"id":"76b41edc-820c-4d36-905b-e12a44b0ebc7","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-26 03:17:56,380 minium.Conn9280 connection#650 __on_message] RECV < [1534007069280]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-26 03:17:56,382 minium.Conn9280 connection#650 __on_message] RECV < [1534007069280]{"id":"76b41edc-820c-4d36-905b-e12a44b0ebc7","result":{"result":{"errMsg":"switchTab:ok"}}}
+[I 2024-05-26 03:17:56,383 minium.Conn9280 connection#694 _handle_async_msg] received async msg: 76b41edc-820c-4d36-905b-e12a44b0ebc7
+[D 2024-05-26 03:17:56,385 minium.Conn9280 connection#417 _safely_send] SEND > [1534007069280]{"id":"09c4f920-196f-4237-a4cc-153a9eb8a159","method":"App.getCurrentPage","params":{}}
+[D 2024-05-26 03:17:56,387 minium.Conn9280 connection#650 __on_message] RECV < [1534007069280]{"id":"09c4f920-196f-4237-a4cc-153a9eb8a159","result":{"pageId":4,"path":"pages/index/index","query":{}}}
+[D 2024-05-26 03:17:56,388 minium.App8480 app#583 _evaluate_js] evaluate js file getCurrentPages [ALL]
+[D 2024-05-26 03:17:56,389 minium.Conn9280 connection#417 _safely_send] SEND > [1534007069280]{"id":"d1d19bb6-f51b-4bf9-ae2c-1196141339ba","method":"App.callFunction","params":{"functionDeclaration":"function miniumGetCurrentPages(e){var r=getCurrentPages();return e&&(r=[r.pop()]),r=r.map((function(e){if(e){let{route:r}=e;const n=r.indexOf(\"__plugin__/\");return n>-1&&(r=\"plugin-private://\"+r.slice(n+11)),{pageId:e.__wxWebviewId__,path:r,query:e.options,renderer:e.renderer}}})),e?r.pop():r}","args":[true]}}
+[D 2024-05-26 03:17:56,394 minium.Conn9280 connection#650 __on_message] RECV < [1534007069280]{"id":"d1d19bb6-f51b-4bf9-ae2c-1196141339ba","result":{"result":{"pageId":4,"path":"pages/index/index","query":{},"renderer":"webview"}}}
+[I 2024-05-26 03:17:56,396 minium minitest#819 capture] capture setup.png
+[D 2024-05-26 03:17:56,397 minium.Conn9280 connection#417 _safely_send] SEND > [1534007069280]{"id":"499c1f0e-f69e-416c-ac27-7a34728faa88","method":"App.captureScreenshot","params":{}}
+[D 2024-05-26 03:17:56,632 minium.Conn9280 connection#650 __on_message] RECV < [1534007069280]{"id":"499c1f0e-f69e-416c-ac27-7a34728faa88","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGeIQmSyPnl8Mu/X+fuG/xHA4+PDwABECAeCfan+AfY4fb53df97XPPOfc2+qff+l8hJycnJ+f+sq88hbfahpycnJyPKbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkb
+[I 2024-05-26 03:17:56,636 minium minitest#471 _miniSetUp] =========case: test_index_01_index_path start=========
+[I 2024-05-26 03:17:56,637 minium minitest#703 _callTestMethod] call test method
+[I 2024-05-26 03:17:56,754 minium minitest#711 _callTestMethod] end test method
+[D 2024-05-26 03:17:56,755 minium minitest#714 _miniTearDown] =========Current case Down: test_index_01_index_path=========
+[I 2024-05-26 03:17:56,757 minium minitest#819 capture] capture teardown.png
+[D 2024-05-26 03:17:56,758 minium.Conn9280 connection#417 _safely_send] SEND > [1534007069280]{"id":"57481509-6337-488a-bac7-576babebba0d","method":"App.captureScreenshot","params":{}}
+[D 2024-05-26 03:17:56,921 minium.Conn9280 connection#650 __on_message] RECV < [1534007069280]{"id":"57481509-6337-488a-bac7-576babebba0d","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGeIQmSyPnl8Mu/X+fuG/xHA4+PDwABECAeCfan+AfY4fb53df97XPPOfc2+qff+l8hJycnJ+f+sq88hbfahpycnJyPKbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkbA25/ubk5ORsDbn+5uTk5GwNuf7m5OTkb
+[I 2024-05-26 03:17:56,924 minium basenative#59 wrapper] call BaseNative.get_start_up
+[I 2024-05-26 03:17:56,925 minium basenative#63 wrapper] call BaseNative.get_start_up end 

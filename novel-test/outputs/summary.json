@@ -1,32 +1,7 @@
 {
-    "test_num": 6,
+    "test_num": 0,
     "errors": [],
-    "failures": [
-        {
-            "module": "CaseTest",
-            "error_type": "test_case",
-            "case_name": "test_case_03",
-            "exception": "Traceback (most recent call last):\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 266, in testPartExecutor\n    yield\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 351, in run\n    self._callTestMethod(testMethod)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\minitest.py\", line 704, in _callTestMethod\n    method()\n  File \"C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\\u836f\u5b66\\\u5927\u56db\u4e0b\\7 \u8f6f\u4ef6\u5b9e\u8df5\\novel\\novel-test\\caseTest\\Case_test.py\", line 117, in test_case_03\n    self.assertFalse(1)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\assertbase.py\", line 58, in hook_assert\n    return src(self, *args, **kwargs)\nAssertionError: 1 is not false\n"
-        },
-        {
-            "module": "CaseTest",
-            "error_type": "test_case",
-            "case_name": "test_case_05",
-            "exception": "Traceback (most recent call last):\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 266, in testPartExecutor\n    yield\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 351, in run\n    self._callTestMethod(testMethod)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\minitest.py\", line 704, in _callTestMethod\n    method()\n  File \"C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\\u836f\u5b66\\\u5927\u56db\u4e0b\\7 \u8f6f\u4ef6\u5b9e\u8df5\\novel\\novel-test\\caseTest\\Case_test.py\", line 186, in test_case_05\n    self.assertFalse(1)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\assertbase.py\", line 58, in hook_assert\n    return src(self, *args, **kwargs)\nAssertionError: 1 is not false\n"
-        },
-        {
-            "module": "CaseTest",
-            "error_type": "test_case",
-            "case_name": "test_case_03",
-            "exception": "Traceback (most recent call last):\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 266, in testPartExecutor\n    yield\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 351, in run\n    self._callTestMethod(testMethod)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\minitest.py\", line 704, in _callTestMethod\n    method()\n  File \"C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\\u836f\u5b66\\\u5927\u56db\u4e0b\\7 \u8f6f\u4ef6\u5b9e\u8df5\\novel\\novel-test\\caseTest\\Case_test.py\", line 117, in test_case_03\n    self.assertFalse(1)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\assertbase.py\", line 58, in hook_assert\n    return src(self, *args, **kwargs)\nAssertionError: 1 is not false\n"
-        },
-        {
-            "module": "CaseTest",
-            "error_type": "test_case",
-            "case_name": "test_case_05",
-            "exception": "Traceback (most recent call last):\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 266, in testPartExecutor\n    yield\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 351, in run\n    self._callTestMethod(testMethod)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\minitest.py\", line 704, in _callTestMethod\n    method()\n  File \"C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\\u836f\u5b66\\\u5927\u56db\u4e0b\\7 \u8f6f\u4ef6\u5b9e\u8df5\\novel\\novel-test\\caseTest\\Case_test.py\", line 186, in test_case_05\n    self.assertFalse(1)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\assertbase.py\", line 58, in hook_assert\n    return src(self, *args, **kwargs)\nAssertionError: 1 is not false\n"
-        }
-    ],
+    "failures": [],
     "class_errors": [],
     "class_failures": []
 }

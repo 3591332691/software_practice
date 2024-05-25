@@ -1,0 +1,79 @@
+[I 2024-05-23 19:23:14,714 minium minitest#416 _miniSetUp] =========Current case: test_bookShelf_02_base_element=========
+[I 2024-05-23 19:23:14,715 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.pageTest.BookShelfPage_test, case info: BookShelfPageTest.test_bookShelf_02_base_element
+[I 2024-05-23 19:23:14,716 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-23 19:23:14,717 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[I 2024-05-23 19:23:14,718 minium basenative#59 wrapper] call BaseNative.back_to_miniprogram
+[I 2024-05-23 19:23:14,719 minium basenative#767 back_to_miniprogram] try back_to_miniprogram 3
+[I 2024-05-23 19:23:14,720 minium basenative#63 wrapper] call BaseNative.back_to_miniprogram end 
+[D 2024-05-23 19:23:14,721 minium.Conn8128 connection#417 _safely_send] ASYNC_SEND > [1626955468128]{"id":"c274c007-a212-4b92-a190-ac13d2f5086c","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-23 19:23:14,750 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-23 19:23:14,758 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"c274c007-a212-4b92-a190-ac13d2f5086c","result":{"result":{"errMsg":"switchTab:ok"}}}
+[I 2024-05-23 19:23:14,759 minium.Conn8128 connection#694 _handle_async_msg] received async msg: c274c007-a212-4b92-a190-ac13d2f5086c
+[D 2024-05-23 19:23:14,762 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"7dd9e0c9-b847-4db4-b338-195c63f56cab","method":"App.getCurrentPage","params":{}}
+[D 2024-05-23 19:23:14,767 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"7dd9e0c9-b847-4db4-b338-195c63f56cab","result":{"pageId":2,"path":"pages/index/index","query":{}}}
+[D 2024-05-23 19:23:14,770 minium.App1872 app#583 _evaluate_js] evaluate js file getCurrentPages [ALL]
+[D 2024-05-23 19:23:14,771 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"385b3edd-25c1-4ca5-82c6-976672c0a0c4","method":"App.callFunction","params":{"functionDeclaration":"function miniumGetCurrentPages(e){var r=getCurrentPages();return e&&(r=[r.pop()]),r=r.map((function(e){if(e){let{route:r}=e;const n=r.indexOf(\"__plugin__/\");return n>-1&&(r=\"plugin-private://\"+r.slice(n+11)),{pageId:e.__wxWebviewId__,path:r,query:e.options,renderer:e.renderer}}})),e?r.pop():r}","args":[true]}}
+[D 2024-05-23 19:23:14,782 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"385b3edd-25c1-4ca5-82c6-976672c0a0c4","result":{"result":{"pageId":2,"path":"pages/index/index","query":{},"renderer":"webview"}}}
+[I 2024-05-23 19:23:14,786 minium minitest#819 capture] capture setup.png
+[D 2024-05-23 19:23:14,801 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"032778e0-7811-4c50-b559-e61565d37b89","method":"App.captureScreenshot","params":{}}
+[D 2024-05-23 19:23:15,039 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"032778e0-7811-4c50-b559-e61565d37b89","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGOIImcXw6//Pt17r7BfzTw+PgAEAAB8pFgf4p/gB1un9993d8+95xzb6N/+p3/FXJycnJyPlz2l6fxVtuQk5OT8wkl19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytI
+[I 2024-05-23 19:23:15,042 minium minitest#471 _miniSetUp] =========case: test_bookShelf_02_base_element start=========
+[I 2024-05-23 19:23:15,043 minium minitest#703 _callTestMethod] call test method
+[D 2024-05-23 19:23:15,045 minium.Conn8128 connection#417 _safely_send] ASYNC_SEND > [1626955468128]{"id":"4f7742a6-345f-49d5-a4cc-9064a933b8bc","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/bookshelf/index"}]}}
+[D 2024-05-23 19:23:15,048 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/bookshelf/index"}]}}
+[D 2024-05-23 19:23:15,050 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"4f7742a6-345f-49d5-a4cc-9064a933b8bc","error":{"message":"can not switch to no-tabBar page"}}
+[E 2024-05-23 19:23:15,051 minium.Conn8128 connection#658 __on_message] [4f7742a6-345f-49d5-a4cc-9064a933b8bc]: can not switch to no-tabBar page
+[I 2024-05-23 19:23:15,051 minium.Conn8128 connection#694 _handle_async_msg] received async msg: 4f7742a6-345f-49d5-a4cc-9064a933b8bc
+[E 2024-05-23 19:23:15,055 minium minitest#708 _callTestMethod] test exception
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\pageTest\BookShelfPage_test.py", line 28, in test_bookShelf_02_base_element
+    self.app.switch_tab(Route.BookShelfPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\utils\utils.py", line 88, in wrapper
+    ret = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 939, in switch_tab
+    page = self._change_route_async(
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 1113, in _change_route_async
+    cmd.get_open_result(wait_timeout)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 132, in get_open_result
+    return self._open_callback.get_result()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\callback.py", line 158, in get_result
+    return self._waiter.result()
+minium.framework.exception.MiniCommandError: can not switch to no-tabBar page
+[I 2024-05-23 19:23:15,059 minium minitest#711 _callTestMethod] end test method
+[D 2024-05-23 19:23:15,059 minium minitest#714 _miniTearDown] =========Current case Down: test_bookShelf_02_base_element=========
+[I 2024-05-23 19:23:15,060 minium minitest#819 capture] capture teardown.png
+[D 2024-05-23 19:23:15,061 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"f99054ed-2a63-4a3d-bd0d-854531206e4d","method":"App.captureScreenshot","params":{}}
+[D 2024-05-23 19:23:15,336 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"f99054ed-2a63-4a3d-bd0d-854531206e4d","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGOIImcXw6//Pt17r7BfzTw+PgAEAAB8pFgf4p/gB1un9993d8+95xzb6N/+p3/FXJycnJyPlz2l6fxVtuQk5OT8wkl19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytI
+[I 2024-05-23 19:23:15,340 minium basenative#59 wrapper] call BaseNative.get_start_up
+[I 2024-05-23 19:23:15,341 minium basenative#63 wrapper] call BaseNative.get_start_up end 
+[E 2024-05-23 19:23:15,344 minium assertbase#351 _get_stack_info] <bound method BookShelfPageTest.test_bookShelf_02_base_element of <pageTest.BookShelfPage_test.BookShelfPageTest testMethod=test_bookShelf_02_base_element>>
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 266, in testPartExecutor
+    yield
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 351, in run
+    self._callTestMethod(testMethod)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\pageTest\BookShelfPage_test.py", line 28, in test_bookShelf_02_base_element
+    self.app.switch_tab(Route.BookShelfPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\utils\utils.py", line 88, in wrapper
+    ret = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 939, in switch_tab
+    page = self._change_route_async(
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 1113, in _change_route_async
+    cmd.get_open_result(wait_timeout)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 132, in get_open_result
+    return self._open_callback.get_result()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\callback.py", line 158, in get_result
+    return self._waiter.result()
+minium.framework.exception.MiniCommandError: can not switch to no-tabBar page
+[W 2024-05-23 19:23:15,350 minium assertbase#333 _log_info_when_error] config: {'debug': False, 'base_dir': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test', 'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'auto_capture': 'auto', 'check_mp_foreground': True, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs', 'enable_app_log': False, 'enable_network_panel': False, 'project_path': 'C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin', 'dev_tool_path': 'D:/小程序/微信web开发者工具/cli.bat', 'test_port': 9420, 'mock_native_modal': {}, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'teardown_snapshot': False, 'mock_images_dir': '', 'mock_images': {}, 'need_perf': False, 'appid': None, 'enable_h5': True, 'assert_capture': False, 'framework_capture': True, 'error_capture': False, 'create_time': '20240523192255', 'case_output': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs\\20240523192255\\test_bookShelf_02_base_element\\20240523192314708660'}
+[W 2024-05-23 19:23:15,354 minium assertbase#334 _log_info_when_error] build info: {'version': '1.5.4', 'revision': 'd0e4ae555098cbedc3c3d5dd383806e1d5aebe34', 'branch': 'master', 'update_at': '2024-04-22 21:01:28'}
+[W 2024-05-23 19:23:15,356 minium minitest#951 _log_info_when_error] mini: 基础库2.25.3, 开发者工具1.06.2402040
+[W 2024-05-23 19:23:15,358 minium minitest#953 _log_info_when_error] native: <minium.native.wx_native.idenative.IdeNative object at 0x0000017ACE17F1C0>

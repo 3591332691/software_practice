@@ -1,0 +1,79 @@
+[I 2024-05-23 19:23:16,602 minium minitest#416 _miniSetUp] =========Current case: test_index_04_click_first_book=========
+[I 2024-05-23 19:23:16,603 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.pageTest.IndexPage_test, case info: IndexPageTest.test_index_04_click_first_book
+[I 2024-05-23 19:23:16,604 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-23 19:23:16,604 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[I 2024-05-23 19:23:16,605 minium basenative#59 wrapper] call BaseNative.back_to_miniprogram
+[I 2024-05-23 19:23:16,605 minium basenative#767 back_to_miniprogram] try back_to_miniprogram 3
+[I 2024-05-23 19:23:16,606 minium basenative#63 wrapper] call BaseNative.back_to_miniprogram end 
+[D 2024-05-23 19:23:16,607 minium.Conn8128 connection#417 _safely_send] ASYNC_SEND > [1626955468128]{"id":"6c06f61a-ab64-435b-8cbf-a133af546b45","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-23 19:23:16,609 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-23 19:23:16,610 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"6c06f61a-ab64-435b-8cbf-a133af546b45","result":{"result":{"errMsg":"switchTab:ok"}}}
+[I 2024-05-23 19:23:16,611 minium.Conn8128 connection#694 _handle_async_msg] received async msg: 6c06f61a-ab64-435b-8cbf-a133af546b45
+[D 2024-05-23 19:23:16,613 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"18e84764-655c-4050-87cc-19fdf613fe89","method":"App.getCurrentPage","params":{}}
+[D 2024-05-23 19:23:16,614 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"18e84764-655c-4050-87cc-19fdf613fe89","result":{"pageId":2,"path":"pages/index/index","query":{}}}
+[D 2024-05-23 19:23:16,615 minium.App1872 app#583 _evaluate_js] evaluate js file getCurrentPages [ALL]
+[D 2024-05-23 19:23:16,616 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"6b12ce8a-234a-4a1b-85ce-d12c9bc6e455","method":"App.callFunction","params":{"functionDeclaration":"function miniumGetCurrentPages(e){var r=getCurrentPages();return e&&(r=[r.pop()]),r=r.map((function(e){if(e){let{route:r}=e;const n=r.indexOf(\"__plugin__/\");return n>-1&&(r=\"plugin-private://\"+r.slice(n+11)),{pageId:e.__wxWebviewId__,path:r,query:e.options,renderer:e.renderer}}})),e?r.pop():r}","args":[true]}}
+[D 2024-05-23 19:23:16,617 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"6b12ce8a-234a-4a1b-85ce-d12c9bc6e455","result":{"result":{"pageId":2,"path":"pages/index/index","query":{},"renderer":"webview"}}}
+[I 2024-05-23 19:23:16,618 minium minitest#819 capture] capture setup.png
+[D 2024-05-23 19:23:16,619 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"a72831e8-c8fe-44a9-82ed-d04b47fb2c6a","method":"App.captureScreenshot","params":{}}
+[D 2024-05-23 19:23:16,778 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"a72831e8-c8fe-44a9-82ed-d04b47fb2c6a","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGOIImcXw6//Pt17r7BfzTw+PgAEAAB8pFgf4p/gB1un9993d8+95xzb6N/+p3/FXJycnJyPlz2l6fxVtuQk5OT8wkl19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytI
+[W 2024-05-23 19:23:16,780 minium utils#94 wrapper] 第 1 次重新运行_framework_capture
+[I 2024-05-23 19:23:16,781 minium utils#97 wrapper] 原因: KeyboardInterrupt()
+[I 2024-05-23 19:23:16,782 minium minitest#819 capture] capture setup.png
+[D 2024-05-23 19:23:16,782 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"2780a173-ecfc-458c-8994-dfb43bd3c5ef","method":"App.captureScreenshot","params":{}}
+[D 2024-05-23 19:23:16,946 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"2780a173-ecfc-458c-8994-dfb43bd3c5ef","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGOIImcXw6//Pt17r7BfzTw+PgAEAAB8pFgf4p/gB1un9993d8+95xzb6N/+p3/FXJycnJyPlz2l6fxVtuQk5OT8wkl19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytI
+[I 2024-05-23 19:23:16,949 minium minitest#471 _miniSetUp] =========case: test_index_04_click_first_book start=========
+[I 2024-05-23 19:23:16,950 minium minitest#703 _callTestMethod] call test method
+[I 2024-05-23 19:23:16,951 minium page#607 _get_elements_by_css] try to get elements: view > view:nth-child(1) > view.itemright > view.itemtitle > text
+[D 2024-05-23 19:23:16,952 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"61954053-f3d6-4065-97fc-d05115ea33b6","method":"Page.getElements","params":{"selector":"view > view:nth-child(1) > view.itemright > view.itemtitle > text","pageId":2}}
+[D 2024-05-23 19:23:16,955 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"61954053-f3d6-4065-97fc-d05115ea33b6","result":{"elements":[]}}
+[W 2024-05-23 19:23:16,956 minium page#612 _get_elements_by_css] Could not found any element 'view > view:nth-child(1) > view.itemright > view.itemtitle > text' you need
+[E 2024-05-23 19:23:16,957 minium minitest#708 _callTestMethod] test exception
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\pageTest\IndexPage_test.py", line 41, in test_index_04_click_first_book
+    self.indexPage.get_first_book()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\pages\IndexPage.py", line 41, in get_first_book
+    element = self.mini.page.get_element(str(self.first_book))
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 260, in wrapper
+    return func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\page\page.py", line 334, in get_element
+    raise MiniElementNotFoundError("element[%s] not found" % selector)
+minium.framework.exception.MiniElementNotFoundError: element[view > view:nth-child(1) > view.itemright > view.itemtitle > text] not found
+[I 2024-05-23 19:23:16,960 minium minitest#711 _callTestMethod] end test method
+[D 2024-05-23 19:23:16,960 minium minitest#714 _miniTearDown] =========Current case Down: test_index_04_click_first_book=========
+[I 2024-05-23 19:23:16,961 minium minitest#819 capture] capture teardown.png
+[D 2024-05-23 19:23:16,962 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"7d9e8014-430e-42d2-8023-823c61783299","method":"App.captureScreenshot","params":{}}
+[D 2024-05-23 19:23:17,122 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"7d9e8014-430e-42d2-8023-823c61783299","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGOIImcXw6//Pt17r7BfzTw+PgAEAAB8pFgf4p/gB1un9993d8+95xzb6N/+p3/FXJycnJyPlz2l6fxVtuQk5OT8wkl19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytI
+[D 2024-05-23 19:23:17,126 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"6c3dc684-6d50-49d5-9fc8-a4d5b0947bd2","method":"Page.getElementByXpath","params":{"selector":"/*","pageId":2}}
+[D 2024-05-23 19:23:17,135 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"6c3dc684-6d50-49d5-9fc8-a4d5b0947bd2","result":{"elementId":"aec9e40e-43ea-4af2-9846-f0c3d4595fcb","tagName":"view"}}
+[D 2024-05-23 19:23:17,137 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"288eff70-4894-4dbe-a67d-2d07c8660636","method":"Element.getWXML","params":{"type":"outer","elementId":"aec9e40e-43ea-4af2-9846-f0c3d4595fcb","pageId":2}}
+[D 2024-05-23 19:23:17,145 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"288eff70-4894-4dbe-a67d-2d07c8660636","result":{"wxml":"<view class=\"content\"><navbar is=\"components/navbar/navbar\"><view class=\"nav navbar--nav\"><view style=\"height:20px;background:rgba(97, 186, 139, 1.0)\"></view><view class=\"headNav navbar--headNav\" style=\"height:44px;line-height:44px;padding-left:10px;background:rgba(97, 186, 139, 1.0)\"><text class=\"app-title navbar--app-title\">阅读平台</text><view style=\"flex:1\"><navigator style=\"height:32px;line-height:32px;margin-top:4px;margin-lef
+[I 2024-05-23 19:23:17,155 minium basenative#59 wrapper] call BaseNative.get_start_up
+[I 2024-05-23 19:23:17,156 minium basenative#63 wrapper] call BaseNative.get_start_up end 
+[E 2024-05-23 19:23:17,159 minium assertbase#351 _get_stack_info] <bound method IndexPageTest.test_index_04_click_first_book of <pageTest.IndexPage_test.IndexPageTest testMethod=test_index_04_click_first_book>>
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 266, in testPartExecutor
+    yield
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 351, in run
+    self._callTestMethod(testMethod)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\pageTest\IndexPage_test.py", line 41, in test_index_04_click_first_book
+    self.indexPage.get_first_book()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\pages\IndexPage.py", line 41, in get_first_book
+    element = self.mini.page.get_element(str(self.first_book))
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 260, in wrapper
+    return func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\page\page.py", line 334, in get_element
+    raise MiniElementNotFoundError("element[%s] not found" % selector)
+minium.framework.exception.MiniElementNotFoundError: element[view > view:nth-child(1) > view.itemright > view.itemtitle > text] not found
+[W 2024-05-23 19:23:17,163 minium assertbase#333 _log_info_when_error] config: {'debug': False, 'base_dir': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test', 'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'auto_capture': 'auto', 'check_mp_foreground': True, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs', 'enable_app_log': False, 'enable_network_panel': False, 'project_path': 'C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin', 'dev_tool_path': 'D:/小程序/微信web开发者工具/cli.bat', 'test_port': 9420, 'mock_native_modal': {}, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'teardown_snapshot': False, 'mock_images_dir': '', 'mock_images': {}, 'need_perf': False, 'appid': None, 'enable_h5': True, 'assert_capture': False, 'framework_capture': True, 'error_capture': False, 'create_time': '20240523192255', 'case_output': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs\\20240523192255\\test_index_04_click_first_book\\20240523192316601363'}
+[W 2024-05-23 19:23:17,165 minium assertbase#334 _log_info_when_error] build info: {'version': '1.5.4', 'revision': 'd0e4ae555098cbedc3c3d5dd383806e1d5aebe34', 'branch': 'master', 'update_at': '2024-04-22 21:01:28'}
+[W 2024-05-23 19:23:17,167 minium minitest#951 _log_info_when_error] mini: 基础库2.25.3, 开发者工具1.06.2402040
+[W 2024-05-23 19:23:17,167 minium minitest#953 _log_info_when_error] native: <minium.native.wx_native.idenative.IdeNative object at 0x0000017ACE17F1C0>

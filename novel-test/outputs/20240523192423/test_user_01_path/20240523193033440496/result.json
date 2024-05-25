@@ -1,0 +1,116 @@
+{
+    "case_name": "test_user_01_path",
+    "run_time": "20240523 19:30:33",
+    "test_type": "UserPageTest",
+    "case_doc": "case1:\u6d4b\u8bd5\u201c\u6211\u7684\u201d\u9875\u9762\u7684\u8df3\u8f6c\u8def\u5f84\u662f\u5426\u6b63\u786e\uff0c\u8df3\u8f6c\u8def\u5f84\u8981\u4f7f\u7528\u7edd\u5bf9\u8def\u5f84\n",
+    "success": true,
+    "failures": "",
+    "errors": "",
+    "start_timestamp": 1716463833.6239846,
+    "is_failure": false,
+    "is_error": false,
+    "module": "C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.\u836f\u5b66.\u5927\u56db\u4e0b.7 \u8f6f\u4ef6\u5b9e\u8df5.novel.novel-test.pageTest.UserPage_test",
+    "package": "pageTest",
+    "failed_line_num": -1,
+    "device": {
+        "system_info": {
+            "batteryLevel": 94,
+            "benchmarkLevel": -1,
+            "brand": "devtools",
+            "memorySize": 2048,
+            "model": "iPhone 6/7/8",
+            "system": "iOS 10.0.1",
+            "platform": "devtools",
+            "pixelRatio": 2,
+            "safeArea": {
+                "top": 20,
+                "left": 0,
+                "right": 375,
+                "bottom": 667,
+                "width": 375,
+                "height": 647
+            },
+            "screenWidth": 375,
+            "screenHeight": 667,
+            "screenTop": 48,
+            "windowWidth": 375,
+            "windowHeight": 619,
+            "statusBarHeight": 20,
+            "version": "8.0.5",
+            "language": "zh_CN",
+            "SDKVersion": "2.25.3",
+            "enableDebug": false,
+            "fontSizeScaleFactor": 0.85,
+            "fontSizeSetting": 15,
+            "mode": "default",
+            "host": {
+                "env": "WeChat"
+            },
+            "bluetoothEnabled": true,
+            "locationEnabled": true,
+            "wifiEnabled": true,
+            "locationReducedAccuracy": true,
+            "albumAuthorized": true,
+            "bluetoothAuthorized": true,
+            "cameraAuthorized": true,
+            "locationAuthorized": true,
+            "microphoneAuthorized": true,
+            "notificationAuthorized": true,
+            "notificationAlertAuthorized": true,
+            "notificationBadgeAuthorized": true,
+            "notificationSoundAuthorized": true,
+            "phoneCalendarAuthorized": true,
+            "deviceOrientation": "portrait",
+            "devicePixelRatio": 2
+        }
+    },
+    "log_filename": "run.log",
+    "error_type": "",
+    "error_value": "",
+    "error_stages": [],
+    "screen_info": [
+        {
+            "name": "setup",
+            "url": "/pages/index/index",
+            "path": "images\\setup.png",
+            "ts": 1716463833,
+            "datetime": "2024-05-23 19:30:33",
+            "use_region": false
+        },
+        {
+            "name": "teardown",
+            "url": "/pages/user/index",
+            "path": "images\\teardown.png",
+            "ts": 1716463833,
+            "datetime": "2024-05-23 19:30:33",
+            "use_region": false
+        }
+    ],
+    "step_info": [],
+    "check_list": [],
+    "assert_list": [
+        {
+            "name": "assertEqual",
+            "ret": true,
+            "msg": null
+        }
+    ],
+    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+    "weapp_log_path": "weapp.log",
+    "request_log_path": "request.log",
+    "stop_timestamp": 1716463833.8357754,
+    "appId": "",
+    "appName": "",
+    "source": {
+        "code": [
+            "    def test_user_01_path(self):\n",
+            "        \"\"\"\n",
+            "        case1:\u6d4b\u8bd5\u201c\u6211\u7684\u201d\u9875\u9762\u7684\u8df3\u8f6c\u8def\u5f84\u662f\u5426\u6b63\u786e\uff0c\u8df3\u8f6c\u8def\u5f84\u8981\u4f7f\u7528\u7edd\u5bf9\u8def\u5f84\n",
+            "        \"\"\"\n",
+            "        self.app.switch_tab(Route.UserPage_route)\n",
+            "        self.userPage.check_userPage_path()\n"
+        ],
+        "start": 17
+    },
+    "filename": "result.json"
+}

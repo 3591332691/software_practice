@@ -4,13 +4,13 @@
             "case_list": [
                 "test_*"
             ],
-            "pkg": "pageTest.*_test"
+            "pkg": "pageTest.Book*_test"
         },
         {
             "case_list": [
                 "test_*"
             ],
-            "pkg": "caseTest.*_test"
+            "pkg": "caseTest.1111*_test"
         }
     ]
 }

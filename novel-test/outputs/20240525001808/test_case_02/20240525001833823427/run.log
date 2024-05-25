@@ -1,0 +1,95 @@
+[I 2024-05-25 00:18:33,824 minium minitest#416 _miniSetUp] =========Current case: test_case_02=========
+[I 2024-05-25 00:18:33,825 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.caseTest.Case_test, case info: CaseTest.test_case_02
+[I 2024-05-25 00:18:33,826 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-25 00:18:33,827 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[I 2024-05-25 00:18:33,827 minium basenative#59 wrapper] call BaseNative.back_to_miniprogram
+[I 2024-05-25 00:18:33,828 minium basenative#767 back_to_miniprogram] try back_to_miniprogram 3
+[I 2024-05-25 00:18:33,829 minium basenative#63 wrapper] call BaseNative.back_to_miniprogram end 
+[D 2024-05-25 00:18:33,830 minium.Conn4816 connection#417 _safely_send] ASYNC_SEND > [2318245694816]{"id":"549085f6-836b-41ab-b465-93bb3419c7e3","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-25 00:18:33,833 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-25 00:18:33,838 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"549085f6-836b-41ab-b465-93bb3419c7e3","result":{"result":{"errMsg":"switchTab:ok"}}}
+[I 2024-05-25 00:18:33,839 minium.Conn4816 connection#694 _handle_async_msg] received async msg: 549085f6-836b-41ab-b465-93bb3419c7e3
+[D 2024-05-25 00:18:33,840 minium.Conn4816 connection#417 _safely_send] SEND > [2318245694816]{"id":"2091184e-3fec-46f1-a97a-28291aaf0267","method":"App.getCurrentPage","params":{}}
+[D 2024-05-25 00:18:33,844 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"2091184e-3fec-46f1-a97a-28291aaf0267","result":{"pageId":2,"path":"pages/index/index","query":{}}}
+[D 2024-05-25 00:18:33,845 minium.App8608 app#583 _evaluate_js] evaluate js file getCurrentPages [ALL]
+[D 2024-05-25 00:18:33,847 minium.Conn4816 connection#417 _safely_send] SEND > [2318245694816]{"id":"9c889e91-1aaf-44c2-b656-8622547dbc8d","method":"App.callFunction","params":{"functionDeclaration":"function miniumGetCurrentPages(e){var r=getCurrentPages();return e&&(r=[r.pop()]),r=r.map((function(e){if(e){let{route:r}=e;const n=r.indexOf(\"__plugin__/\");return n>-1&&(r=\"plugin-private://\"+r.slice(n+11)),{pageId:e.__wxWebviewId__,path:r,query:e.options,renderer:e.renderer}}})),e?r.pop():r}","args":[true]}}
+[D 2024-05-25 00:18:33,852 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"9c889e91-1aaf-44c2-b656-8622547dbc8d","result":{"result":{"pageId":2,"path":"pages/index/index","query":{},"renderer":"webview"}}}
+[I 2024-05-25 00:18:33,854 minium minitest#819 capture] capture setup.png
+[D 2024-05-25 00:18:33,855 minium.Conn4816 connection#417 _safely_send] SEND > [2318245694816]{"id":"7405e1e8-5c4f-4dc8-baee-0e75ea9bcdfb","method":"App.captureScreenshot","params":{}}
+[D 2024-05-25 00:18:34,042 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"7405e1e8-5c4f-4dc8-baee-0e75ea9bcdfb","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGOIImcXw6//Pt17r7BfzTw+PgAEAAB8pFgf4p/gB1un9993d8+95xzb6N/+p3/FXJycnJyPlz2l6fxVtuQk5OT8wkl19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytI
+[I 2024-05-25 00:18:34,045 minium minitest#471 _miniSetUp] =========case: test_case_02 start=========
+[I 2024-05-25 00:18:34,045 minium minitest#703 _callTestMethod] call test method
+[I 2024-05-25 00:18:34,068 minium page#607 _get_elements_by_css] try to get elements: view
+[D 2024-05-25 00:18:34,071 minium.Conn4816 connection#417 _safely_send] SEND > [2318245694816]{"id":"2ca78213-2380-4efa-87fc-a738de58e2b7","method":"Page.getElements","params":{"selector":"view","pageId":2}}
+[D 2024-05-25 00:18:34,075 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"2ca78213-2380-4efa-87fc-a738de58e2b7","result":{"elements":[{"elementId":"5006e14b-efb9-4e5a-ae95-fe8cd5c06d69","tagName":"view"},{"elementId":"dd0e0869-d752-40df-a19c-01974fa41118","tagName":"view"},{"elementId":"87120057-cdf5-457a-a455-cc2374605ec7","tagName":"view"},{"elementId":"fbc5dbc6-a4b7-434a-9e1c-e51b7e139ec0","tagName":"view"},{"elementId":"c183148d-0ead-44aa-84a1-c73658e8308a","tagName":"view"},{"elementId":"750cb625-f289-44ee-ad2f-7e7ee5f0c61b","tagName":"view"},{"elementId":"09103d8c-d0
+[I 2024-05-25 00:18:34,076 minium page#614 _get_elements_by_css] find elements success: [<minium.miniprogram.base_driver.element.BaseElement object at 0x0000021BC2DF2B00>]
+[I 2024-05-25 00:18:34,082 minium page#607 _get_elements_by_css] try to get elements: navbar
+[D 2024-05-25 00:18:34,084 minium.Conn4816 connection#417 _safely_send] SEND > [2318245694816]{"id":"810693b2-0521-4cac-80ef-aa0a9d422efe","method":"Page.getElements","params":{"selector":"navbar","pageId":2}}
+[D 2024-05-25 00:18:34,091 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"810693b2-0521-4cac-80ef-aa0a9d422efe","result":{"elements":[{"elementId":"7ad986b2-6992-4b74-bb69-da70f3d68acc","tagName":"navbar","nodeId":"b5f58caf"}]}}
+[I 2024-05-25 00:18:34,093 minium page#614 _get_elements_by_css] find elements success: [<minium.miniprogram.base_driver.element.CustomElement object at 0x0000021BC2DF2320>]
+[I 2024-05-25 00:18:34,098 minium page#607 _get_elements_by_css] try to get elements: swiper
+[D 2024-05-25 00:18:34,101 minium.Conn4816 connection#417 _safely_send] SEND > [2318245694816]{"id":"9bd598e6-59c7-433c-aca7-5af2eb36d87f","method":"Page.getElements","params":{"selector":"swiper","pageId":2}}
+[D 2024-05-25 00:18:34,106 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"9bd598e6-59c7-433c-aca7-5af2eb36d87f","result":{"elements":[{"elementId":"0e3bf57e-0c49-48c9-8e8e-4321b100d492","tagName":"swiper"}]}}
+[I 2024-05-25 00:18:34,107 minium page#614 _get_elements_by_css] find elements success: [<minium.miniprogram.base_driver.element.ViewElement object at 0x0000021BC2DF2D10>]
+[I 2024-05-25 00:18:34,113 minium page#607 _get_elements_by_css] try to get elements: book-list
+[D 2024-05-25 00:18:34,115 minium.Conn4816 connection#417 _safely_send] SEND > [2318245694816]{"id":"755f8df9-652e-49a6-8a83-7b77f0dd7aff","method":"Page.getElements","params":{"selector":"book-list","pageId":2}}
+[D 2024-05-25 00:18:34,118 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"755f8df9-652e-49a6-8a83-7b77f0dd7aff","result":{"elements":[{"elementId":"008d5f9e-e172-4a5f-bdd0-fbfd2400cb06","tagName":"book-list","nodeId":"167f9f8f"}]}}
+[I 2024-05-25 00:18:34,120 minium page#614 _get_elements_by_css] find elements success: [<minium.miniprogram.base_driver.element.CustomElement object at 0x0000021BC2DF2D70>]
+[D 2024-05-25 00:18:34,126 minium.Conn4816 connection#417 _safely_send] ASYNC_SEND > [2318245694816]{"id":"a119380d-962e-4953-ad10-24a32be32094","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/bookshelf/index"}]}}
+[D 2024-05-25 00:18:34,129 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/bookshelf/index"}]}}
+[D 2024-05-25 00:18:34,131 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"a119380d-962e-4953-ad10-24a32be32094","error":{"message":"can not switch to no-tabBar page"}}
+[E 2024-05-25 00:18:34,132 minium.Conn4816 connection#658 __on_message] [a119380d-962e-4953-ad10-24a32be32094]: can not switch to no-tabBar page
+[I 2024-05-25 00:18:34,133 minium.Conn4816 connection#694 _handle_async_msg] received async msg: a119380d-962e-4953-ad10-24a32be32094
+[E 2024-05-25 00:18:34,134 minium minitest#708 _callTestMethod] test exception
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\caseTest\Case_test.py", line 89, in test_case_02
+    self.app.switch_tab(Route.BookShelfPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\utils\utils.py", line 88, in wrapper
+    ret = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 939, in switch_tab
+    page = self._change_route_async(
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 1113, in _change_route_async
+    cmd.get_open_result(wait_timeout)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 132, in get_open_result
+    return self._open_callback.get_result()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\callback.py", line 158, in get_result
+    return self._waiter.result()
+minium.framework.exception.MiniCommandError: can not switch to no-tabBar page
+[I 2024-05-25 00:18:34,139 minium minitest#711 _callTestMethod] end test method
+[D 2024-05-25 00:18:34,139 minium minitest#714 _miniTearDown] =========Current case Down: test_case_02=========
+[I 2024-05-25 00:18:34,140 minium minitest#819 capture] capture teardown.png
+[D 2024-05-25 00:18:34,141 minium.Conn4816 connection#417 _safely_send] SEND > [2318245694816]{"id":"e4a56630-a016-4284-b162-10ceb94c0a17","method":"App.captureScreenshot","params":{}}
+[D 2024-05-25 00:18:34,303 minium.Conn4816 connection#650 __on_message] RECV < [2318245694816]{"id":"e4a56630-a016-4284-b162-10ceb94c0a17","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGOIImcXw6//Pt17r7BfzTw+PgAEAAB8pFgf4p/gB1un9993d8+95xzb6N/+p3/FXJycnJyPlz2l6fxVtuQk5OT8wkl19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytI
+[I 2024-05-25 00:18:34,306 minium basenative#59 wrapper] call BaseNative.get_start_up
+[I 2024-05-25 00:18:34,306 minium basenative#63 wrapper] call BaseNative.get_start_up end 
+[E 2024-05-25 00:18:34,309 minium assertbase#351 _get_stack_info] <bound method CaseTest.test_case_02 of <caseTest.Case_test.CaseTest testMethod=test_case_02>>
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 266, in testPartExecutor
+    yield
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 351, in run
+    self._callTestMethod(testMethod)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\caseTest\Case_test.py", line 89, in test_case_02
+    self.app.switch_tab(Route.BookShelfPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\utils\utils.py", line 88, in wrapper
+    ret = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 939, in switch_tab
+    page = self._change_route_async(
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 1113, in _change_route_async
+    cmd.get_open_result(wait_timeout)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 132, in get_open_result
+    return self._open_callback.get_result()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\callback.py", line 158, in get_result
+    return self._waiter.result()
+minium.framework.exception.MiniCommandError: can not switch to no-tabBar page
+[W 2024-05-25 00:18:34,312 minium assertbase#333 _log_info_when_error] config: {'debug': False, 'base_dir': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test', 'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'auto_capture': 'auto', 'check_mp_foreground': True, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs', 'enable_app_log': False, 'enable_network_panel': False, 'project_path': 'C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin', 'dev_tool_path': 'D:/小程序/微信web开发者工具/cli.bat', 'test_port': 9420, 'mock_native_modal': {}, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'teardown_snapshot': False, 'mock_images_dir': '', 'mock_images': {}, 'need_perf': False, 'appid': None, 'enable_h5': True, 'assert_capture': False, 'framework_capture': True, 'error_capture': False, 'create_time': '20240525001808', 'case_output': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs\\20240525001808\\test_case_02\\20240525001833823427'}
+[W 2024-05-25 00:18:34,314 minium assertbase#334 _log_info_when_error] build info: {'version': '1.5.4', 'revision': 'd0e4ae555098cbedc3c3d5dd383806e1d5aebe34', 'branch': 'master', 'update_at': '2024-04-22 21:01:28'}
+[W 2024-05-25 00:18:34,315 minium minitest#951 _log_info_when_error] mini: 基础库2.25.3, 开发者工具1.06.2402040
+[W 2024-05-25 00:18:34,315 minium minitest#953 _log_info_when_error] native: <minium.native.wx_native.idenative.IdeNative object at 0x0000021BC233F1C0>

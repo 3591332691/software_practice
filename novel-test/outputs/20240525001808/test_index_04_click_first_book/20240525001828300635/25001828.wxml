@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<view class="content">
+  <navbar is="components/navbar/navbar">
+    <view class="nav navbar--nav">
+      <view style="height:20px;background:rgba(97, 186, 139, 1.0)"/>
+      <view class="headNav navbar--headNav" style="height:44px;line-height:44px;padding-left:10px;background:rgba(97, 186, 139, 1.0)">
+        <text class="app-title navbar--app-title">阅读平台</text>
+        <view style="flex:1">
+          <navigator style="height:32px;line-height:32px;margin-top:4px;margin-left:16px;margin-right:98px;background: #f4f4f4;border-radius:100px;text-align:center" url="../../pages/search/index" role="link">
+            <text class="search-text navbar--search-text">找小说</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </navbar>
+  <view style="margin-top:64px;">
+    <view class="weui-cell" style="background:#fff9eb">
+      <view class="weui-cell__hd">
+        <image src="/static/images/ic_myapp.png" style="display:block;width:20px;height:20px;margin-right:7px" role="img"/>
+      </view>
+      <view class="weui-cell__bd">
+        <text style="color:#be9719;font-size:13px">点击右上角“添加到我的小程序”，方便下次找到！</text>
+      </view>
+      <view class="weui-cell__ft">
+        <image src="/static/images/modal_closer.png" style="display:block;width:15px;height:15px" role="img"/>
+      </view>
+    </view>
+  </view>
+  <view class="index-swiper">
+    <swiper autoplay="" circular="" indicator-dots="" duration="500" interval="4000" style="height:200px" current="1" current-item-id="">
+      <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+        <image show-menu-by-longpress="" data-index="0" mode="widthFix" src="https://hbimg.b0.upaiyun.com/90740f7d9d5ae96b6571cf76f09a978599bb339b165f0e-3JUof9_fw658" role="img" style="height: 221.857px;"/>
+      </swiper-item>
+      <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(100%, 0px) translateZ(0px);">
+        <image show-menu-by-longpress="" data-index="1" mode="widthFix" src="https://img0.baidu.com/it/u=2371520967,1827169586&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=889&amp;h=500" role="img" style="height: 199.768px;"/>
+      </swiper-item>
+      <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(200%, 0px) translateZ(0px);">
+        <image show-menu-by-longpress="" data-index="2" mode="widthFix" src="https://i1.hdslb.com/bfs/archive/5600fb8bacd2fd57fe8f6af2abf0e5a59bbec5e5.jpg" role="img" style="height: 221.899px;"/>
+      </swiper-item>
+      <swiper-item style="position: absolute; width: 100%; height: 100%; transform: translate(300%, 0px) translateZ(0px);">
+        <image show-menu-by-longpress="" data-index="3" mode="widthFix" src="https://hbimg.b0.upaiyun.com/8d8bb45a274ede3007985f48cbdbeba40626ebac39658-XF9HM8_fw658" role="img" style="height: 221.857px;"/>
+      </swiper-item>
+    </swiper>
+  </view>
+  <book-list is="components/book-list/book-list">
+    <view/>
+  </book-list>
+</view>

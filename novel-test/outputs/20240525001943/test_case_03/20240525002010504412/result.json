@@ -1,0 +1,129 @@
+{
+    "case_name": "test_case_03",
+    "run_time": "20240525 00:20:10",
+    "test_type": "CaseTest",
+    "case_doc": "\u7528\u4f8b\u7f16\u53f7\uff1a03\n\u7528\u4f8b\u63cf\u8ff0\uff1a\n\u6253\u5f00\u5fae\u4fe1\u5c0f\u7a0b\u5e8f\uff0c\u663e\u793a\u4e3b\u754c\u9762\u3002\u70b9\u51fb\u4e3b\u754c\u9762\u4e2d\u7684\u8f6e\u64ad\u56fe\uff0c\u8df3\u8f6c\u81f3\u5bf9\u5e94\u7684\u5c0f\u8bf4\u754c\u9762\u3002\n\u4e3b\u8981\u6d4b\u8bd5\u529f\u80fd\u70b9\uff1a\n1. \u70b9\u51fb\u8f6e\u64ad\u56fe\u8df3\u8f6c\u81f3\u5bf9\u5e94\u5c0f\u8bf4\u7684\u8be6\u60c5\u9875\n\u9884\u671f\u7ed3\u679c\uff1a\n1. \u6253\u5f00\u5c0f\u7a0b\u5e8f\uff0c\u9996\u9875\u8f6e\u64ad\u56fe\u6b63\u5e38\u663e\u793a\u3002\n2. \u70b9\u51fb\u8f6e\u64ad\u56fe\u540e\u8df3\u8f6c\u81f3\u5bf9\u5e94\u5c0f\u8bf4\u8be6\u60c5\u9875\u9762\uff0c\u4e14\u9875\u9762\u6b63\u5e38\u663e\u793a\u3002\n",
+    "success": false,
+    "failures": "Traceback (most recent call last):\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 266, in testPartExecutor\n    yield\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\case.py\", line 351, in run\n    self._callTestMethod(testMethod)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\minitest.py\", line 704, in _callTestMethod\n    method()\n  File \"C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\\u836f\u5b66\\\u5927\u56db\u4e0b\\7 \u8f6f\u4ef6\u5b9e\u8df5\\novel\\novel-test\\caseTest\\Case_test.py\", line 117, in test_case_03\n    self.assertFalse(1)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\assertbase.py\", line 58, in hook_assert\n    return src(self, *args, **kwargs)\nAssertionError: 1 is not false\n",
+    "errors": "",
+    "start_timestamp": 1716567610.6451318,
+    "is_failure": true,
+    "is_error": false,
+    "module": "C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.\u836f\u5b66.\u5927\u56db\u4e0b.7 \u8f6f\u4ef6\u5b9e\u8df5.novel.novel-test.caseTest.Case_test",
+    "package": "caseTest",
+    "failed_line_num": 117,
+    "device": {
+        "system_info": {
+            "batteryLevel": 93,
+            "benchmarkLevel": -1,
+            "brand": "devtools",
+            "memorySize": 2048,
+            "model": "iPhone 6/7/8",
+            "system": "iOS 10.0.1",
+            "platform": "devtools",
+            "pixelRatio": 2,
+            "safeArea": {
+                "top": 20,
+                "left": 0,
+                "right": 375,
+                "bottom": 667,
+                "width": 375,
+                "height": 647
+            },
+            "screenWidth": 375,
+            "screenHeight": 667,
+            "screenTop": 48,
+            "windowWidth": 375,
+            "windowHeight": 619,
+            "statusBarHeight": 20,
+            "version": "8.0.5",
+            "language": "zh_CN",
+            "SDKVersion": "2.25.3",
+            "enableDebug": false,
+            "fontSizeScaleFactor": 0.85,
+            "fontSizeSetting": 15,
+            "mode": "default",
+            "host": {
+                "env": "WeChat"
+            },
+            "bluetoothEnabled": true,
+            "locationEnabled": true,
+            "wifiEnabled": true,
+            "locationReducedAccuracy": true,
+            "albumAuthorized": true,
+            "bluetoothAuthorized": true,
+            "cameraAuthorized": true,
+            "locationAuthorized": true,
+            "microphoneAuthorized": true,
+            "notificationAuthorized": true,
+            "notificationAlertAuthorized": true,
+            "notificationBadgeAuthorized": true,
+            "notificationSoundAuthorized": true,
+            "phoneCalendarAuthorized": true,
+            "deviceOrientation": "portrait",
+            "devicePixelRatio": 2
+        }
+    },
+    "log_filename": "run.log",
+    "error_type": "AssertionError",
+    "error_value": "1 is not false",
+    "error_stages": [
+        "testMethod"
+    ],
+    "screen_info": [
+        {
+            "name": "setup",
+            "url": "/pages/index/index",
+            "path": "images\\setup.png",
+            "ts": 1716567610,
+            "datetime": "2024-05-25 00:20:10",
+            "use_region": false
+        },
+        {
+            "name": "teardown",
+            "url": "/pages/index/index",
+            "path": "images\\teardown.png",
+            "ts": 1716567610,
+            "datetime": "2024-05-25 00:20:10",
+            "use_region": false
+        }
+    ],
+    "step_info": [],
+    "check_list": [],
+    "assert_list": [
+        {
+            "name": "assertFalse",
+            "ret": false,
+            "msg": "1 is not false"
+        }
+    ],
+    "perf_data": "{\"startup\": 0, \"avg_cpu\": 0, \"max_cpu\": 0, \"cpu_data_list\": [], \"avg_mem\": 0, \"max_mem\": 0, \"mem_data_list\": [], \"avg_fps\": 0, \"min_fps_rt\": 0, \"fps_data_list\": [], \"fps_time_series_list\": [], \"cpu_time_series_list\": [], \"mem_time_series_list\": []}",
+    "weapp_log_path": "weapp.log",
+    "request_log_path": "request.log",
+    "stop_timestamp": 1716567610.7777781,
+    "appId": "",
+    "appName": "",
+    "source": {
+        "code": [
+            "    def test_case_03(self):\n",
+            "        \"\"\"\n",
+            "        \u7528\u4f8b\u7f16\u53f7\uff1a03\n",
+            "\n",
+            "        \u7528\u4f8b\u63cf\u8ff0\uff1a\n",
+            "        \u6253\u5f00\u5fae\u4fe1\u5c0f\u7a0b\u5e8f\uff0c\u663e\u793a\u4e3b\u754c\u9762\u3002\u70b9\u51fb\u4e3b\u754c\u9762\u4e2d\u7684\u8f6e\u64ad\u56fe\uff0c\u8df3\u8f6c\u81f3\u5bf9\u5e94\u7684\u5c0f\u8bf4\u754c\u9762\u3002\n",
+            "\n",
+            "        \u4e3b\u8981\u6d4b\u8bd5\u529f\u80fd\u70b9\uff1a\n",
+            "        1. \u70b9\u51fb\u8f6e\u64ad\u56fe\u8df3\u8f6c\u81f3\u5bf9\u5e94\u5c0f\u8bf4\u7684\u8be6\u60c5\u9875\n",
+            "\n",
+            "        \u9884\u671f\u7ed3\u679c\uff1a\n",
+            "        1. \u6253\u5f00\u5c0f\u7a0b\u5e8f\uff0c\u9996\u9875\u8f6e\u64ad\u56fe\u6b63\u5e38\u663e\u793a\u3002\n",
+            "        2. \u70b9\u51fb\u8f6e\u64ad\u56fe\u540e\u8df3\u8f6c\u81f3\u5bf9\u5e94\u5c0f\u8bf4\u8be6\u60c5\u9875\u9762\uff0c\u4e14\u9875\u9762\u6b63\u5e38\u663e\u793a\u3002\n",
+            "        \"\"\"\n",
+            "\n",
+            "        self.assertFalse(1)\n",
+            "        # TODO\n"
+        ],
+        "start": 102
+    },
+    "filename": "result.json"
+}

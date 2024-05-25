@@ -1,0 +1,30 @@
+[E 2024-05-26 03:43:04,339 minium assertbase#287 _get_error_info] self._outcome is None, maybe a class error
+[E 2024-05-26 03:43:04,345 minium assertbase#351 _get_stack_info] <bound method MiniTest._miniClassSetUp of <class 'pageTest.BookDetailPage_test.BookDetailPageTest'>>
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\suite.py", line 64, in _handleClassSetUp
+    _miniClassSetUp()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 331, in _miniClassSetUp
+    native, mini, miniprogram = init_miniprogram(cls.CONFIG)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 201, in init_miniprogram
+    mini = get_minium(cfg)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 161, in get_minium
+    g_minium = minium.miniprogram.get_minium_driver(conf=cfg, native=g_native)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\__init__.py", line 28, in get_minium_driver
+    return APP[application](conf, *args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 164, in __init__
+    self._inject()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 340, in _inject
+    self.app.call_wx_method("getSetting")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 722, in call_wx_method
+    return self._call_wx_method(method=method, args=args, plugin_appid=plugin_appid)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 473, in _receive_response
+    raise response
+minium.framework.exception.MiniCommandError: getSetting:fail
+[W 2024-05-26 03:43:04,350 minium assertbase#333 _log_info_when_error] config: {'debug': False, 'base_dir': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test', 'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'auto_capture': 'auto', 'check_mp_foreground': True, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs', 'enable_app_log': False, 'enable_network_panel': False, 'project_path': 'C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin', 'dev_tool_path': 'D:/小程序/微信web开发者工具/cli.bat', 'test_port': 9420, 'mock_native_modal': {}, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'teardown_snapshot': False, 'mock_images_dir': '', 'mock_images': {}, 'need_perf': False, 'appid': None, 'enable_h5': True, 'assert_capture': False, 'framework_capture': True, 'error_capture': False, 'create_time': '20240526034251', 'case_output': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs\\20240526034251\\test_bookDetail_01_path\\20240526034304334762'}
+[W 2024-05-26 03:43:04,352 minium assertbase#334 _log_info_when_error] build info: {'version': '1.5.4', 'revision': 'd0e4ae555098cbedc3c3d5dd383806e1d5aebe34', 'branch': 'master', 'update_at': '2024-04-22 21:01:28'}

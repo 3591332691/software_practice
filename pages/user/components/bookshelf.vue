@@ -1,35 +1,61 @@
 <script setup>
 	import {
-	  ref,
-	  onBeforeMount,
-	  defineProps
+		ref,
+		onBeforeMount,
+		defineProps
 	} from 'vue'
-	
+	import {
+		onShow
+	} from "@dcloudio/uni-app"
+	import {
+		prevPage
+	} from '../../../stores/prevPage';
+
 	const books = ref([])
-	
-	onBeforeMount(() => {
-	  getBooks()
+	onShow(() => {
+		getBooks()
 	})
-	
+
+	const open_id = uni.getStorageSync("open_id")
 	const getBooks = () => {
-	  const app = getApp()
-	  books.value = app.globalData.mockData.books
-	  console.log(books.value);
-	}
-	
-	// 跳转到小说详情页
-	const goDetail = (e) => {
-	  uni.navigateTo({
-		url:'../../../pages/book-detail/index?bid=' + e.currentTarget.dataset.bid
-	  })
-	}
-	
-	function tosearch() {
-		uni.navigateTo({
-			url:"../../../pages/search/index"
+		books.value = []
+		uni.request({
+			url: "http://150.158.39.251:8080/GetFavoredBooks/Reader?reader_id=" + open_id,
+			method: "GET",
+			success: (res) => {
+				const arr = res.data
+				// console.log(res.data);
+				// console.log(arr);
+				if (arr !== "no favored books") {
+					arr.map((item) => {
+						uni.request({
+							url: "http://150.158.39.251:8080/GetBookDetail?book_id=" + item
+								.book_id,
+							method: "GET",
+							success: (result) => {
+								result.data.id = item.id
+								books.value.push(result.data)
+							}
+						})
+					})
+				}
+			}
 		})
 	}
 
+	// 跳转到小说详情页
+	const goDetail = (e) => {
+		uni.navigateTo({
+			url: '../../../pages/book-detail/index?bid=' + e.currentTarget.dataset.bid + '&&id=' + e
+				.currentTarget.dataset.id + '&&from=bookshelf'
+		})
+	}
+
+	function tosearch() {
+		uni.navigateTo({
+			url: "../../../pages/search/index"
+		})
+	}
 </script>
 
 <template>
@@ -42,9 +68,10 @@
 					<text>找小说</text>
 				</view>
 			</view>
-			<view class="item" v-for="(item, index) in books" :key="item.id" :data-bid="item.id" @click="goDetail">
-				<image class="img" :src="item.img" mode=""></image>
-				<text class="title">{{item.title}}</text>
+			<view class="item" v-for="(item, index) in books" :key="item.book_id" :data-id="item.id"
+				:data-bid="item.book_id" @click="goDetail">
+				<image class="img" :src="item.image" mode=""></image>
+				<text class="title">{{item.book_name}}</text>
 			</view>
 		</view>
 	</view>
@@ -98,7 +125,7 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 				font-size: 26rpx;
-				
+
 				image {
 					display: block;
 					margin: 0 auto;

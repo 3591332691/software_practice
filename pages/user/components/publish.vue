@@ -1,7 +1,39 @@
 <script setup>
+	import {
+		ref
+	} from "vue"
+	import {
+		onShow
+	} from "@dcloudio/uni-app"
+
+	const open_id = uni.getStorageSync("open_id")
+	const books = ref([])
+	const getBook = () => {
+		uni.request({
+			url: "http://150.158.39.251:8080/GetBooksICreated?open_id=" + open_id,
+			method: "GET",
+			success: (res) => {
+				// console.log(res);
+				if (Array.isArray(res.data)) {
+					books.value = res.data
+				}
+			}
+		})
+	}
+
+	onShow(() => {
+		getBook()
+	})
+
+	const goDetail = (e) => {
+		uni.navigateTo({
+			url: '../../../pages/book-detail/index?bid=' + e.currentTarget.dataset.bid + '&&from=publish'
+		})
+	}
+
 	function toEdit() {
 		uni.navigateTo({
-			url:"../../../pages/publishBook/publishBook"
+			url: "../../../pages/publishBook/publishBook"
 		})
 	}
 </script>
@@ -17,21 +49,11 @@
 				</view>
 			</view>
 
-			<view class="item">
-				<image class="img" src="../../../static/upload/1.jpg" mode=""></image>
-				<text class="title">书名</text>
+			<view class="item" v-for="(item, id) in books" :key="item.book_id" :data-bid="item.book_id"
+				@click="goDetail">
+				<image class="img" :src="item.image" mode=""></image>
+				<text class="title">{{item.book_name}}</text>
 			</view>
-
-			<view class="item">
-				<image class="img" src="../../../static/upload/1.jpg" mode=""></image>
-				<text class="title">书名</text>
-			</view>
-
-			<view class="item">
-				<image class="img" src="../../../static/upload/1.jpg" mode=""></image>
-				<text class="title">书名</text>
-			</view>
-
 		</view>
 	</view>
 </template>
@@ -47,10 +69,11 @@
 	.books {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
-		padding: 30rpx;
+		// justify-content: space-between;
+		padding: 30rpx 0;
 
 		.item {
+			margin-left: 30rpx;
 			margin-bottom: 20rpx;
 			width: 210rpx;
 			height: 350rpx;
@@ -83,7 +106,7 @@
 				left: 50%;
 				transform: translate(-50%, -50%);
 				font-size: 26rpx;
-				
+
 				image {
 					display: block;
 					margin: 0 auto;

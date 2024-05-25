@@ -75,7 +75,6 @@
         }
       }
     }
-
     console.log(book.value)
   }
 </script>

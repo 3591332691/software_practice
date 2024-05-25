@@ -1,3 +1,31 @@
+<script setup>
+  import {
+    ref,
+    reactive,
+    computed,
+    onBeforeMount,
+  } from 'vue'
+  import {
+    onLoad
+  } from '@dcloudio/uni-app'
+
+  const slides = ref([])
+  const navbar_height = ref(130)
+
+  const app = getApp()
+
+  onBeforeMount(() => {
+    uni.$once('updateNavbarHeight', function(data) {
+      navbar_height.value = data.height
+    })
+  })
+  
+  onLoad(() => {
+    // app.globalData.utils.getUserInfo()
+    slides.value = app.globalData.mockData.slides
+  })
+</script>
+
 <template>
   <view class="content">
     <!-- 顶端状态栏 -->
@@ -35,32 +63,7 @@
   </view>
 </template>
 
-<script setup>
-  import {
-    ref,
-    reactive,
-    computed,
-    onBeforeMount,
-  } from 'vue'
-  import {
-    onLoad
-  } from '@dcloudio/uni-app'
 
-  const slides = ref([])
-  const navbar_height = ref(130)
-
-  const app = getApp()
-
-  onBeforeMount(() => {
-    uni.$once('updateNavbarHeight', function(data) {
-      navbar_height.value = data.height
-    })
-  })
-  onLoad(() => {
-    app.globalData.utils.getUserInfo()
-    slides.value = app.globalData.mockData.slides
-  })
-</script>
 
 <style>
   .page {

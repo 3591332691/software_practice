@@ -1,0 +1,377 @@
+[I 2024-05-23 19:25:10,231 minium minitest#416 _miniSetUp] =========Current case: test_bookDetail_02_base_element=========
+[W 2024-05-23 19:25:10,232 minium minitest#418 _miniSetUp] 第1次重试
+[I 2024-05-23 19:25:10,232 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.pageTest.BookDetailPage_test, case info: BookDetailPageTest.test_bookDetail_02_base_element
+[I 2024-05-23 19:25:10,233 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-23 19:25:10,234 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[W 2024-05-23 19:25:10,234 minium minitest#376 _check_debug_connection] app is relaunching, wait for it
+[W 2024-05-23 19:25:10,235 minium wx_minium#1072 wait_app_relaunch] app is relaunching, wait 36.70607829093933 seconds for it
+[I 2024-05-23 19:25:10,513 minium minium_object#101 _do_shell] err:
+- initialize
+
+√ IDE server has started, listening on http://127.0.0.1:43012
+- preparing
+√ close
+
+[I 2024-05-23 19:25:10,514 minium minium_object#102 _do_shell] out:
+
+[I 2024-05-23 19:25:10,515 minium wx_minium#680 launch_dev_tool] Starting dev tool and launch MiniProgram project ...
+[I 2024-05-23 19:25:10,516 minium minium_object#83 _do_shell] de shell: cli.bat auto --project "C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin" --auto-port 9420
+[I 2024-05-23 19:25:12,926 minium minium_object#101 _do_shell] err:
+- initialize
+
+√ IDE server has started, listening on http://127.0.0.1:43012
+- preparing
+- Fetching AppID (wxcc45e2933675cfa6) permissions
+√ Using AppID: wxcc45e2933675cfa6
+√ auto
+
+[I 2024-05-23 19:25:12,928 minium minium_object#102 _do_shell] out:
+
+[I 2024-05-23 19:25:22,930 minium wx_minium#777 connect_dev_tool] Trying to connect Dev tool ...
+[I 2024-05-23 19:25:23,085 minium.Conn6352 connection#342 _connect] connect to WebChatTools successfully
+[D 2024-05-23 19:25:23,086 minium.Conn6352 connection#417 _safely_send] SEND > [1965529896352]{"id":"9ac934a0-cc56-4efb-8753-4e639da95278","method":"Tool.getInfo","params":{}}
+[D 2024-05-23 19:25:23,088 minium.Conn6352 connection#650 __on_message] RECV < [1965529896352]{"id":"9ac934a0-cc56-4efb-8753-4e639da95278","result":{"version":"1.06.2402040","SDKVersion":"2.25.3"}}
+[D 2024-05-23 19:25:23,089 minium.Conn6352 connection#417 _safely_send] SEND > [1965529896352]{"id":"73a171ff-20a3-45e3-b5d8-0594564f01e2","method":"App.callWxMethod","params":{"method":"getSystemInfoSync","args":[]}}
+[W 2024-05-23 19:25:46,943 minium minitest#379 _check_debug_connection] app did not relaunch within 36.70607829093933 seconds
+[W 2024-05-23 19:25:46,944 minium minitest#433 _miniSetUp] check debug connection fail
+[I 2024-05-23 19:25:46,945 minium minitest#106 reset_minium] reset_minium
+[D 2024-05-23 19:25:46,946 minium.Conn6352 connection#417 _safely_send] ASYNC_SEND > [1965529896352]{"id":"de2c54e6-3560-4932-9388-2a73149859b1","method":"Tool.close","params":{}}
+[D 2024-05-23 19:25:46,947 minium.Conn6352 connection#650 __on_message] RECV < [1965529896352]{"id":"de2c54e6-3560-4932-9388-2a73149859b1","result":{}}
+[I 2024-05-23 19:25:46,948 minium.Conn6352 connection#694 _handle_async_msg] received async msg: de2c54e6-3560-4932-9388-2a73149859b1, maybe command ignore response
+[E 2024-05-23 19:25:46,967 minium.Conn6352 connection#632 _on_error] Connection to remote host was lost.
+[I 2024-05-23 19:25:46,968 minium.Conn6352 connection#367 _ws_run_forever] websocket run forever shutdown
+[I 2024-05-23 19:25:47,947 minium minitest#86 reset_native] reset_native
+[I 2024-05-23 19:25:47,947 minium basenative#59 wrapper] call IdeNative.stop_wechat
+[I 2024-05-23 19:25:47,948 minium basenative#63 wrapper] call IdeNative.stop_wechat end None
+[I 2024-05-23 19:25:47,949 minium basenative#59 wrapper] call IdeNative.release
+[I 2024-05-23 19:25:47,949 minium basenative#59 wrapper] call BaseNative.release
+[I 2024-05-23 19:25:47,950 minium basenative#232 release] Native release
+[I 2024-05-23 19:25:47,951 minium basenative#59 wrapper] call BaseNative.release_auto_authorize
+[I 2024-05-23 19:25:47,951 minium basenative#63 wrapper] call BaseNative.release_auto_authorize end None
+[I 2024-05-23 19:25:47,952 minium basenative#63 wrapper] call BaseNative.release end None
+[I 2024-05-23 19:25:47,952 minium basenative#63 wrapper] call IdeNative.release end None
+[D 2024-05-23 19:25:47,953 minium minitest#390 _update_miniprogram] start update miniprogram, class is: BookDetailPageTest
+[D 2024-05-23 19:25:47,954 minium minitest#397 _update_miniprogram] finish update miniprogram, current native: 140719701126848, minium: 140719701126848
+[I 2024-05-23 19:25:47,954 minium minitest#199 init_miniprogram] start init miniprogram
+[I 2024-05-23 19:25:47,955 minium basenative#59 wrapper] call IdeNative.start_wechat
+[I 2024-05-23 19:25:47,955 minium basenative#63 wrapper] call IdeNative.start_wechat end None
+[D 2024-05-23 19:25:47,957 minium wx_minium#111 __init__] {'debug': False, 'base_dir': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test', 'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'auto_capture': 'auto', 'check_mp_foreground': True, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs', 'enable_app_log': False, 'enable_network_panel': False, 'project_path': 'C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin', 'dev_tool_path': 'D:/小程序/微信web开发者工具/cli.bat', 'test_port': 9420, 'mock_native_modal': {}, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'teardown_snapshot': False, 'mock_images_dir': '', 'mock_images': {}, 'need_perf': False, 'appid': None, 'enable_h5': True, 'assert_capture': False, 'framework_capture': True, 'error_capture': False, 'create_time': '20240523192423'}
+[I 2024-05-23 19:25:47,958 minium wx_minium#680 launch_dev_tool] Starting dev tool and launch MiniProgram project ...
+[I 2024-05-23 19:25:47,960 minium minium_object#83 _do_shell] de shell: cli.bat auto --project "C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin" --auto-port 9420
+[I 2024-05-23 19:25:50,444 minium minium_object#101 _do_shell] err:
+- initialize
+
+√ IDE server has started, listening on http://127.0.0.1:43012
+- preparing
+- Fetching AppID (wxcc45e2933675cfa6) permissions
+√ Using AppID: wxcc45e2933675cfa6
+√ auto
+
+[I 2024-05-23 19:25:50,446 minium minium_object#102 _do_shell] out:
+
+[I 2024-05-23 19:26:00,447 minium wx_minium#777 connect_dev_tool] Trying to connect Dev tool ...
+[I 2024-05-23 19:26:00,607 minium.Conn9008 connection#342 _connect] connect to WebChatTools successfully
+[E 2024-05-23 19:26:00,608 minium.Conn6352 connection#717 destroy] 断开连接
+[D 2024-05-23 19:26:00,608 minium.Conn9008 connection#417 _safely_send] SEND > [1965530249008]{"id":"8f1e723e-8a4d-482c-83a5-49e622c01889","method":"Tool.getInfo","params":{}}
+[E 2024-05-23 19:26:00,609 minium wx_minium#789 connect_dev_tool] client close by myself
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 782, in connect_dev_tool
+    self._instantiate_app()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 818, in _instantiate_app
+    self._get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 499, in _get_system_info
+    system_info = self.get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 848, in get_system_info
+    self._call_wx_method("getSystemInfoSync")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 480, in _receive_response
+    raise MiniClientOfflineError("client close by myself")
+minium.framework.exception.MiniClientOfflineError: client close by myself
+[D 2024-05-23 19:26:00,613 minium.Conn9008 connection#650 __on_message] RECV < [1965530249008]{"id":"8f1e723e-8a4d-482c-83a5-49e622c01889","result":{"version":"1.06.2402040","SDKVersion":"2.25.3"}}
+[I 2024-05-23 19:26:00,615 minium wx_minium#777 connect_dev_tool] Trying to connect Dev tool ...
+[D 2024-05-23 19:26:00,616 minium.Conn9008 connection#417 _safely_send] SEND > [1965530249008]{"id":"48da6f2f-b0a0-480b-a50d-4d1cd1c47f18","method":"App.callWxMethod","params":{"method":"getSystemInfoSync","args":[]}}
+[I 2024-05-23 19:26:00,781 minium.Conn4672 connection#342 _connect] connect to WebChatTools successfully
+[E 2024-05-23 19:26:00,782 minium.Conn9008 connection#717 destroy] 断开连接
+[I 2024-05-23 19:26:00,784 minium.Conn9008 connection#367 _ws_run_forever] websocket run forever shutdown
+[D 2024-05-23 19:26:00,784 minium.Conn9008 connection#482 _receive_response] rewait for 48da6f2f-b0a0-480b-a50d-4d1cd1c47f18
+[D 2024-05-23 19:26:00,785 minium.Conn4672 connection#417 _safely_send] SEND > [1965529894672]{"id":"261601c9-8817-4f8e-b442-ea15d54520f3","method":"Tool.getInfo","params":{}}
+[D 2024-05-23 19:26:00,786 minium.Conn4672 connection#650 __on_message] RECV < [1965529894672]{"id":"261601c9-8817-4f8e-b442-ea15d54520f3","result":{"version":"1.06.2402040","SDKVersion":"2.25.3"}}
+[D 2024-05-23 19:26:00,787 minium.Conn4672 connection#417 _safely_send] SEND > [1965529894672]{"id":"a3660640-1d1c-4f37-b4d4-160f91a29290","method":"App.callWxMethod","params":{"method":"getSystemInfoSync","args":[]}}
+[E 2024-05-23 19:27:00,619 minium wx_minium#789 connect_dev_tool] [48da6f2f-b0a0-480b-a50d-4d1cd1c47f18][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 782, in connect_dev_tool
+    self._instantiate_app()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 818, in _instantiate_app
+    self._get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 499, in _get_system_info
+    system_info = self.get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 848, in get_system_info
+    self._call_wx_method("getSystemInfoSync")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 488, in _receive_response
+    raise MiniTimeoutCauseByConnectionBreakError(
+minium.framework.exception.MiniTimeoutCauseByConnectionBreakError: [48da6f2f-b0a0-480b-a50d-4d1cd1c47f18][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+[I 2024-05-23 19:27:00,625 minium wx_minium#777 connect_dev_tool] Trying to connect Dev tool ...
+[I 2024-05-23 19:27:00,704 minium.Conn6048 connection#342 _connect] connect to WebChatTools successfully
+[E 2024-05-23 19:27:00,705 minium.Conn4672 connection#717 destroy] 断开连接
+[I 2024-05-23 19:27:00,706 minium.Conn4672 connection#367 _ws_run_forever] websocket run forever shutdown
+[D 2024-05-23 19:27:00,706 minium.Conn4672 connection#482 _receive_response] rewait for a3660640-1d1c-4f37-b4d4-160f91a29290
+[D 2024-05-23 19:27:00,707 minium.Conn6048 connection#417 _safely_send] SEND > [1965530236048]{"id":"64886ffa-1457-4123-a51e-f30b85f7c776","method":"Tool.getInfo","params":{}}
+[D 2024-05-23 19:27:00,709 minium.Conn6048 connection#650 __on_message] RECV < [1965530236048]{"id":"64886ffa-1457-4123-a51e-f30b85f7c776","result":{"version":"1.06.2402040","SDKVersion":"2.25.3"}}
+[D 2024-05-23 19:27:00,709 minium.Conn6048 connection#417 _safely_send] SEND > [1965530236048]{"id":"b1145b6d-91c3-407c-933e-22ec61f8df29","method":"App.callWxMethod","params":{"method":"getSystemInfoSync","args":[]}}
+[E 2024-05-23 19:27:00,790 minium wx_minium#789 connect_dev_tool] [a3660640-1d1c-4f37-b4d4-160f91a29290][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 782, in connect_dev_tool
+    self._instantiate_app()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 818, in _instantiate_app
+    self._get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 499, in _get_system_info
+    system_info = self.get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 848, in get_system_info
+    self._call_wx_method("getSystemInfoSync")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 488, in _receive_response
+    raise MiniTimeoutCauseByConnectionBreakError(
+minium.framework.exception.MiniTimeoutCauseByConnectionBreakError: [a3660640-1d1c-4f37-b4d4-160f91a29290][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+[I 2024-05-23 19:27:00,793 minium wx_minium#777 connect_dev_tool] Trying to connect Dev tool ...
+[I 2024-05-23 19:27:01,011 minium.Conn5424 connection#342 _connect] connect to WebChatTools successfully
+[E 2024-05-23 19:27:01,012 minium.Conn6048 connection#717 destroy] 断开连接
+[I 2024-05-23 19:27:01,012 minium.Conn6048 connection#367 _ws_run_forever] websocket run forever shutdown
+[D 2024-05-23 19:27:01,013 minium.Conn6048 connection#482 _receive_response] rewait for b1145b6d-91c3-407c-933e-22ec61f8df29
+[D 2024-05-23 19:27:01,014 minium.Conn5424 connection#417 _safely_send] SEND > [1965526365424]{"id":"9f188710-3e98-49a6-88da-360556ec72f1","method":"Tool.getInfo","params":{}}
+[D 2024-05-23 19:27:01,015 minium.Conn5424 connection#650 __on_message] RECV < [1965526365424]{"id":"9f188710-3e98-49a6-88da-360556ec72f1","result":{"version":"1.06.2402040","SDKVersion":"2.25.3"}}
+[D 2024-05-23 19:27:01,016 minium.Conn5424 connection#417 _safely_send] SEND > [1965526365424]{"id":"09431dee-12fa-4132-911f-719ddad20c49","method":"App.callWxMethod","params":{"method":"getSystemInfoSync","args":[]}}
+[E 2024-05-23 19:28:00,712 minium wx_minium#789 connect_dev_tool] [b1145b6d-91c3-407c-933e-22ec61f8df29][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 782, in connect_dev_tool
+    self._instantiate_app()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 818, in _instantiate_app
+    self._get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 499, in _get_system_info
+    system_info = self.get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 848, in get_system_info
+    self._call_wx_method("getSystemInfoSync")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 488, in _receive_response
+    raise MiniTimeoutCauseByConnectionBreakError(
+minium.framework.exception.MiniTimeoutCauseByConnectionBreakError: [b1145b6d-91c3-407c-933e-22ec61f8df29][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+[I 2024-05-23 19:28:00,715 minium wx_minium#777 connect_dev_tool] Trying to connect Dev tool ...
+[I 2024-05-23 19:28:00,968 minium.Conn1216 connection#342 _connect] connect to WebChatTools successfully
+[E 2024-05-23 19:28:00,969 minium.Conn5424 connection#717 destroy] 断开连接
+[I 2024-05-23 19:28:00,970 minium.Conn5424 connection#367 _ws_run_forever] websocket run forever shutdown
+[D 2024-05-23 19:28:00,970 minium.Conn5424 connection#482 _receive_response] rewait for 09431dee-12fa-4132-911f-719ddad20c49
+[D 2024-05-23 19:28:00,971 minium.Conn1216 connection#417 _safely_send] SEND > [1965530251216]{"id":"3a45acfa-0566-4487-88cd-e7146ad006b4","method":"Tool.getInfo","params":{}}
+[D 2024-05-23 19:28:00,972 minium.Conn1216 connection#650 __on_message] RECV < [1965530251216]{"id":"3a45acfa-0566-4487-88cd-e7146ad006b4","result":{"version":"1.06.2402040","SDKVersion":"2.25.3"}}
+[D 2024-05-23 19:28:00,973 minium.Conn1216 connection#417 _safely_send] SEND > [1965530251216]{"id":"5abe9545-0582-472e-bea1-9fdd12cb45dc","method":"App.callWxMethod","params":{"method":"getSystemInfoSync","args":[]}}
+[E 2024-05-23 19:28:01,019 minium wx_minium#789 connect_dev_tool] [09431dee-12fa-4132-911f-719ddad20c49][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 782, in connect_dev_tool
+    self._instantiate_app()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 818, in _instantiate_app
+    self._get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 499, in _get_system_info
+    system_info = self.get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 848, in get_system_info
+    self._call_wx_method("getSystemInfoSync")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 488, in _receive_response
+    raise MiniTimeoutCauseByConnectionBreakError(
+minium.framework.exception.MiniTimeoutCauseByConnectionBreakError: [09431dee-12fa-4132-911f-719ddad20c49][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+[E 2024-05-23 19:28:01,022 minium wx_minium#739 launch_dev_tool] three times try to connect Dev tool has all fail ..., restart now...
+[I 2024-05-23 19:28:01,023 minium wx_minium#753 launch_dev_tool] Starting dev tool again...
+[I 2024-05-23 19:28:01,023 minium minium_object#83 _do_shell] de shell: cli.bat auto --project "C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin" --auto-port 9420
+[I 2024-05-23 19:28:02,050 minium minium_object#101 _do_shell] err:
+- initialize
+
+√ IDE server has started, listening on http://127.0.0.1:43012
+- preparing
+- Fetching AppID (wxcc45e2933675cfa6) permissions
+√ Using AppID: wxcc45e2933675cfa6
+× Fetching AppID (wxcc45e2933675cfa6) detailed information
+
+[I 2024-05-23 19:28:02,051 minium minium_object#102 _do_shell] out:
+[error] {
+  code: 10,
+  message: 'Error: 错误 Error: Port 9420 is in use (code 10)Error: Port 9420 is in use\n' +
+    '    at Object.exports.auto [as method] (D:\\小程序\\微信web开发者工具\\code\\package.nw\\core.wxvpkg\\1d3c44fb45826718b091c4f56f6d9ab0.js:2:1236)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+    '    at async D:\\小程序\\微信web开发者工具\\code\\package.nw\\core.wxvpkg\\7a975443f52e91830ae1d65cdf8c86db.js:2:3779\n' +
+    '    at async Object.<anonymous> (D:\\小程序\\微信web开发者工具\\code\\package.nw\\core.wxvpkg\\7a975443f52e91830ae1d65cdf8c86db.js:2:3012)'
+}
+
+[E 2024-05-23 19:28:02,053 minium wx_minium#629 _relaunch] Error: Port 9420 is in use (code 10)
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 782, in connect_dev_tool
+    self._instantiate_app()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 818, in _instantiate_app
+    self._get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 499, in _get_system_info
+    system_info = self.get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 848, in get_system_info
+    self._call_wx_method("getSystemInfoSync")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 488, in _receive_response
+    raise MiniTimeoutCauseByConnectionBreakError(
+minium.framework.exception.MiniTimeoutCauseByConnectionBreakError: [09431dee-12fa-4132-911f-719ddad20c49][call App.callWxMethod] command timeout cause by connection close: code[None] reason[None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 735, in launch_dev_tool
+    self.connect_dev_tool()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 792, in connect_dev_tool
+    raise MiniConnectError(
+minium.framework.exception.MiniConnectError: three times try to connect Dev tool has all fail ...
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 618, in _relaunch
+    self.launch_dev_tool()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 756, in launch_dev_tool
+    raise MiniLaunchError(err_msg) from e
+minium.framework.exception.MiniLaunchError: Error: Port 9420 is in use (code 10)
+[D 2024-05-23 19:28:02,057 minium.Conn5424 connection#715 destroy] already destroy
+[I 2024-05-23 19:28:02,058 minium wx_minium#633 _relaunch] end relaunch app
+[E 2024-05-23 19:29:00,975 minium wx_minium#789 connect_dev_tool] [5abe9545-0582-472e-bea1-9fdd12cb45dc][call App.callWxMethod] receive from remote timeout
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 782, in connect_dev_tool
+    self._instantiate_app()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 818, in _instantiate_app
+    self._get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 499, in _get_system_info
+    system_info = self.get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 848, in get_system_info
+    self._call_wx_method("getSystemInfoSync")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 491, in _receive_response
+    raise MiniTimeoutError(
+minium.framework.exception.MiniTimeoutError: [5abe9545-0582-472e-bea1-9fdd12cb45dc][call App.callWxMethod] receive from remote timeout
+[E 2024-05-23 19:29:00,979 minium wx_minium#739 launch_dev_tool] three times try to connect Dev tool has all fail ..., restart now...
+[I 2024-05-23 19:29:00,979 minium wx_minium#753 launch_dev_tool] Starting dev tool again...
+[I 2024-05-23 19:29:00,979 minium minium_object#83 _do_shell] de shell: cli.bat auto --project "C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin" --auto-port 9420
+[I 2024-05-23 19:29:01,918 minium minium_object#101 _do_shell] err:
+- initialize
+
+√ IDE server has started, listening on http://127.0.0.1:43012
+- preparing
+- Fetching AppID (wxcc45e2933675cfa6) permissions
+√ Using AppID: wxcc45e2933675cfa6
+× Fetching AppID (wxcc45e2933675cfa6) detailed information
+
+[I 2024-05-23 19:29:01,919 minium minium_object#102 _do_shell] out:
+[error] {
+  code: 10,
+  message: 'Error: 错误 Error: Port 9420 is in use (code 10)Error: Port 9420 is in use\n' +
+    '    at Object.exports.auto [as method] (D:\\小程序\\微信web开发者工具\\code\\package.nw\\core.wxvpkg\\1d3c44fb45826718b091c4f56f6d9ab0.js:2:1236)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n' +
+    '    at async D:\\小程序\\微信web开发者工具\\code\\package.nw\\core.wxvpkg\\7a975443f52e91830ae1d65cdf8c86db.js:2:3779\n' +
+    '    at async Object.<anonymous> (D:\\小程序\\微信web开发者工具\\code\\package.nw\\core.wxvpkg\\7a975443f52e91830ae1d65cdf8c86db.js:2:3012)'
+}
+
+[D 2024-05-23 19:29:01,921 minium minitest#390 _update_miniprogram] start update miniprogram, class is: BookDetailPageTest
+[D 2024-05-23 19:29:01,922 minium minitest#397 _update_miniprogram] finish update miniprogram, current native: 140719701126848, minium: 1965529906240
+[D 2024-05-23 19:29:01,923 minium minitest#714 _miniTearDown] =========Current case Down: test_bookDetail_02_base_element=========
+[I 2024-05-23 19:29:01,924 minium minitest#819 capture] capture teardown.png
+[W 2024-05-23 19:29:01,924 minium minitest#851 capture] C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\outputs\20240523192423\test_bookDetail_02_base_element\20240523192510230432\images\teardown.png not exists
+[E 2024-05-23 19:29:01,929 minium assertbase#351 _get_stack_info] <bound method MiniTest._miniSetUp of <pageTest.BookDetailPage_test.BookDetailPageTest testMethod=test_bookDetail_02_base_element>>
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 782, in connect_dev_tool
+    self._instantiate_app()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 818, in _instantiate_app
+    self._get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 499, in _get_system_info
+    system_info = self.get_system_info()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 848, in get_system_info
+    self._call_wx_method("getSystemInfoSync")
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_object.py", line 162, in _call_wx_method
+    return self.connection.send("App.callWxMethod", params)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 447, in send
+    return self._receive_response(cmd)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\connection.py", line 491, in _receive_response
+    raise MiniTimeoutError(
+minium.framework.exception.MiniTimeoutError: [5abe9545-0582-472e-bea1-9fdd12cb45dc][call App.callWxMethod] receive from remote timeout
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 735, in launch_dev_tool
+    self.connect_dev_tool()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 792, in connect_dev_tool
+    raise MiniConnectError(
+minium.framework.exception.MiniConnectError: three times try to connect Dev tool has all fail ...
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 266, in testPartExecutor
+    yield
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\libs\unittest\case.py", line 342, in run
+    self._miniSetUp()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 440, in _miniSetUp
+    self.init_miniprogram()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 405, in init_miniprogram
+    native, mini, _ = init_miniprogram(self.__class__.CONFIG)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 201, in init_miniprogram
+    mini = get_minium(cfg)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 161, in get_minium
+    g_minium = minium.miniprogram.get_minium_driver(conf=cfg, native=g_native)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\__init__.py", line 28, in get_minium_driver
+    return APP[application](conf, *args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 151, in __init__
+    self.launch_weapp()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 579, in launch_weapp
+    self.launch_dev_tool()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\wx_minium.py", line 756, in launch_dev_tool
+    raise MiniLaunchError(err_msg) from e
+minium.framework.exception.MiniLaunchError: Error: Port 9420 is in use (code 10)
+[W 2024-05-23 19:29:01,935 minium assertbase#333 _log_info_when_error] config: {'debug': False, 'base_dir': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test', 'platform': 'ide', 'app': 'wx', 'debug_mode': 'debug', 'close_ide': False, 'auto_capture': 'auto', 'check_mp_foreground': True, 'auto_relaunch': True, 'device_desire': {}, 'account_info': {}, 'report_usage': True, 'remote_connect_timeout': 300, 'request_timeout': 60, 'use_push': True, 'full_reset': False, 'outputs': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs', 'enable_app_log': False, 'enable_network_panel': False, 'project_path': 'C:/Users/MSI-NB/Desktop/FILE/YuFanWenShu/药学/大四下/7 软件实践/novel/unpackage/dist/dev/mp-weixin', 'dev_tool_path': 'D:/小程序/微信web开发者工具/cli.bat', 'test_port': 9420, 'mock_native_modal': {}, 'mock_request': [], 'auto_authorize': False, 'audits': None, 'teardown_snapshot': False, 'mock_images_dir': '', 'mock_images': {}, 'need_perf': False, 'appid': None, 'enable_h5': True, 'assert_capture': False, 'framework_capture': True, 'error_capture': False, 'create_time': '20240523192423', 'case_output': 'C:\\Users\\MSI-NB\\Desktop\\FILE\\YuFanWenShu\\药学\\大四下\\7 软件实践\\novel\\novel-test\\outputs\\20240523192423\\test_bookDetail_02_base_element\\20240523192510230432'}
+[W 2024-05-23 19:29:01,937 minium assertbase#334 _log_info_when_error] build info: {'version': '1.5.4', 'revision': 'd0e4ae555098cbedc3c3d5dd383806e1d5aebe34', 'branch': 'master', 'update_at': '2024-04-22 21:01:28'}
+[W 2024-05-23 19:29:01,937 minium minitest#953 _log_info_when_error] native: <minium.native.wx_native.idenative.IdeNative object at 0x000001C9A2B63C40>

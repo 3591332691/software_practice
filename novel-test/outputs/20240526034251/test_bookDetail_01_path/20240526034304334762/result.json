@@ -1,0 +1,50 @@
+{
+    "case_name": "test_bookDetail_01_path",
+    "run_time": "20240526 03:43:04",
+    "test_type": "BookDetailPageTest",
+    "case_doc": "case1:\u6d4b\u8bd5book\u8be6\u60c5\u9875\u7684\u8df3\u8f6c\u8def\u5f84\u662f\u5426\u6b63\u786e\uff0c\u8df3\u8f6c\u8def\u5f84\u8981\u4f7f\u7528\u7edd\u5bf9\u8def\u5f84\n",
+    "success": false,
+    "failures": "",
+    "errors": "Traceback (most recent call last):\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\libs\\unittest\\suite.py\", line 64, in _handleClassSetUp\n    _miniClassSetUp()\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\minitest.py\", line 331, in _miniClassSetUp\n    native, mini, miniprogram = init_miniprogram(cls.CONFIG)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\minitest.py\", line 201, in init_miniprogram\n    mini = get_minium(cfg)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\framework\\minitest.py\", line 161, in get_minium\n    g_minium = minium.miniprogram.get_minium_driver(conf=cfg, native=g_native)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\miniprogram\\__init__.py\", line 28, in get_minium_driver\n    return APP[application](conf, *args, **kwargs)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\miniprogram\\wx_minium.py\", line 164, in __init__\n    self._inject()\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\miniprogram\\wx_minium.py\", line 340, in _inject\n    self.app.call_wx_method(\"getSetting\")\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\miniprogram\\base_driver\\minium_log.py\", line 225, in wrapper\n    result = func(*args, **kwargs)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\miniprogram\\base_driver\\app.py\", line 722, in call_wx_method\n    return self._call_wx_method(method=method, args=args, plugin_appid=plugin_appid)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\miniprogram\\base_driver\\minium_object.py\", line 162, in _call_wx_method\n    return self.connection.send(\"App.callWxMethod\", params)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\miniprogram\\base_driver\\connection.py\", line 447, in send\n    return self._receive_response(cmd)\n  File \"E:\\zfy\\anaconda3\\envs\\minium\\lib\\site-packages\\minium\\miniprogram\\base_driver\\connection.py\", line 473, in _receive_response\n    raise response\nminium.framework.exception.MiniCommandError: getSetting:fail\n",
+    "start_timestamp": 1716666184.3357596,
+    "is_failure": false,
+    "is_error": true,
+    "module": "C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.\u836f\u5b66.\u5927\u56db\u4e0b.7 \u8f6f\u4ef6\u5b9e\u8df5.novel.novel-test.pageTest.BookDetailPage_test",
+    "package": "pageTest",
+    "failed_line_num": 331,
+    "device": {},
+    "log_filename": "run.log",
+    "error_type": "MiniCommandError",
+    "error_value": "getSetting:fail",
+    "error_stages": [
+        "_miniClassSetUp"
+    ],
+    "screen_info": [],
+    "step_info": [],
+    "check_list": [],
+    "assert_list": [],
+    "stop_timestamp": 1716666184.3397498,
+    "appId": "",
+    "appName": "",
+    "source": {
+        "code": [
+            "    @classmethod\n",
+            "    def _miniClassSetUp(cls):\n",
+            "        logger.debug(\"=====================\")\n",
+            "        logger.debug(\"Testing class\uff1a%s\" % cls.__name__)\n",
+            "        logger.debug(\"=====================\")\n",
+            "        super(MiniTest, cls)._miniClassSetUp()\n",
+            "        if not cls.CONFIG.report_usage:\n",
+            "            minium.miniprogram.base_driver.minium_log.existFlag = 1\n",
+            "\n",
+            "        native, mini, miniprogram = init_miniprogram(cls.CONFIG)\n",
+            "        cls.native = native\n",
+            "        cls.mini = mini\n",
+            "        if cls.CONFIG.need_perf:  # start get perf thread\n",
+            "            cls.native.start_get_perf(timeinterval=0.8)\n",
+            "        cls.DEVICE_INFO[\"system_info\"] = miniprogram.system_info\n"
+        ],
+        "start": 322
+    },
+    "filename": "result.json"
+}

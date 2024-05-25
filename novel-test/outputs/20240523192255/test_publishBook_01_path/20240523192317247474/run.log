@@ -1,0 +1,56 @@
+[I 2024-05-23 19:23:17,248 minium minitest#416 _miniSetUp] =========Current case: test_publishBook_01_path=========
+[I 2024-05-23 19:23:17,249 minium minitest#419 _miniSetUp] package info: C:.Users.MSI-NB.Desktop.FILE.YuFanWenShu.药学.大四下.7 软件实践.novel.novel-test.pageTest.PublishBookPage_test, case info: PublishBookPageTest.test_publishBook_01_path
+[I 2024-05-23 19:23:17,250 minium basenative#59 wrapper] call BaseNative.check_connection
+[I 2024-05-23 19:23:17,250 minium basenative#63 wrapper] call BaseNative.check_connection end True
+[I 2024-05-23 19:23:17,251 minium basenative#59 wrapper] call BaseNative.back_to_miniprogram
+[I 2024-05-23 19:23:17,252 minium basenative#767 back_to_miniprogram] try back_to_miniprogram 3
+[I 2024-05-23 19:23:17,253 minium basenative#63 wrapper] call BaseNative.back_to_miniprogram end 
+[D 2024-05-23 19:23:17,254 minium.Conn8128 connection#417 _safely_send] ASYNC_SEND > [1626955468128]{"id":"dfbaca99-9900-4c75-96f8-31d20c324738","method":"App.callWxMethod","params":{"method":"switchTab","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-23 19:23:17,257 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"method":"App.bindingCalled","params":{"name":"switchTab_before_global","args":[{"url":"/pages/index/index"}]}}
+[D 2024-05-23 19:23:17,259 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"dfbaca99-9900-4c75-96f8-31d20c324738","result":{"result":{"errMsg":"switchTab:ok"}}}
+[I 2024-05-23 19:23:17,260 minium.Conn8128 connection#694 _handle_async_msg] received async msg: dfbaca99-9900-4c75-96f8-31d20c324738
+[D 2024-05-23 19:23:17,261 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"b8e7ee50-5467-4802-8910-6ab56b01bc78","method":"App.getCurrentPage","params":{}}
+[D 2024-05-23 19:23:17,267 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"b8e7ee50-5467-4802-8910-6ab56b01bc78","result":{"pageId":2,"path":"pages/index/index","query":{}}}
+[D 2024-05-23 19:23:17,268 minium.App1872 app#583 _evaluate_js] evaluate js file getCurrentPages [ALL]
+[D 2024-05-23 19:23:17,269 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"7843e031-df1a-4299-9753-0551cab0dc9c","method":"App.callFunction","params":{"functionDeclaration":"function miniumGetCurrentPages(e){var r=getCurrentPages();return e&&(r=[r.pop()]),r=r.map((function(e){if(e){let{route:r}=e;const n=r.indexOf(\"__plugin__/\");return n>-1&&(r=\"plugin-private://\"+r.slice(n+11)),{pageId:e.__wxWebviewId__,path:r,query:e.options,renderer:e.renderer}}})),e?r.pop():r}","args":[true]}}
+[D 2024-05-23 19:23:17,274 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"7843e031-df1a-4299-9753-0551cab0dc9c","result":{"result":{"pageId":2,"path":"pages/index/index","query":{},"renderer":"webview"}}}
+[I 2024-05-23 19:23:17,276 minium minitest#819 capture] capture setup.png
+[D 2024-05-23 19:23:17,276 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"92400520-7438-49f0-8d8c-4326bc04704d","method":"App.captureScreenshot","params":{}}
+[D 2024-05-23 19:23:17,600 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"92400520-7438-49f0-8d8c-4326bc04704d","result":{"data":"iVBORw0KGgoAAAANSUhEUgAAAdUAAAMGCAIAAAAr7okIAAAAAXNSR0IArs4c6QAAIABJREFUeJzsvXewH1d253fuvZ3TL4cXgYcMAgRAgGHISZzRBIVR2lFab9CutLsqWVKVtlx2uWS7ZNlV9rr8h9dl79bWal2yqizZSitpR6MZjmaGnGGOIImcXw6//Pt17r7BfzTw+PgAEAAB8pFgf4p/gB1un9993d8+95xzb6N/+p3/FXJycnJyPlz2l6fxVtuQk5OT8wkl19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytIdffnJycnK0h19+cnJycrSHX35ycnJytI
+[I 2024-05-23 19:23:17,604 minium minitest#471 _miniSetUp] =========case: test_publishBook_01_path start=========
+[I 2024-05-23 19:23:17,605 minium minitest#703 _callTestMethod] call test method
+[I 2024-05-23 19:23:17,606 minium.App1872 app#856 navigate_to] NavigateTo: /pages/publishBook/publishBook
+[D 2024-05-23 19:23:17,607 minium.Conn8128 connection#417 _safely_send] ASYNC_SEND > [1626955468128]{"id":"f3f59250-5efd-4772-9371-b3112b305c6a","method":"App.callWxMethod","params":{"method":"navigateTo","args":[{"url":"/pages/publishBook/publishBook"}]}}
+[D 2024-05-23 19:23:17,610 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"method":"App.bindingCalled","params":{"name":"navigateTo_before_global","args":[{"url":"/pages/publishBook/publishBook"}]}}
+[D 2024-05-23 19:23:22,617 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"id":"f3f59250-5efd-4772-9371-b3112b305c6a","error":{"message":"timeout"}}
+[E 2024-05-23 19:23:22,618 minium.Conn8128 connection#658 __on_message] [f3f59250-5efd-4772-9371-b3112b305c6a]: timeout
+[I 2024-05-23 19:23:22,619 minium.Conn8128 connection#694 _handle_async_msg] received async msg: f3f59250-5efd-4772-9371-b3112b305c6a
+[E 2024-05-23 19:23:22,619 minium minitest#708 _callTestMethod] test exception
+Traceback (most recent call last):
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\framework\minitest.py", line 704, in _callTestMethod
+    method()
+  File "C:\Users\MSI-NB\Desktop\FILE\YuFanWenShu\药学\大四下\7 软件实践\novel\novel-test\pageTest\PublishBookPage_test.py", line 21, in test_publishBook_01_path
+    self.app.navigate_to(Route.PublishBookPage_route)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\minium_log.py", line 225, in wrapper
+    result = func(*args, **kwargs)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 857, in navigate_to
+    page = self._change_route_async("navigateTo", url, is_wait_url_change)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 1113, in _change_route_async
+    cmd.get_open_result(wait_timeout)
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\app.py", line 132, in get_open_result
+    return self._open_callback.get_result()
+  File "E:\zfy\anaconda3\envs\minium\lib\site-packages\minium\miniprogram\base_driver\callback.py", line 158, in get_result
+    return self._waiter.result()
+minium.framework.exception.MiniCommandError: timeout
+[I 2024-05-23 19:23:22,622 minium minitest#711 _callTestMethod] end test method
+[D 2024-05-23 19:23:22,623 minium minitest#714 _miniTearDown] =========Current case Down: test_publishBook_01_path=========
+[I 2024-05-23 19:23:22,624 minium minitest#819 capture] capture teardown.png
+[D 2024-05-23 19:23:22,624 minium.Conn8128 connection#417 _safely_send] SEND > [1626955468128]{"id":"e97ab004-1279-43b1-b07a-6a5395ffdc9e","method":"App.captureScreenshot","params":{}}
+[D 2024-05-23 19:23:32,273 minium.Conn8128 connection#650 __on_message] RECV < [1626955468128]{"method":"App.bindingCalled","params":{"name":"onAppRouteDone","args":[{"webviewId":6,"path":"pages/publishBook/publishBook","query":{},"openType":"navigateTo","__ts__":1716463412267,"renderer":"webview"},1716463412271]}}
+[I 2024-05-23 19:23:32,275 minium.App1872 app#1152 _on_route_changed] Route changed, {'name': 'onAppRouteDone', 'args': [{'webviewId': 6, 'path': 'pages/publishBook/publishBook', 'query': {}, 'openType': 'navigateTo', '__ts__': 1716463412267, 'renderer': 'webview'}, 1716463412271]}
+[E 2024-05-23 19:23:53,525 minium.Conn8128 connection#632 _on_error] [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[I 2024-05-23 19:23:53,526 minium.Conn8128 connection#367 _ws_run_forever] websocket run forever shutdown
+[W 2024-05-23 19:23:53,526 minium.Conn8128 connection#552 reconnect] connection reconnect
+[E 2024-05-23 19:23:57,687 minium.Conn8128 connection#632 _on_error] [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+[I 2024-05-23 19:23:57,746 minium.Conn8128 connection#367 _ws_run_forever] websocket run forever shutdown
+[W 2024-05-23 19:23:57,810 minium.Conn8128 connection#568 reconnect] connect refused, please check svr
