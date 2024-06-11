@@ -85,13 +85,13 @@ public class FavoredBookController {
         Favored_book favored_book = favoredBookService.findById(shelf_id);
         // 判断书架是否存在，并且上次退出时间应该在这次进入之前
         if(favored_book == null || favored_book.getEnd_time().after(begin_time)){
-            return "更新失败";
+            return "update false";
         }
         favored_book.setBegin_time(begin_time);
-        favored_book.setEnd_time(begin_time); // 可修改可不修改
+        favored_book.setEnd_time(begin_time);
 
         favoredBookService.updateFavored_book(favored_book);
-        return "更新成功";
+        return "update succeed";
     }
 
     @PostMapping("/UpdateFavoredBook/end")
@@ -107,7 +107,7 @@ public class FavoredBookController {
         Favored_book favored_book = favoredBookService.findById(shelf_id);
         // 判断书架是否存在，并且进入时间应该在结束之前
         if(favored_book == null || favored_book.getBegin_time().after(end_time)){
-            return "更新失败";
+            return "update false";
         }
         Date begin_time = favored_book.getBegin_time();
         int reading_time_last = favored_book.getReading_time();
@@ -118,7 +118,14 @@ public class FavoredBookController {
         favored_book.setReading_progress(reading_progress);
 
         favoredBookService.updateFavored_book(favored_book);
-        return "更新成功";
+        return "update succeed";
+    }
+
+    @GetMapping("/GetFavoredBook/shelf")
+    public String GetFavoredBook(@RequestParam int shelf_id) throws Exception{
+        Favored_book favoredBook = favoredBookService.findById(shelf_id);
+        Gson gson = new Gson();
+        return gson.toJson(favoredBook);
     }
 
 }
