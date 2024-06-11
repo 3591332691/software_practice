@@ -34,8 +34,11 @@ public class BackendApplication {
      */
 	@Bean
 	public CommandLineRunner init_database(JdbcTemplate jdbcTemplate) throws Exception {
-		// 读取 SQL 文件内容
-        executeSqlFile("lab1test.sql");
+		// 读取 SQL 文件内容 ，只要保证部署的时候用的是Application.sql就行了
+		//Application.sql是真实部署的时候使用的
+		//lab1test.sql是在单元测试的时候使用的
+		//shelfTest.sql是在验收测试的时候使用的数据库
+        executeSqlFile("Application.sql");
 		return args -> {};
     }
 
@@ -75,6 +78,7 @@ public class BackendApplication {
 			e.printStackTrace();
 		}
 	}
+
 
 
 }
