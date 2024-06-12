@@ -28,7 +28,7 @@ jobs:
 
       - name: Print current directory
         run: |
-          cat %USERPROFILE%\.ssh\id_rsa
+          cat $env:USERPROFILE\.ssh\id_rsa
           
 
       - name: Build with Maven
