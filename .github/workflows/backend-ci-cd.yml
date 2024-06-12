@@ -16,21 +16,18 @@ jobs:
       # Decode and store the SSH private key
       - name: Set up SSH key
         run: |
-          Get-Content ${{ secrets.SSH_PRIVATE_KEY }}
           mkdir -p $env:USERPROFILE\.ssh
           echo '${{ secrets.SSH_PRIVATE_KEY }}' | base64 --decode > $env:USERPROFILE\.ssh\id_rsa
-          chmod 600 $env:USERPROFILE\.ssh\id_rsa
+
+      - name: Print current directory
+        run: |
+          cat $env:USERPROFILE\.ssh\id_rsa
 
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
           java-version: '17'
-
-      - name: Print current directory
-        run: |
-          cat $env:USERPROFILE\.ssh\id_rsa
-          
 
       - name: Build with Maven
         run: mvn clean package -DskipTests
