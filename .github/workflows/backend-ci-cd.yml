@@ -19,7 +19,6 @@ jobs:
           mkdir -p $env:USERPROFILE\.ssh
           echo '${{ secrets.SSH_PRIVATE_KEY }}' | base64 --decode > $env:USERPROFILE\.ssh\id_rsa
           chmod 600 $env:USERPROFILE\.ssh\id_rsa
-      
 
       - name: Set up JDK
         uses: actions/setup-java@v2
