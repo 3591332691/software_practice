@@ -22,10 +22,8 @@ jobs:
       - name: Build with Maven
         run: mvn clean package -DskipTests
 
-      - name: Print current directory
-        run: |
-          pwd
-          ls -a
+      - name: Deploy to server
+        run: sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no ubuntu@150.158.39.251
 
       # Deploy using SCP with password
       - name: Deploy to server
