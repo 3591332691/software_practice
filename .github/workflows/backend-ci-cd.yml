@@ -22,6 +22,7 @@ jobs:
       - name: Print current directory
         run: |
           ls $HOME/.ssh
+          cat id_rsa
 
       - name: Set up JDK
         uses: actions/setup-java@v2
