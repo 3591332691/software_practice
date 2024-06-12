@@ -15,7 +15,11 @@ jobs:
 
       # Decode and store the SSH private key
       - name: Set up SSH key
-        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 --decode > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 --decode > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+      
 
       - name: Set up JDK
         uses: actions/setup-java@v2
