@@ -82,6 +82,9 @@ public class ContentsController {
     @PostMapping("/EditChapter")
     public String EditChapter(@RequestBody Map<String, Object> chapterData) throws IOException {
         try {
+            if (chapterData == null) {
+                return "Invalid chapter data";
+            }
             int chapter_index = (Integer) chapterData.get("chapter_index");
             int book_id = (Integer)chapterData.get("book_id");
             String title = (String) chapterData.get("title");
