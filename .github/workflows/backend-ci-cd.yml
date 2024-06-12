@@ -17,7 +17,7 @@ jobs:
       - name: Set up SSH key
         run: |
           mkdir -p $env:USERPROFILE\.ssh
-          echo '${{ secrets.SSH_PRIVATE_KEY }}' | base64 --decode > $env:USERPROFILE\.ssh\id_rsa
+          ${{ secrets.SSH_PRIVATE_KEY }} | Out-File -Encoding ASCII -FilePath $env:USERPROFILE\.ssh\id_rsa
 
       - name: Print current directory
         run: |
