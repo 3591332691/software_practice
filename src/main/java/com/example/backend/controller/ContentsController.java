@@ -87,8 +87,8 @@ public class ContentsController {
         String textContent = (String) chapterData.get("textContent");
         if(bookMapper.findBookById(book_id)==null) {return "Book not found";}
         Map<String, Object> params = new HashMap<>();
-        params.put("bookId", book_id);
-        params.put("contentIndexInBook", chapter_index);
+        params.put("book_id", book_id);
+        params.put("content_index_inBook", chapter_index);
         Contents contents = contentMapper.getContentByBook_idAndIndex_id(params);
         if (contents == null) {
             return "chapter not found";
