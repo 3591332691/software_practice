@@ -13,6 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Decode and store the SSH private key
+      - name: Set up SSH key
+        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 --decode > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
@@ -22,11 +26,10 @@ jobs:
       - name: Build with Maven
         run: mvn clean package -DskipTests
 
+      # Deploy using SCP
       - name: Deploy to server
-        run: |
-          scp -i ${{ secrets.SSH_PRIVATE_KEY }} ./target/backend-0.0.1-SNAPSHOT.jar ubuntu@150.158.39.251:/home/ubuntu/phase2/
+        run: scp -i ~/.ssh/id_rsa ./target/backend-0.0.1-SNAPSHOT.jar ubuntu@150.158.39.251:/home/ubuntu/phase2/
 
-
-      - name: Stop old JAR file and Start new JAR file
-        run: |
-          ssh -i ${{ secrets.SSH_PRIVATE_KEY }} ubuntu@150.158.39.251 'pkill -f backend-0.0.1-SNAPSHOT.jar && nohup java -jar /home/ubuntu/phase2/backend-0.0.1-SNAPSHOT.jar &'
+      # Restart the JAR file
+      - name: Restart JAR file
+        run: ssh -i ~/.ssh/id_rsa ubuntu@150.158.39.251 'pkill -f backend-0.0.1-SNAPSHOT.jar && nohup java -jar /home/ubuntu/phase2/backend-0.0.1-SNAPSHOT.jar &'
