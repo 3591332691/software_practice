@@ -35,7 +35,7 @@ jobs:
           fi
 
       - name: Start new JAR file
-        run: sshpass -p ${{ secrets.PASSWORD }} ssh -o PasswordAuthentication=yes ubuntu@150.158.39.251 'nohup java -jar /home/ubuntu/phase2/backend-0.0.1-SNAPSHOT.jar & exit '
+        run: sshpass -p ${{ secrets.PASSWORD }} ssh -o PasswordAuthentication=yes ubuntu@150.158.39.251 'nohup java -jar /home/ubuntu/phase2/backend-0.0.1-SNAPSHOT.jar &'
 
 
 
