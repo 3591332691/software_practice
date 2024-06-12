@@ -18,6 +18,7 @@ jobs:
         run: |
           mkdir -p $HOME/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | base64 -d > $HOME/.ssh/id_rsa
+          chmod 400 $HOME/.ssh/id_rsa
 
       - name: Print current directory
         run: |
