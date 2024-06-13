@@ -1,4 +1,4 @@
-1. BackendApplication.java 里面有数据库的初始化（springboot每次运行就初始化一遍数据库）
+1. BackendApplication.java 里面如果数据库没有设定的表的话就会进行数据库的初始化
 	要求是本地的mysql里有一个叫做software_practice_phase1的数据库
 //这是application.yml文件，需要按自己的root和密码改
 spring:
@@ -7,15 +7,5 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-mybatis:
-  mapper-locations: classpath*:mapper/*.xml
-server:
-  port: 8080
 
-2. 关于mybatis的使用方法，一个Entity对应一个Mapper接口类对应一个mapper.xml文件；分别代表table,调用的函数，函数使用table的sql语句；如果哪里不对就去哪里改
-		(src/main/java/com/example/backend/Entity)、(src/main/java/com/example/backend/mapper)、(src/main/resources/mapper)
-3. 业务就写在src/main/java/com/example/backend/service 和src/main/java/com/example/backend/controller
-    下，其中controller是更接近于前端交互的接口，service是逻辑实现，例子可见LogInController和LogInService。
-    LogInController的接口调用了LogInService的一个函数。
-4. 自行进行基础的接口测试
-5. 可以在自己分支上打打finish-tag，然后尝试合并一下分支
+2.小程序前端运行和部署需要Hbuilder和微信小程序开发者工具
