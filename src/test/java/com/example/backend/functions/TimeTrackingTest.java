@@ -152,8 +152,8 @@ public class TimeTrackingTest {
                 .andExpect(jsonPath("$.end_time", is("Jun 11, 2024, 11:00:00 AM")))
                 .andExpect(jsonPath("$.reading_progress", is(50)))
                 .andExpect(jsonPath("$.reading_time", is(60)));
-
     }
+
 
     @AfterAll
     static void tearDown() {

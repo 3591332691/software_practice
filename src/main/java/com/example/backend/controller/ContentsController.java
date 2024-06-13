@@ -99,8 +99,8 @@ public class ContentsController {
             }
             else{
                 contents.setTitle(title);
-                String url = contentService.textToUrl(textContent);
-                contents.setChapter(url);
+                //String url = contentService.textToUrl(textContent);
+                contents.setChapter(textContent);
                 contentMapper.updateContent(contents);
                 return "Modify chapter successfully";
             }
