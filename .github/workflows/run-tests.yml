@@ -18,6 +18,18 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
+      - name: Stop MySQL service
+        run: sudo service mysql stop
+
+      - name: Start MySQL with skip-grant-tables
+        run: sudo mysqld_safe --skip-grant-tables &
+
+      - name: Wait for MySQL to start
+        run: sleep 5
+
+      - name: Reset root password
+        run: |
+          sudo mysql -e "FLUSH PRIVILEGES; ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';"
 
       - name: Start MySQL service
         run: sudo service mysql start
