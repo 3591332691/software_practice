@@ -10,3 +10,8 @@ mybatis:
 
 server:
   port: 8080
+  ssl:   # SSL证书设置
+     key-store: classpath:yufanwenshu.cn.jks
+     key-store-password: 1y21l0fob2
+     key-store-type: JKS
+

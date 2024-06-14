@@ -81,26 +81,34 @@ public class ContentsController {
 
     @PostMapping("/EditChapter")
     public String EditChapter(@RequestBody Map<String, Object> chapterData) throws IOException {
-        int chapter_index = (Integer) chapterData.get("chapter_index");
-        int book_id = (Integer)chapterData.get("book_id");
-        String title = (String) chapterData.get("title");
-        String textContent = (String) chapterData.get("textContent");
-        if(bookMapper.findBookById(book_id)==null) {return "Book not found";}
-        Map<String, Object> params = new HashMap<>();
-        params.put("bookId", book_id);
-        params.put("contentIndexInBook", chapter_index);
-        Contents contents = contentMapper.getContentByBook_idAndIndex_id(params);
-        if (contents == null) {
-            return "chapter not found";
+        try {
+            if (chapterData.get("chapter_index")==null||chapterData.get("book_id")==null||chapterData.get("title")==null||chapterData.get("textContent")==null) {
+                return "Invalid chapter data";
+            }
+            int chapter_index = (Integer) chapterData.get("chapter_index");
+            int book_id = (Integer)chapterData.get("book_id");
+            String title = (String) chapterData.get("title");
+            String textContent = (String) chapterData.get("textContent");
+            if(bookMapper.findBookById(book_id)==null) {return "Book not found";}
+            Map<String, Object> params = new HashMap<>();
+            params.put("book_id", book_id);
+            params.put("content_index_inBook", chapter_index);
+            Contents contents = contentMapper.getContentByBook_idAndIndex_id(params);
+            if (contents == null) {
+                return "chapter not found";
+            }
+            else{
+                contents.setTitle(title);
+                //String url = contentService.textToUrl(textContent);
+                contents.setChapter(textContent);
+                contentMapper.updateContent(contents);
+                return "Modify chapter successfully";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "error input"; // 如果数据不符合预期，返回错误信息
         }
-        else{
-            contents.setTitle(title);
-            String url = contentService.textToUrl(textContent);
-            contents.setChapter(url);
-            contentMapper.updateContent(contents);
-            return "Modify chapter successfully";
-        }
-
     }
+
 
 }
