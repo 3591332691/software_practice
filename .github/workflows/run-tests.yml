@@ -22,10 +22,9 @@ jobs:
         run: sudo service mysql stop
 
       - name: Start MySQL with skip-grant-tables
-        run: sudo mysqld_safe --skip-grant-tables &
-
-      - name: Wait for MySQL to start
-        run: sleep 5
+        run: |
+          sudo mysqld_safe --skip-grant-tables &
+          sleep 5  # 等待5秒，确保 MySQL 服务器已经启动
 
       - name: Reset root password
         run: |
