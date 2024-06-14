@@ -9,6 +9,16 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_ROOT_PASSWORD: 123456
+          MYSQL_DATABASE: software_practice_phase1
+        ports:
+          - 3306:3306
+        options: --health-cmd='mysqladmin ping --silent' --health-interval=10s --health-timeout=5s --health-retries=3
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -19,16 +29,6 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
-      - name: Install MySQL
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y mysql-server
-          sudo service mysql start
-          sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY '123456';"
-          sudo mysql -e "CREATE DATABASE software_practice_phase1;"
-
-      - name: Install MySQL client
-        run: sudo apt-get install -y mysql-client
 
       - name: Wait for MySQL to be ready
         run: |
