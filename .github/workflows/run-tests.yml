@@ -18,13 +18,13 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
-      - name: Install MySQL and set root password
-        run: |
-          sudo service mysql start
-          sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';"
 
       - name: Start MySQL service
         run: sudo service mysql start
+
+      - name: set root password
+        run: |
+          sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';"
 
       - name: Create database
         run: |
