@@ -8,12 +8,6 @@ on:
 jobs:
   run-tests:
     runs-on: ubuntu-latest
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ROOT_PASSWORD: 123456
-          MYSQL_DATABASE: software_practice_phase1
 
     steps:
       - name: Checkout code
@@ -25,10 +19,23 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
+      - name: Install MySQL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mysql-server
+          sudo service mysql start
+          sudo mysql -e "CREATE DATABASE software_practice_phase1;"
+          sudo mysql -e "CREATE USER 'root'@'%' IDENTIFIED BY '123456';"
+          sudo mysql -e "GRANT ALL PRIVILEGES ON software_practice_phase1.* TO 'root'@'%';"
+          sudo mysql -e "FLUSH PRIVILEGES;"
+
+      - name: Install MySQL client
+        run: sudo apt-get install -y mysql-client
+
       - name: Wait for MySQL to be ready
         run: |
-          for i in `seq 1 30`; do
-          if echo 'SELECT 1' | mysql --host=127.0.0.1 --port=3306 --user=root --password=root_password software_practice_phase1 &> /dev/null; then
+          for i in `seq 1 60`; do
+          if echo 'SELECT 1' | mysql --host=127.0.0.1 --port=3306 --user=root --password=123456 software_practice_phase1 &> /dev/null; then
            echo "MySQL is ready"
            break
           fi
@@ -49,14 +56,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: test-reports
-          path: target/surefire-reports
-
-  save-reports:
-    needs: run-tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download test reports artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: test-reports
-          path: test-reports
+          path:
