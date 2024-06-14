@@ -8,6 +8,14 @@ on:
 jobs:
   run-tests:
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:latest
+        options: --health-cmd='mysqladmin ping --silent' --health-interval=10s --health-timeout=5s --health-retries=3
+        env:
+          MYSQL_ROOT_PASSWORD: 123456
+          MYSQL_DATABASE: software_practice_phase1
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -18,36 +26,31 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
-      - name: Stop MySQL service
-        run: sudo service mysql stop
-
-      - name: Start MySQL with skip-grant-tables
+      - name: Wait for MySQL to be ready
         run: |
-          sudo mysqld_safe --skip-grant-tables &
-          sleep 15  # 等待15秒，确保 MySQL 服务器已经启动
-
-      - name: Reset root password
-        run: |
-          sudo mysql -e "FLUSH PRIVILEGES; ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';"
-
-      - name: Start MySQL service
-        run: sudo service mysql start
-
-      - name: Set root password
-        run: |
-          sudo mysql -uroot -p'123456'
-
-      - name: Set root password
-        run: |
-          sudo mysql -u root -p '123456' -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';"
-
-      - name: Create database
-        run: |
-          sudo mysql -e "CREATE DATABASE IF NOT EXISTS software_practice_phase1;"
-          sudo mysql -e "FLUSH PRIVILEGES;"
+          for i in `seq 1 30`; do
+          if echo 'SELECT 1' | mysql --host=127.0.0.1 --port=3306 --user=root --password=root_password software_practice_phase1 &> /dev/null; then
+           echo "MySQL is ready"
+           break
+          fi
+          echo "Waiting for MySQL..."
+          sleep 1
+          done
 
       - name: Build and Test
         run: mvn clean test
+        env:
+          SPRING_DATASOURCE_URL: jdbc:mysql://127.0.0.1:3306/software_practice_phase1
+          SPRING_DATASOURCE_USERNAME: root
+          SPRING_DATASOURCE_PASSWORD: 123456
+          SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+
+      - name: Archive test reports
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-reports
+          path: target/surefire-reports
 
   save-reports:
     needs: run-tests
