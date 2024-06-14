@@ -6,9 +6,8 @@ on:
       - backend-yyz
 
 jobs:
-  build:
+  run-tests:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -19,11 +18,29 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
+      - name: Install MySQL and set root password
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y mysql-server
+          sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';"
+
+      - name: Start MySQL service
+        run: sudo service mysql start
+
+      - name: Create database
+        run: |
+          sudo mysql -e "CREATE DATABASE IF NOT EXISTS software_practice_phase1;"
+          sudo mysql -e "FLUSH PRIVILEGES;"
+
       - name: Build and Test
         run: mvn clean test
 
-      - name: Save test reports
-        uses: actions/upload-artifact@v2
+  save-reports:
+    needs: run-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download test reports artifact
+        uses: actions/download-artifact@v2
         with:
           name: test-reports
-          path: target/surefire-reports
+          path: test-reports
